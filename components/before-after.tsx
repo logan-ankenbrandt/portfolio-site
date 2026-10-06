@@ -77,7 +77,14 @@ export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNo
   ) : null;
 
   if (!before) {
-    return <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager}>{toggle}</Figure>;
+    // A lone image would fill the whole column, so it gets the width of one side of a pair at most.
+    return (
+      <div className="max-w-3xl">
+        <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager}>
+          {toggle}
+        </Figure>
+      </div>
+    );
   }
 
   const ratio = (img: Img) => (img.width / img.height).toFixed(4);

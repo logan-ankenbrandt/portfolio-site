@@ -63,7 +63,7 @@ export default function HomePage() {
               after={image(hero.project, hero.item.after.image, afterAlt(hero.item))}
               overlay={hero.item.overlay ? image(hero.project, hero.item.overlay, overlayAlt(hero.item)) : null}
               beforeNote={hero.item.source!.credit}
-              afterNote="editable PowerPoint"
+              afterNote={hero.item.after.pptx ? 'editable PowerPoint' : KIND_LABEL[hero.item.kind].toLowerCase()}
             />
           </div>
           <div className="mt-10">
@@ -72,7 +72,7 @@ export default function HomePage() {
           </div>
           <p className="mt-8 text-[15px]">
             <Link href={itemUrl(hero.project.portfolio.slug, hero.item.id)} className="link font-medium">
-              See the full log and download the PowerPoint
+              {hero.item.after.pptx ? 'See the full log and download the PowerPoint' : 'See the full log'}
             </Link>
           </p>
         </section>

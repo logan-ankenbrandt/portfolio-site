@@ -40,8 +40,10 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
 
 `npm run sync` reads `../slide-rebuild-log`, `../architecture-three-ways` and `../chart-rebuilds`.
 It fails with a full list if any `portfolio.json` breaks the contract, a file is missing, a byte count
-is wrong, or the text names an employer. Warnings (dashes, the banned word list, a repo with
-uncommitted changes, slide widths other than 1280 or 960) print but do not stop it. Then build,
+is wrong, or the text or a log names a term from `.private-terms.json`. That file sits in this folder,
+is gitignored, and lists the names the site must never show; open it and add any you want. Without it
+the sync skips that check and says so. Warnings (dashes, the banned word list, a warn term, a repo
+with uncommitted changes, slide widths other than 1280 or 960) print but do not stop it. Then build,
 preview and check these:
 
 - The hero is the first item in slide-rebuild-log's `items` that has a source image, so item order in
@@ -62,9 +64,11 @@ preview and check these:
 
 ## 3. Checks already run, against the fixtures
 
-- `npm test` passes all 19 sync and contract tests. Five rules (unknown keys, the repo URL, byte
-  counts, employer names, a first sync into an empty hub) were broken on purpose to confirm that
-  their tests fail.
+- `npm test` passes all 19 sync and contract tests. Six rules (unknown keys, the repo URL, byte
+  counts, private terms, a first sync into an empty hub, the dash warning's pattern) were broken on
+  purpose to confirm that their tests fail.
+- An early version of the sync script spelled the private terms out in code. The history (never
+  pushed) was rewritten so that no commit contains them; `git grep` over every commit finds none.
 - `npm run typecheck` and `npm run build` pass, and `out/` holds `/`, `/one-pager/`, the three
   `/projects/<slug>/` pages and `404.html`.
 - `node scripts/check-browser.mjs` passes 23 checks: no horizontal scroll at 390 px on all five

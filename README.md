@@ -25,7 +25,8 @@ outside the list or a skill outside the listing's words fails it.
 1. `npm run sync` reads `../<slug>/portfolio.json` for each slug in `projects.config.json`. It
    validates the JSON, checks that every referenced file exists and matches its type (PNG, PDF, PPTX,
    Markdown), checks the download byte counts and the repo URL, and fails with the full list of
-   problems. On success it copies the referenced files into `public/projects/<slug>/` and writes
+   problems. When a local `.private-terms.json` exists (gitignored, never published), text that
+   names one of its terms fails the sync too. On success it copies the referenced files into `public/projects/<slug>/` and writes
    `content/projects.json`, with each PNG's size and the project repo's commit.
 2. Both outputs are committed, so a deploy builds only from files in this repo.
 3. `npm run build` is a Next.js static export. It validates `content/projects.json` again, checks

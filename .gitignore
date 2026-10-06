@@ -20,3 +20,6 @@ scratch/
 
 # sync staging folder
 .sync-staging/
+
+# private term list for the sync (never published)
+.private-terms.json

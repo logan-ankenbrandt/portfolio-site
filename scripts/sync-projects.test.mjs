@@ -115,6 +115,14 @@ test('rejects a private never term and warns on a private warn term', () => {
   assert.match(r.warnings.join('\n'), /oneLiner: contains "Acme"/);
 });
 
+test('warns, without failing, on a dash in published text', () => {
+  const dir = copyFixture();
+  editJson(dir, (j) => { j.items[0].summary = 'Kept the caveat \u2014 word for word.'; });
+  const r = inspectProject({ dir, slug: SLUG });
+  assert.deepEqual(r.errors, []);
+  assert.match(r.warnings.join('\n'), /items\.0\.summary: contains an em or en dash/);
+});
+
 test('a repo sync reads ../<slug> and never falls back to fixtures', () => {
   const root = tempRoot();
   const hub = tempHub(root);

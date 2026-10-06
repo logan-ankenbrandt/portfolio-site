@@ -37,7 +37,7 @@ export const NO_TERMS = { never: [], warn: [] };
 const BANNED_WORDS = ['del' + 've', 'tapes' + 'try', 'lever' + 'age', 'rob' + 'ust', 'seam' + 'less',
   'para' + 'digm', 'syn' + 'ergy', 'holis' + 'tic', 'util' + 'ize', 'stream' + 'line'];
 const BANNED_RE = new RegExp(`\\b(?:${BANNED_WORDS.join('|')})\\w*`, 'i');
-const DASH_RE = /[–—]/;
+const DASH_RE = /[\u2013\u2014]/;
 
 const SLIDE_WIDTHS = [1280, 960];
 

@@ -62,15 +62,17 @@ preview and check these:
 
 ## 3. Checks already run, against the fixtures
 
-- `npm test` passes all 18 sync and contract tests. Each rule was also broken on purpose to confirm
-  that its test fails.
+- `npm test` passes all 19 sync and contract tests. Five rules (unknown keys, the repo URL, byte
+  counts, employer names, a first sync into an empty hub) were broken on purpose to confirm that
+  their tests fail.
 - `npm run typecheck` and `npm run build` pass, and `out/` holds `/`, `/one-pager/`, the three
   `/projects/<slug>/` pages and `404.html`.
 - `node scripts/check-browser.mjs` passes 23 checks: no horizontal scroll at 390 px on all five
   pages, alt text on every image, every image and download served, the tabs by click, ArrowRight and
   Home, the overlay toggle by click and Space, and both images side by side at 1280 px.
+- `VERCEL=1 npm run build` fails with the fixture message, so placeholder content cannot deploy.
 - The one-pager prints on one US Letter page.
-- Screenshots of `/`, `/projects/slide-rebuild-log/` and `/one-pager/` at 390 and 1280 px are in
+- Screenshots of `/`, all three project pages and `/one-pager/` at 390 and 1280 px are in
   `scratch/screenshots/`, which is not committed. Take them again after the real sync with
   `bash scripts/screenshots.sh` while `npm run preview` runs.
 

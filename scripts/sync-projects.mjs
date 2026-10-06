@@ -310,6 +310,8 @@ export function runSync({ hubDir = HUB_DIR, fixtures = false, check = false, log
       fs.copyFileSync(path.join(r.dir, rel), dest);
     }
   }
+  fs.mkdirSync(staging, { recursive: true });
+  fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.rmSync(target, { recursive: true, force: true });
   fs.renameSync(staging, target);
 

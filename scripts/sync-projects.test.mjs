@@ -144,6 +144,16 @@ test('a repo sync copies every referenced file and replaces stale ones', () => {
   assert.equal(fs.existsSync(stale), false);
 });
 
+test('a first sync into a hub with no public folder works', () => {
+  const root = tempRoot();
+  const hub = tempHub(root);
+  copyFixture(root);
+  runSync({ hubDir: hub, log: quiet });
+  assert.ok(fs.existsSync(path.join(hub, 'public', 'projects', SLUG, 'portfolio.json')) === false);
+  assert.ok(fs.existsSync(path.join(hub, 'public', 'projects', SLUG, 'renders', 'cover.png')));
+  assert.ok(fs.existsSync(path.join(hub, 'content', 'projects.json')));
+});
+
 test('--check validates without writing', () => {
   const root = tempRoot();
   const hub = tempHub(root);

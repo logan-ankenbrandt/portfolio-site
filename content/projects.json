@@ -1,0 +1,892 @@
+{
+  "mode": "fixtures",
+  "projects": [
+    {
+      "portfolio": {
+        "slug": "slide-rebuild-log",
+        "title": "PLACEHOLDER Slide rebuild log",
+        "oneLiner": "PLACEHOLDER one-liner. The real line says what the slide rebuild log project shows, in one sentence.",
+        "repo": "https://github.com/logan-ankenbrandt/slide-rebuild-log",
+        "order": 1,
+        "skills": [
+          "Slide Reconstruction",
+          "Presentation Design",
+          "Data Visualization",
+          "Visual Storytelling",
+          "Content Editing",
+          "Technical Documentation",
+          "Microsoft PowerPoint",
+          "Attention to Detail"
+        ],
+        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "cover": "renders/cover.png",
+        "items": [
+          {
+            "id": "01-usage-revised",
+            "group": "01-usage",
+            "title": "PLACEHOLDER revised slide whose title states the point in the source's own hedged terms",
+            "kind": "revised",
+            "summary": "PLACEHOLDER summary. The real summary says what this revised version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-usage/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-usage/revised.png",
+              "pptx": "slides/01-usage/revised.pptx",
+              "pdf": "slides/01-usage/revised.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-usage/log-revised.md"
+          },
+          {
+            "id": "01-usage-faithful",
+            "group": "01-usage",
+            "title": "PLACEHOLDER faithful rebuild of the usage slide",
+            "kind": "faithful",
+            "summary": "PLACEHOLDER summary. The real summary says what this faithful version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-usage/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-usage/faithful.png",
+              "pptx": "slides/01-usage/faithful.pptx",
+              "pdf": "slides/01-usage/faithful.pdf"
+            },
+            "overlay": "slides/01-usage/overlay-faithful.png",
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                }
+              ],
+              "flagged": [],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-usage/log-faithful.md"
+          },
+          {
+            "id": "02-key-features-faithful",
+            "group": "02-key-features",
+            "title": "PLACEHOLDER faithful rebuild of a 4:3 architecture slide",
+            "kind": "faithful",
+            "summary": "PLACEHOLDER summary. The real summary says what this faithful version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/02-key-features/source.png",
+              "title": "PLACEHOLDER source title 2",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 2",
+              "url": "https://example.com/placeholder-source-2",
+              "license": "PLACEHOLDER license line for source 2",
+              "page": "PLACEHOLDER page 2"
+            },
+            "after": {
+              "image": "slides/02-key-features/faithful.png",
+              "pptx": "slides/02-key-features/faithful.pptx",
+              "pdf": "slides/02-key-features/faithful.pdf"
+            },
+            "overlay": "slides/02-key-features/overlay-faithful.png",
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/02-key-features/log-faithful.md"
+          }
+        ],
+        "downloads": [
+          {
+            "label": "PLACEHOLDER Deck with every slide (.pptx)",
+            "path": "dist/deck.pptx",
+            "bytes": 45849
+          },
+          {
+            "label": "PLACEHOLDER Deck with every slide (PDF)",
+            "path": "dist/deck.pdf",
+            "bytes": 28479
+          }
+        ],
+        "credits": [
+          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
+          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+        ]
+      },
+      "files": {
+        "dist/deck.pdf": {
+          "bytes": 28479
+        },
+        "dist/deck.pptx": {
+          "bytes": 45849
+        },
+        "renders/cover.png": {
+          "bytes": 32689,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-usage/faithful.pdf": {
+          "bytes": 30351
+        },
+        "slides/01-usage/faithful.png": {
+          "bytes": 34673,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-usage/faithful.pptx": {
+          "bytes": 45864
+        },
+        "slides/01-usage/log-faithful.md": {
+          "bytes": 1139
+        },
+        "slides/01-usage/log-revised.md": {
+          "bytes": 1794
+        },
+        "slides/01-usage/overlay-faithful.png": {
+          "bytes": 34839,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-usage/revised.pdf": {
+          "bytes": 30306
+        },
+        "slides/01-usage/revised.png": {
+          "bytes": 34609,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-usage/revised.pptx": {
+          "bytes": 45863
+        },
+        "slides/01-usage/source.png": {
+          "bytes": 38217,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/02-key-features/faithful.pdf": {
+          "bytes": 14658
+        },
+        "slides/02-key-features/faithful.png": {
+          "bytes": 13064,
+          "width": 960,
+          "height": 720
+        },
+        "slides/02-key-features/faithful.pptx": {
+          "bytes": 45871
+        },
+        "slides/02-key-features/log-faithful.md": {
+          "bytes": 1802
+        },
+        "slides/02-key-features/overlay-faithful.png": {
+          "bytes": 12936,
+          "width": 960,
+          "height": 720
+        },
+        "slides/02-key-features/source.png": {
+          "bytes": 13988,
+          "width": 960,
+          "height": 720
+        }
+      },
+      "commit": null,
+      "dirty": false
+    },
+    {
+      "portfolio": {
+        "slug": "architecture-three-ways",
+        "title": "PLACEHOLDER One architecture, three ways",
+        "oneLiner": "PLACEHOLDER one-liner. The real line says what the one architecture, three ways project shows, in one sentence.",
+        "repo": "https://github.com/logan-ankenbrandt/architecture-three-ways",
+        "order": 2,
+        "skills": [
+          "System Architecture",
+          "Technical Documentation",
+          "Visual Storytelling",
+          "Presentation Design",
+          "Content Editing",
+          "Written Communication"
+        ],
+        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "cover": "renders/cover.png",
+        "items": [
+          {
+            "id": "01-layers-exec",
+            "group": "01-layers",
+            "title": "PLACEHOLDER executive slide that makes one point about the layers",
+            "kind": "exec",
+            "summary": "PLACEHOLDER summary. The real summary says what this exec version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-layers/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-layers/exec.png",
+              "pptx": "slides/01-layers/exec.pptx",
+              "pdf": "slides/01-layers/exec.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-layers/log-exec.md"
+          },
+          {
+            "id": "01-layers-engineer",
+            "group": "01-layers",
+            "title": "PLACEHOLDER engineer slide with each layer API labeled",
+            "kind": "engineer",
+            "summary": "PLACEHOLDER summary. The real summary says what this engineer version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-layers/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-layers/engineer.png",
+              "pptx": "slides/01-layers/engineer.pptx",
+              "pdf": "slides/01-layers/engineer.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-layers/log-engineer.md"
+          },
+          {
+            "id": "02-brief-page",
+            "group": "02-brief",
+            "title": "PLACEHOLDER one-page architecture brief",
+            "kind": "brief",
+            "summary": "PLACEHOLDER summary. The real summary says what this brief version changes and keeps, in one or two sentences.",
+            "source": null,
+            "after": {
+              "image": "slides/02-brief/page.png",
+              "pptx": "slides/02-brief/page.pptx",
+              "pdf": "slides/02-brief/page.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                }
+              ],
+              "flagged": [],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                }
+              ]
+            },
+            "logMarkdown": "slides/02-brief/log-page.md"
+          }
+        ],
+        "downloads": [
+          {
+            "label": "PLACEHOLDER Executive and engineer slides (.pptx)",
+            "path": "dist/deck.pptx",
+            "bytes": 45855
+          },
+          {
+            "label": "PLACEHOLDER Architecture brief (PDF)",
+            "path": "dist/brief.pdf",
+            "bytes": 29465
+          }
+        ],
+        "credits": [
+          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
+          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+        ]
+      },
+      "files": {
+        "dist/brief.pdf": {
+          "bytes": 29465
+        },
+        "dist/deck.pptx": {
+          "bytes": 45855
+        },
+        "renders/cover.png": {
+          "bytes": 34138,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-layers/engineer.pdf": {
+          "bytes": 30848
+        },
+        "slides/01-layers/engineer.png": {
+          "bytes": 35436,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-layers/engineer.pptx": {
+          "bytes": 45871
+        },
+        "slides/01-layers/exec.pdf": {
+          "bytes": 30918
+        },
+        "slides/01-layers/exec.png": {
+          "bytes": 35824,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-layers/exec.pptx": {
+          "bytes": 45867
+        },
+        "slides/01-layers/log-engineer.md": {
+          "bytes": 1796
+        },
+        "slides/01-layers/log-exec.md": {
+          "bytes": 1792
+        },
+        "slides/01-layers/source.png": {
+          "bytes": 13942,
+          "width": 960,
+          "height": 720
+        },
+        "slides/02-brief/log-page.md": {
+          "bytes": 1135
+        },
+        "slides/02-brief/page.pdf": {
+          "bytes": 31239
+        },
+        "slides/02-brief/page.png": {
+          "bytes": 36304,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/02-brief/page.pptx": {
+          "bytes": 45866
+        }
+      },
+      "commit": null,
+      "dirty": false
+    },
+    {
+      "portfolio": {
+        "slug": "chart-rebuilds",
+        "title": "PLACEHOLDER Chart rebuilds",
+        "oneLiner": "PLACEHOLDER one-liner. The real line says what the chart rebuilds project shows, in one sentence.",
+        "repo": "https://github.com/logan-ankenbrandt/chart-rebuilds",
+        "order": 3,
+        "skills": [
+          "Data Visualization",
+          "Slide Reconstruction",
+          "Presentation Design",
+          "Visual Storytelling",
+          "Attention to Detail"
+        ],
+        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "cover": "renders/cover.png",
+        "items": [
+          {
+            "id": "01-spending-faithful",
+            "group": "01-spending",
+            "title": "PLACEHOLDER native chart rebuilt to match the report figure",
+            "kind": "chart-faithful",
+            "summary": "PLACEHOLDER summary. The real summary says what this chart-faithful version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-spending/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-spending/faithful.png",
+              "pptx": "slides/01-spending/faithful.pptx",
+              "pdf": "slides/01-spending/faithful.pdf"
+            },
+            "overlay": "slides/01-spending/overlay-faithful.png",
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-spending/log-faithful.md"
+          },
+          {
+            "id": "01-spending-redesign",
+            "group": "01-spending",
+            "title": "PLACEHOLDER redesigned chart whose title states the finding",
+            "kind": "chart-redesign",
+            "summary": "PLACEHOLDER summary. The real summary says what this chart-redesign version changes and keeps, in one or two sentences.",
+            "source": {
+              "image": "slides/01-spending/source.png",
+              "title": "PLACEHOLDER source title 1",
+              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+              "url": "https://example.com/placeholder-source-1",
+              "license": "PLACEHOLDER license line for source 1",
+              "page": "PLACEHOLDER page 1"
+            },
+            "after": {
+              "image": "slides/01-spending/redesign.png",
+              "pptx": "slides/01-spending/redesign.pptx",
+              "pdf": "slides/01-spending/redesign.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                },
+                {
+                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                },
+                {
+                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                },
+                {
+                  "what": "PLACEHOLDER kept wording from the source.",
+                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                },
+                {
+                  "what": "PLACEHOLDER rejected a second change.",
+                  "why": "PLACEHOLDER reason, one short sentence."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+                  "result": "PLACEHOLDER result. What the check found."
+                },
+                {
+                  "what": "PLACEHOLDER check of fonts and sizes.",
+                  "result": "PLACEHOLDER result. Pass."
+                },
+                {
+                  "what": "PLACEHOLDER check that every number traces to the source.",
+                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                }
+              ]
+            },
+            "logMarkdown": "slides/01-spending/log-redesign.md"
+          }
+        ],
+        "downloads": [
+          {
+            "label": "PLACEHOLDER Both charts (.pptx)",
+            "path": "dist/charts.pptx",
+            "bytes": 45848
+          },
+          {
+            "label": "PLACEHOLDER Both charts (PDF)",
+            "path": "dist/charts.pdf",
+            "bytes": 28805
+          },
+          {
+            "label": "PLACEHOLDER Chart data (CSV)",
+            "path": "data/spending.csv",
+            "bytes": 56
+          }
+        ],
+        "credits": [
+          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
+          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+        ]
+      },
+      "files": {
+        "data/spending.csv": {
+          "bytes": 56
+        },
+        "dist/charts.pdf": {
+          "bytes": 28805
+        },
+        "dist/charts.pptx": {
+          "bytes": 45848
+        },
+        "renders/cover.png": {
+          "bytes": 33302,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-spending/faithful.pdf": {
+          "bytes": 30507
+        },
+        "slides/01-spending/faithful.png": {
+          "bytes": 34781,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-spending/faithful.pptx": {
+          "bytes": 45864
+        },
+        "slides/01-spending/log-faithful.md": {
+          "bytes": 1798
+        },
+        "slides/01-spending/log-redesign.md": {
+          "bytes": 1798
+        },
+        "slides/01-spending/overlay-faithful.png": {
+          "bytes": 8663,
+          "width": 600,
+          "height": 759
+        },
+        "slides/01-spending/redesign.pdf": {
+          "bytes": 30360
+        },
+        "slides/01-spending/redesign.png": {
+          "bytes": 34624,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/01-spending/redesign.pptx": {
+          "bytes": 45864
+        },
+        "slides/01-spending/source.png": {
+          "bytes": 9267,
+          "width": 600,
+          "height": 759
+        }
+      },
+      "commit": null,
+      "dirty": false
+    }
+  ]
+}

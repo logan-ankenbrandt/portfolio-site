@@ -1,0 +1,31 @@
+Content license
+
+The code in this repository is MIT licensed (see LICENSE). Everything else is covered here.
+
+Site text and brand images
+
+The text written for this site (lib/site.ts and the page and component files under app/ and
+components/) and the images in app/ (the Open Graph card and the icons) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+Copyright (c) 2026 Logan Ankenbrandt
+
+Project content
+
+The slides, renders, logs and data under public/projects/ are copies synced from the project
+repositories (slide-rebuild-log, architecture-three-ways and chart-rebuilds). They carry the
+license stated in each project repository: CC BY 4.0 for the rebuilt slides, renders and logs.
+
+Source works
+
+The source slides and figures are US government works. NASA technical reports server items are
+marked "Work of the US Gov. Public Use Permitted". GAO products are not subject to copyright in
+the United States. NIST staff works ask for credit. Each source is credited on the site and in
+the CREDITS.md of the project repository that uses it. Agency logos are left out or masked.
+
+Not affiliated with or endorsed by NASA, GAO or NIST.
+
+Fixtures
+
+The files under fixtures/ are labeled placeholders used to develop the site. They are not
+published.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Draws the static brand files with ImageMagick and the system Arial (macOS):
-//   app/opengraph-image.png (1200 x 630), app/icon.svg, app/favicon.ico, app/apple-icon.png
+//   public/og.png (1200 x 630, the Open Graph card), app/icon.svg, app/favicon.ico, app/apple-icon.png
 // Run: node scripts/make-brand-assets.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -63,7 +63,7 @@ function ogImage() {
     ...text(FONT_BOLD, 15, C.muted, 848, 338, 'AFTER'),
     ...card(848, 362, 1128, 532),
     ...bars.flatMap(([w, color], i) => ['-fill', color, '-draw', `rectangle 872,${386 + i * 34} ${872 + w},${406 + i * 34}`]),
-    '-depth', '8', app('opengraph-image.png'),
+    '-depth', '8', path.join(HUB_DIR, 'public', 'og.png'),
   ]);
 }
 
@@ -87,7 +87,6 @@ function iconArgs(rounded) {
 
 ogImage();
 fs.writeFileSync(app('icon.svg'), ICON_SVG);
-fs.writeFileSync(app('opengraph-image.alt.txt'), 'Logan Ankenbrandt, slide reconstruction portfolio: a pie chart slide rebuilt as sorted bars.\n');
 magick([...iconArgs(true), '-define', 'icon:auto-resize=48,32,16', app('favicon.ico')]);
 magick([...iconArgs(false), '-resize', '180x180', '-depth', '8', app('apple-icon.png')]);
-console.log('wrote app/opengraph-image.png, app/opengraph-image.alt.txt, app/icon.svg, app/favicon.ico, app/apple-icon.png');
+console.log('wrote public/og.png, app/icon.svg, app/favicon.ico, app/apple-icon.png');

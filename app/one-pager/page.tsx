@@ -3,13 +3,14 @@ import type { Metadata } from 'next';
 import { PrintButton } from '@/components/print-button';
 import { getContent, image, projectUrl } from '@/lib/content';
 import { coverAlt } from '@/lib/format';
+import { pageMetadata } from '@/lib/metadata';
 import { site } from '@/lib/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'One-page summary',
   description: `${site.name}: each project on one printable page, with its link as text.`,
-  alternates: { canonical: '/one-pager/' },
-};
+  path: '/one-pager/',
+});
 
 const host = site.url.replace('https://', '');
 
@@ -48,10 +49,12 @@ export default function OnePager() {
                 <p className="mt-1 text-[15px] leading-snug print:text-[10.5pt]">{p.oneLiner}</p>
                 <p className="mt-1 text-[15px] leading-snug text-muted print:text-[10pt]">Shows: {p.skills.join(', ')}</p>
                 <p className="mt-2 font-mono text-[13px] leading-snug break-all print:text-[9pt]">
-                  {site.url}
+                  {host}
                   {projectUrl(p.slug)}
                 </p>
-                <p className="font-mono text-[13px] leading-snug break-all text-muted print:text-[9pt]">{p.repo}</p>
+                <p className="font-mono text-[13px] leading-snug break-all text-muted print:text-[9pt]">
+                  {p.repo.replace('https://', '')}
+                </p>
               </div>
             </li>
           );

@@ -7,6 +7,7 @@ import { ItemBlock } from '@/components/item-block';
 import { SkillChips } from '@/components/skill-chips';
 import { fileUrl, getContent, getProject, groupItems, projectUrl, type Item } from '@/lib/content';
 import { KIND_LABEL } from '@/lib/format';
+import { pageMetadata } from '@/lib/metadata';
 import { site } from '@/lib/site';
 
 type Params = { params: Promise<{ slug: string }> };
@@ -22,13 +23,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   const { title, oneLiner } = project.portfolio;
-  return {
-    title,
-    description: oneLiner,
-    alternates: { canonical: projectUrl(slug) },
-    openGraph: { type: 'article', siteName: site.name, title: `${title} | ${site.name}`, description: oneLiner, url: projectUrl(slug) },
-    twitter: { card: 'summary_large_image', title: `${title} | ${site.name}`, description: oneLiner },
-  };
+  return pageMetadata({ title, description: oneLiner, path: projectUrl(slug), type: 'article' });
 }
 
 function groupHeading(items: Item[]): { eyebrow: string; title: string } {

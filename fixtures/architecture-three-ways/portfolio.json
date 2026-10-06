@@ -1,0 +1,241 @@
+{
+  "slug": "architecture-three-ways",
+  "title": "PLACEHOLDER One architecture, three ways",
+  "oneLiner": "PLACEHOLDER one-liner. The real line says what the one architecture, three ways project shows, in one sentence.",
+  "repo": "https://github.com/logan-ankenbrandt/architecture-three-ways",
+  "order": 2,
+  "skills": [
+    "System Architecture",
+    "Technical Documentation",
+    "Visual Storytelling",
+    "Presentation Design",
+    "Content Editing",
+    "Written Communication"
+  ],
+  "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+  "cover": "renders/cover.png",
+  "items": [
+    {
+      "id": "01-layers-exec",
+      "group": "01-layers",
+      "title": "PLACEHOLDER executive slide that makes one point about the layers",
+      "kind": "exec",
+      "summary": "PLACEHOLDER summary. The real summary says what this exec version changes and keeps, in one or two sentences.",
+      "source": {
+        "image": "slides/01-layers/source.png",
+        "title": "PLACEHOLDER source title 1",
+        "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+        "url": "https://example.com/placeholder-source-1",
+        "license": "PLACEHOLDER license line for source 1",
+        "page": "PLACEHOLDER page 1"
+      },
+      "after": {
+        "image": "slides/01-layers/exec.png",
+        "pptx": "slides/01-layers/exec.pptx",
+        "pdf": "slides/01-layers/exec.pdf"
+      },
+      "overlay": null,
+      "log": {
+        "changed": [
+          {
+            "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+            "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+          },
+          {
+            "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+            "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+          },
+          {
+            "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+            "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+          }
+        ],
+        "kept": [
+          {
+            "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+            "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+          },
+          {
+            "what": "PLACEHOLDER kept wording from the source.",
+            "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+          }
+        ],
+        "rejected": [
+          {
+            "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+            "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+          },
+          {
+            "what": "PLACEHOLDER rejected a second change.",
+            "why": "PLACEHOLDER reason, one short sentence."
+          }
+        ],
+        "flagged": [
+          {
+            "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+            "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+          }
+        ],
+        "checks": [
+          {
+            "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+            "result": "PLACEHOLDER result. What the check found."
+          },
+          {
+            "what": "PLACEHOLDER check of fonts and sizes.",
+            "result": "PLACEHOLDER result. Pass."
+          },
+          {
+            "what": "PLACEHOLDER check that every number traces to the source.",
+            "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+          }
+        ]
+      },
+      "logMarkdown": "slides/01-layers/log-exec.md"
+    },
+    {
+      "id": "01-layers-engineer",
+      "group": "01-layers",
+      "title": "PLACEHOLDER engineer slide with each layer API labeled",
+      "kind": "engineer",
+      "summary": "PLACEHOLDER summary. The real summary says what this engineer version changes and keeps, in one or two sentences.",
+      "source": {
+        "image": "slides/01-layers/source.png",
+        "title": "PLACEHOLDER source title 1",
+        "credit": "PLACEHOLDER credit: author, agency and date of source 1",
+        "url": "https://example.com/placeholder-source-1",
+        "license": "PLACEHOLDER license line for source 1",
+        "page": "PLACEHOLDER page 1"
+      },
+      "after": {
+        "image": "slides/01-layers/engineer.png",
+        "pptx": "slides/01-layers/engineer.pptx",
+        "pdf": "slides/01-layers/engineer.pdf"
+      },
+      "overlay": null,
+      "log": {
+        "changed": [
+          {
+            "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+            "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+          },
+          {
+            "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+            "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+          },
+          {
+            "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
+            "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+          }
+        ],
+        "kept": [
+          {
+            "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+            "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+          },
+          {
+            "what": "PLACEHOLDER kept wording from the source.",
+            "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+          }
+        ],
+        "rejected": [
+          {
+            "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+            "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+          },
+          {
+            "what": "PLACEHOLDER rejected a second change.",
+            "why": "PLACEHOLDER reason, one short sentence."
+          }
+        ],
+        "flagged": [
+          {
+            "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
+            "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+          }
+        ],
+        "checks": [
+          {
+            "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+            "result": "PLACEHOLDER result. What the check found."
+          },
+          {
+            "what": "PLACEHOLDER check of fonts and sizes.",
+            "result": "PLACEHOLDER result. Pass."
+          },
+          {
+            "what": "PLACEHOLDER check that every number traces to the source.",
+            "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+          }
+        ]
+      },
+      "logMarkdown": "slides/01-layers/log-engineer.md"
+    },
+    {
+      "id": "02-brief-page",
+      "group": "02-brief",
+      "title": "PLACEHOLDER one-page architecture brief",
+      "kind": "brief",
+      "summary": "PLACEHOLDER summary. The real summary says what this brief version changes and keeps, in one or two sentences.",
+      "source": null,
+      "after": {
+        "image": "slides/02-brief/page.png",
+        "pptx": "slides/02-brief/page.pptx",
+        "pdf": "slides/02-brief/page.pdf"
+      },
+      "overlay": null,
+      "log": {
+        "changed": [
+          {
+            "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
+            "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+          },
+          {
+            "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
+            "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+          }
+        ],
+        "kept": [
+          {
+            "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
+            "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+          }
+        ],
+        "rejected": [
+          {
+            "what": "PLACEHOLDER rejected. A change that was considered and not made.",
+            "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+          }
+        ],
+        "flagged": [],
+        "checks": [
+          {
+            "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
+            "result": "PLACEHOLDER result. What the check found."
+          },
+          {
+            "what": "PLACEHOLDER check of fonts and sizes.",
+            "result": "PLACEHOLDER result. Pass."
+          }
+        ]
+      },
+      "logMarkdown": "slides/02-brief/log-page.md"
+    }
+  ],
+  "downloads": [
+    {
+      "label": "PLACEHOLDER Executive and engineer slides (.pptx)",
+      "path": "dist/deck.pptx",
+      "bytes": 45855
+    },
+    {
+      "label": "PLACEHOLDER Architecture brief (PDF)",
+      "path": "dist/brief.pdf",
+      "bytes": 29465
+    }
+  ],
+  "credits": [
+    "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
+    "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+  ]
+}

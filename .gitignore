@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+.venv/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# scratch output (screenshots, temp renders, logs)
+scratch/
+*.log
+.DS_Store
+
+# local env files
+.env
+.env.*
+.vercel/
+
+# sync staging folder
+.sync-staging/

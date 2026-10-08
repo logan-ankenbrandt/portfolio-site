@@ -57,13 +57,13 @@ export function LogExcerpt({ log }: { log: Log }) {
     .filter((l): l is { section: Section; entry: Entry } => Boolean(l.entry));
   if (!lines.length) return null;
   return (
-    <dl className="grid gap-x-12 gap-y-7 md:grid-cols-2">
+    <dl className="grid gap-x-12 gap-y-7 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-6">
       {lines.map(({ section, entry }) => (
-        <div key={section.key} className="border-t border-rule pt-4">
+        <div key={section.key} className="border-t border-rule pt-4 lg:pt-2.5">
           <dt className={`eyebrow ${section.tone}`}>{section.label}</dt>
-          <dd className="m-0 mt-2">
-            <p className="leading-snug">{entry.what}</p>
-            <p className="mt-1.5 text-[15px] leading-snug text-muted">
+          <dd className="m-0 mt-2 lg:mt-1">
+            <p className="leading-snug lg:text-[15px]">{entry.what}</p>
+            <p className="mt-1.5 text-[15px] leading-snug text-muted lg:text-sm">
               <span className="font-semibold text-ink/75">{section.detailLabel}:</span> {entry[section.detail]}
             </p>
           </dd>

@@ -5,7 +5,7 @@ import { BeforeAfter } from '@/components/before-after';
 import { LogExcerpt } from '@/components/log-view';
 import { ProjectCard } from '@/components/project-card';
 import { SkillsMatrix } from '@/components/skills-matrix';
-import { allCredits, getContent, getHero, image, itemUrl } from '@/lib/content';
+import { creditsByProject, getContent, getHero, image, itemUrl } from '@/lib/content';
 import { buildEvidence } from '@/lib/evidence';
 import { KIND_LABEL, afterAlt, overlayAlt, sourceAlt } from '@/lib/format';
 import { site } from '@/lib/site';
@@ -31,16 +31,19 @@ export default function HomePage() {
   const content = getContent();
   const hero = getHero(content);
   const rows = buildEvidence(content);
-  const credits = allCredits(content);
+  const credits = creditsByProject(content);
 
   return (
     <main id="main" className="mx-auto max-w-6xl px-4 sm:px-8">
-      <section aria-labelledby="intro" className="pt-14 pb-4 sm:pt-20">
-        <h1 id="intro" className="text-[44px] leading-[1.05] font-semibold tracking-tight sm:text-6xl">
+      <section aria-labelledby="intro" className="pt-14 pb-4 sm:pt-20 lg:pt-8 lg:pb-0">
+        <h1 id="intro" className="text-[44px] leading-[1.05] font-semibold tracking-tight sm:text-6xl lg:text-5xl">
           {site.name}
         </h1>
-        <p className="mt-5 max-w-3xl text-xl leading-relaxed text-ink/80 sm:text-2xl sm:leading-relaxed">{site.positioning}</p>
-        <p className="mt-5 text-[15px]">
+        <p className="mt-5 max-w-3xl text-xl leading-relaxed text-ink/80 sm:text-2xl sm:leading-relaxed lg:mt-3 lg:max-w-none lg:text-xl lg:leading-snug">
+          {site.positioning}
+        </p>
+        {/* The header links to GitHub too, so on wide screens this line gives its space to the hero. */}
+        <p className="mt-5 text-[15px] lg:hidden">
           <a href={site.github} className="link">
             github.com/logan-ankenbrandt
           </a>
@@ -48,15 +51,17 @@ export default function HomePage() {
       </section>
 
       {hero ? (
-        <section aria-labelledby="featured" className="mt-12 sm:mt-16">
+        <section aria-labelledby="featured" className="mt-12 sm:mt-16 lg:mt-7">
           <p className="eyebrow">
             Featured &middot; {hero.project.portfolio.title} &middot; {KIND_LABEL[hero.item.kind]}
           </p>
-          <h2 id="featured" className="mt-3 max-w-4xl text-[26px] leading-tight font-semibold tracking-tight sm:text-[32px]">
+          <h2 id="featured" className="mt-3 max-w-4xl text-[26px] leading-tight font-semibold tracking-tight sm:text-[32px] lg:mt-1.5 lg:max-w-none lg:text-2xl">
             {hero.item.title}
           </h2>
-          <p className="mt-3 max-w-3xl text-muted">{hero.item.summary}</p>
-          <div className="mt-7">
+          {/* At 1280 x 800 the name, the positioning line, both images and the first log lines fit on the first screen,
+              so the summary follows the log there. */}
+          <p className="mt-3 max-w-3xl text-muted lg:hidden">{hero.item.summary}</p>
+          <div className="mt-7 lg:mt-4">
             <BeforeAfter
               eager
               before={image(hero.project, hero.item.source!.image, sourceAlt(hero.item))}
@@ -66,11 +71,12 @@ export default function HomePage() {
               afterNote={hero.item.after.pptx ? 'editable PowerPoint' : KIND_LABEL[hero.item.kind].toLowerCase()}
             />
           </div>
-          <div className="mt-10">
+          <div className="mt-10 lg:mt-4">
             <h3 className="sr-only">From the log</h3>
             <LogExcerpt log={hero.item.log} />
           </div>
-          <p className="mt-8 text-[15px]">
+          <p className="mt-8 hidden max-w-3xl text-muted lg:block">{hero.item.summary}</p>
+          <p className="mt-8 text-[15px] lg:mt-4">
             <Link href={itemUrl(hero.project.portfolio.slug, hero.item.id)} className="link font-medium">
               {hero.item.after.pptx ? 'See the full log and download the PowerPoint' : 'See the full log'}
             </Link>
@@ -123,13 +129,20 @@ export default function HomePage() {
         <SectionHeading id="credits-title" eyebrow="Sources">
           Credits
         </SectionHeading>
-        <ul className="mt-8 max-w-4xl space-y-3 text-[15px] leading-snug">
-          {credits.map((credit) => (
-            <li key={credit} className="border-l-2 border-rule pl-4">
-              {credit}
-            </li>
+        <div className="mt-8 max-w-4xl space-y-8">
+          {credits.map((group) => (
+            <div key={group.slug}>
+              <h3 className="font-semibold">{group.title}</h3>
+              <ul className="mt-3 space-y-3 text-[15px] leading-snug">
+                {group.credits.map((credit) => (
+                  <li key={credit} className="border-l-2 border-rule pl-4">
+                    {credit}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
         <p className="mt-8 font-semibold">{site.notAffiliated}</p>
       </section>
     </main>

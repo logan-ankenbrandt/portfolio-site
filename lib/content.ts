@@ -100,6 +100,9 @@ export function groupItems(items: Item[]): { group: string; items: Item[] }[] {
   return [...groups].map(([group, list]) => ({ group, items: list }));
 }
 
-export function allCredits(content: Content): string[] {
-  return [...new Set(content.projects.flatMap((p) => p.portfolio.credits))];
+/** Each project's credit lines under its title. Projects cite shared sources in their own words, so lines are not merged. */
+export function creditsByProject(content: Content): { slug: string; title: string; credits: string[] }[] {
+  return content.projects
+    .map((p) => ({ slug: p.portfolio.slug, title: p.portfolio.title, credits: [...new Set(p.portfolio.credits)] }))
+    .filter((g) => g.credits.length);
 }

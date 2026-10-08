@@ -30,12 +30,13 @@ function Figure({ img, label, note, eager, children }: { img: Img; label: string
         decoding="async"
         className="block h-auto w-full border border-rule-strong/60 bg-white"
       />
-      <figcaption className="mt-2.5 flex min-h-8 flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm">
-        <span>
+      <figcaption className="mt-2.5 flex min-h-8 flex-wrap items-baseline justify-between gap-x-4 gap-y-2 text-sm md:flex-nowrap">
+        {/* A long credit wraps beside the links instead of pushing them onto a line of their own. */}
+        <span className="min-w-0 md:flex-1">
           <span className="font-semibold">{label}</span>
           {note ? <span className="text-muted"> &middot; {note}</span> : null}
         </span>
-        <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <span className="flex flex-wrap items-center gap-x-4 gap-y-2 md:shrink-0">
           {children}
           <a href={img.src} target="_blank" rel="noopener" className="link">
             Full size<span className="sr-only"> image: {label}</span>

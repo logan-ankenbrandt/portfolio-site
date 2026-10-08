@@ -1,9 +1,10 @@
 # Review before publishing
 
-Claude Code agents wrote everything in this repo. Nothing has been pushed, no GitHub repo or Vercel
-project exists, and nothing has been deployed. The site now builds from the three real project repos
+Claude Code agents wrote everything in this repo. On 2026-10-08 this repo and the three project repos
+were pushed to GitHub as public repos, and the site was deployed to
+https://logan-ankenbrandt.vercel.app. The site builds from the three real project repos
 (`npm run sync`, no fixtures), and `content/` and `public/projects/` hold that synced content. Work
-through the items below, then run the commands in the last section yourself.
+through the items below. Section 4 has the commands for later updates.
 
 ## 1. Copy to approve
 
@@ -99,7 +100,7 @@ Checks, against the real content:
 
 ## 4. Commands for later, yours to run
 
-Agents never push, create repos or deploy. Run these from this folder, in this order.
+Run these from this folder, in this order.
 
 The real content is already synced and committed. Run this again after any change in a project repo,
 and before deploying if you are unsure the hub is current. The build refuses fixture content on Vercel:
@@ -114,30 +115,20 @@ git add content public/projects
 git commit -m "Sync project content"
 ```
 
-Push the three project repos before the hub, so the repo links on the site resolve. Then the hub:
+Push a changed project repo before the hub, so the repo links on the site resolve. Then the hub:
 
 ```sh
-gh repo create logan-ankenbrandt/portfolio-site --public --source=. --remote=origin \
-  --description "Slide reconstruction portfolio: static site for three case studies"
-git push -u origin main
+git push
+vercel deploy --prod     # this folder is linked to the Vercel project logan-ankenbrandt
 ```
 
-On Vercel the project name sets the domain, so name the project `logan-ankenbrandt`:
+The Vercel project `logan-ankenbrandt` serves https://logan-ankenbrandt.vercel.app. It has no Git
+connection, so every deploy stays a manual step. `vercel.json` pins the Next.js framework preset,
+because a project created from the CLI starts as "Other" and serves `public/` in place of the export.
+If the domain ever changes, set `url` in `lib/site.ts` to it, then rebuild, commit and deploy again.
+The canonical URLs, the Open Graph image URL and the one-pager's printed links all come from it.
 
-```sh
-vercel login
-vercel link              # personal scope; create a new project named logan-ankenbrandt
-vercel deploy            # preview deploy: open the URL it prints and check it
-vercel deploy --prod
-```
-
-If `vercel link` offers to connect the GitHub repo, decline, so that every deploy stays a manual step.
-After the first production deploy, open the domain Vercel assigned in a logged-out browser. If it is
-not `logan-ankenbrandt.vercel.app` (the fallback is `loganankenbrandt.vercel.app`), set `url` in
-`lib/site.ts` to the real domain, then rebuild, commit and deploy again. The canonical URLs, the Open
-Graph image URL and the one-pager's printed links all come from it.
-
-This file can stay in the repo or be deleted before pushing. It names no employer.
+This file can stay in the repo or be deleted. It names no employer.
 
 ## 5. Caveats the project agents reported
 

@@ -11,7 +11,7 @@ export const site = {
   url: 'https://logan-ankenbrandt.vercel.app',
   github: 'https://github.com/logan-ankenbrandt',
   howMade:
-    'Claude Code agents rebuilt these slides from the source images as editable PowerPoint, drafted the logs and built this site. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.',
+    'Claude Code agents rebuilt these slides from the source images as editable PowerPoint, drafted the logs and built this site. I approved the sources and the rules each rebuild follows, and checked every slide, number and log before publishing.',
   rules: [
     'Every number on a slide or in a log traces to the source page or figure, or to an arithmetic check recorded in the log. A value that cannot be read is reported, not guessed.',
     'Faithful rebuilds match the source: positions, sizes, colors sampled from the source pixels, fonts, line weights and aspect ratio.',

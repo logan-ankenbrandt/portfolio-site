@@ -1,0 +1,6 @@
+# Keep files the static build does not need off Vercel, including the private term list.
+.private-terms.json
+scratch/
+fixtures/
+out/
+*.tsbuildinfo

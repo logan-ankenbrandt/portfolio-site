@@ -15,7 +15,7 @@ const FONT = '/System/Library/Fonts/Supplemental/Arial.ttf';
 const FONT_BOLD = '/System/Library/Fonts/Supplemental/Arial Bold.ttf';
 const HOW_MADE =
   'Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. ' +
-  'I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.';
+  'I approved the sources and the rules each rebuild follows, and checked every slide, number and log before publishing.';
 
 const STYLE = {
   cover: { bg: '#E6EDF3', block: '#C5D3E0', ink: '#1F3B57', label: 'COVER' },

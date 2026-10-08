@@ -22,7 +22,7 @@
           "System Architecture",
           "Software Engineering"
         ],
-        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I approved the sources and the rules each rebuild follows, and checked every slide, number and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
@@ -696,10 +696,10 @@
           "bytes": 36502
         },
         "slides/01-cfs-usage/log-faithful.md": {
-          "bytes": 8228
+          "bytes": 8230
         },
         "slides/01-cfs-usage/log-revised.md": {
-          "bytes": 10169
+          "bytes": 10171
         },
         "slides/01-cfs-usage/overlay.png": {
           "bytes": 303544,
@@ -734,10 +734,10 @@
           "bytes": 24251
         },
         "slides/02-cfs-key-features/log-faithful.md": {
-          "bytes": 7112
+          "bytes": 7114
         },
         "slides/02-cfs-key-features/log-revised.md": {
-          "bytes": 8327
+          "bytes": 8329
         },
         "slides/02-cfs-key-features/overlay.png": {
           "bytes": 253379,
@@ -761,7 +761,7 @@
           "height": 720
         }
       },
-      "commit": "a25ad20a0aa8",
+      "commit": "e93a8fbec1e8",
       "dirty": false
     },
     {
@@ -783,7 +783,7 @@
           "Critical Thinking",
           "Microsoft PowerPoint"
         ],
-        "howMade": "Claude Code agents rebuilt NASA’s layer diagram and drew the other views as editable PowerPoint from NASA’s public documents, and drafted the logs, the brief and the glossary. I chose the sources, set the rules each view follows, and checked every slide, quote and log before publishing.",
+        "howMade": "Claude Code agents rebuilt NASA’s layer diagram and drew the other views as editable PowerPoint from NASA’s public documents, and drafted the logs, the brief and the glossary. I approved the sources and the rules each view follows, and checked every slide, quote and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
@@ -1308,7 +1308,7 @@
           "height": 720
         }
       },
-      "commit": "de93d76417c9",
+      "commit": "f9e5ef6efe4d",
       "dirty": false
     },
     {
@@ -1330,7 +1330,7 @@
           "Technical Documentation",
           "Software Engineering"
         ],
-        "howMade": "Claude Code agents rebuilt this GAO figure from the source image as editable PowerPoint and drafted the logs. I chose the source, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "howMade": "Claude Code agents rebuilt this GAO figure from the source image as editable PowerPoint and drafted the logs. I approved the source and the rules each rebuild follows, and checked every slide, number and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
@@ -1719,10 +1719,10 @@
           "bytes": 25631
         },
         "slides/figure1/log-faithful.md": {
-          "bytes": 9045
+          "bytes": 9047
         },
         "slides/figure1/log-redesign.md": {
-          "bytes": 10005
+          "bytes": 10007
         },
         "slides/figure1/overlay.png": {
           "bytes": 205754,
@@ -1746,7 +1746,7 @@
           "height": 720
         }
       },
-      "commit": "ba1daa769dc2",
+      "commit": "00ff2a8a907b",
       "dirty": false
     }
   ]

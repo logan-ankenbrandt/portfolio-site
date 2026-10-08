@@ -8,7 +8,7 @@ Source: Ashok Prajapati, NASA Goddard Space Flight Center, 2024. NASA Technical 
 
 Files: `revised.pptx`, `revised.pdf`, `revised.png`.
 
-How this was made: Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.
+How this was made: Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I approved the sources and the rules each rebuild follows, and checked every slide, number and log before publishing.
 
 ## Changed
 

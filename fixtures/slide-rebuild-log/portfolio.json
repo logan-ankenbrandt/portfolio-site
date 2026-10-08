@@ -14,7 +14,7 @@
     "Microsoft PowerPoint",
     "Attention to Detail"
   ],
-  "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+  "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I approved the sources and the rules each rebuild follows, and checked every slide, number and log before publishing.",
   "cover": "renders/cover.png",
   "items": [
     {

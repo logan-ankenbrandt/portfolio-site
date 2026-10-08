@@ -16,7 +16,7 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
    review replaced it. A passive alternative: "Technical slides rebuilt as editable PowerPoint: clear
    charts, architecture diagrams and a log for every change."
 2. The how-made note (`howMade`) reads: "Claude Code agents rebuilt these slides from the source
-   images as editable PowerPoint, drafted the logs and built this site. I chose the sources, set the
+   images as editable PowerPoint, drafted the logs and built this site. I approved the sources and the
    rules each rebuild follows, and checked every slide, number and log before publishing." The last
    clause is a claim about you. Do the checking first, or change the clause.
 3. The four rules (`rules`) under "How this was made" restate the rules the project agents were given:
@@ -35,8 +35,8 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
 
 ## 2. The real sync, and what to check in it
 
-`npm run sync` read `../slide-rebuild-log` (commit a25ad20), `../architecture-three-ways` (commit
-de93d76) and `../chart-rebuilds` (commit ba1daa7), all clean. All three passed the contract, the file
+`npm run sync` read `../slide-rebuild-log` (commit e93a8fb), `../architecture-three-ways` (commit
+f9e5ef6) and `../chart-rebuilds` (commit 00ff2a8), all clean. All three passed the contract, the file
 checks and the private-term check with no warnings: 4, 3 and 2 items, 57 files in all. The project
 agents reported slide-rebuild-log and architecture-three-ways as ready with caveats and chart-rebuilds
 as ready (their caveats are in section 5). The sync still fails with a full list if any

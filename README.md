@@ -10,7 +10,7 @@ shows three slide reconstruction projects, each in its own repo:
 ## How this was made
 
 Claude Code agents built this site and its sync and check scripts, and rebuilt the slides and drafted
-the logs in the project repos. I chose the sources, set the rules each rebuild follows, and checked
+the logs in the project repos. I approved the sources and the rules each rebuild follows, and checked
 every slide, number and log before publishing.
 
 ## How it works

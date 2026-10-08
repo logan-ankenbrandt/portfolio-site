@@ -3,6 +3,7 @@
 # macOS, headless Chrome. Serve the export first in another terminal: npm run build && npm run preview
 # Usage: bash scripts/screenshots.sh [outdir] [path ...]
 #   BASE=http://127.0.0.1:4173 bash scripts/screenshots.sh scratch/screenshots / /projects/slide-rebuild-log/
+# Long pages: raise the capture heights with H390 and H1280 (defaults 15000 and 10000 px).
 set -euo pipefail
 
 BASE="${BASE:-http://127.0.0.1:4173}"
@@ -56,6 +57,6 @@ shoot() {
 for path in "${PATHS[@]}"; do
   name="$(echo "$path" | sed -e 's#^/##' -e 's#/$##' -e 's#/#-#g')"
   name="${name:-home}"
-  shoot "$BASE$path" 390 15000 "$OUT/$name-390.png"
-  shoot "$BASE$path" 1280 10000 "$OUT/$name-1280.png"
+  shoot "$BASE$path" 390 "${H390:-15000}" "$OUT/$name-390.png"
+  shoot "$BASE$path" 1280 "${H1280:-10000}" "$OUT/$name-1280.png"
 done

@@ -3,12 +3,9 @@
 Source for [logan-ankenbrandt.vercel.app](https://logan-ankenbrandt.vercel.app), a static site that
 shows three slide reconstruction projects, each in its own repo:
 
-- [slide-rebuild-log](https://github.com/logan-ankenbrandt/slide-rebuild-log): public NASA slides rebuilt
-  as editable PowerPoint, faithful and revised, with a log for every slide.
-- [architecture-three-ways](https://github.com/logan-ankenbrandt/architecture-three-ways): one system
-  architecture as an executive slide, an engineer slide and a one-page brief.
-- [chart-rebuilds](https://github.com/logan-ankenbrandt/chart-rebuilds): a public GAO chart rebuilt as a
-  native PowerPoint chart, then redesigned.
+- [slide-rebuild-log](https://github.com/logan-ankenbrandt/slide-rebuild-log): Two public NASA slides rebuilt as editable PowerPoint, each once faithfully and once revised, with a log of every change, every rejected change and every number check.
+- [architecture-three-ways](https://github.com/logan-ankenbrandt/architecture-three-ways): NASA’s layered flight software framework, documented from NASA’s public slides and training memo as an executive slide, an engineer slide and a one-page brief, with every quote cited to its page.
+- [chart-rebuilds](https://github.com/logan-ankenbrandt/chart-rebuilds): A dense GAO chart, 24 agencies with every value printed, rebuilt as a native PowerPoint chart, checked against its own printed totals, then redesigned around its one finding.
 
 ## How this was made
 
@@ -52,10 +49,11 @@ content on Vercel or CI.
 | `npm run preview` | Serve `out/` at http://127.0.0.1:4173. |
 | `node scripts/check-browser.mjs` | Headless Chrome checks against the preview: no horizontal scroll at 390 px, alt text, every image and download served, tabs and overlay toggle by mouse and keyboard. |
 | `bash scripts/screenshots.sh` | Full-page screenshots at 390 and 1280 px into `scratch/screenshots/`. |
+| `node scripts/screenshots-long.mjs [outdir] [path ...]` | Screenshots of long pages (the project pages) at 390 and 1280 px, cut into segments of at most 2000 px. |
 | `node scripts/make-brand-assets.mjs` | Redraw the Open Graph card and icons in `app/`. |
 | `node scripts/make-fixtures.mjs` | Regenerate the placeholder fixtures (needs `npm install --no-save pptxgenjs@4.0.1`). |
 
-The last four scripts expect macOS with Google Chrome and ImageMagick installed.
+The last five scripts expect macOS with Google Chrome and ImageMagick installed.
 
 ## Layout
 

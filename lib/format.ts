@@ -51,7 +51,7 @@ export function fileName(rel: string): string {
 export function sourceAlt(item: Item): string {
   const s = item.source;
   if (!s) return '';
-  return `Source slide, before the rebuild: "${s.title}" (${s.page}), ${s.credit}.`;
+  return `Source, before the rebuild: "${s.title}" (${s.page}), ${s.credit}.`;
 }
 
 export function afterAlt(item: Item): string {

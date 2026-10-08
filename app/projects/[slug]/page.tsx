@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 function groupHeading(items: Item[]): { eyebrow: string; title: string } {
   const first = items[0];
   return first.source
-    ? { eyebrow: 'Source slide', title: first.source.title }
+    ? { eyebrow: 'Source', title: first.source.title }
     : { eyebrow: 'New page', title: KIND_LABEL[first.kind] };
 }
 

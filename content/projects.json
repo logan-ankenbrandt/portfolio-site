@@ -1443,7 +1443,7 @@
                 },
                 {
                   "what": "No step in this build opened the file in Microsoft PowerPoint.",
-                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application and say Claude Code agents generated it (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
+                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
                 }
               ],
               "checks": [
@@ -1473,7 +1473,7 @@
                 },
                 {
                   "what": "Inspector (python-pptx) on faithful.pptx",
-                  "result": "22 of 22 checks pass: one native 100% stacked bar chart, chart values and embedded workbook equal to the CSV, table equal to the CSV with a frame as tall as its 24 rows, outside labels, no pictures, Arial only (theme fonts too), footer present, file properties that name PptxGenJS and Claude Code. A test builds broken decks and each one fails."
+                  "result": "22 of 22 checks pass: one native 100% stacked bar chart, chart values and embedded workbook equal to the CSV, table equal to the CSV with a frame as tall as its 24 rows, outside labels, no pictures, Arial only (theme fonts too), footer present, file properties that name PptxGenJS. A test builds broken decks and each one fails."
                 },
                 {
                   "what": "Overlay on the published figure",
@@ -1617,7 +1617,7 @@
                 },
                 {
                   "what": "No step in this build opened the file in Microsoft PowerPoint.",
-                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application and say Claude Code agents generated it (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
+                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
                 }
               ],
               "checks": [
@@ -1647,7 +1647,7 @@
                 },
                 {
                   "what": "Inspector (python-pptx) on redesign.pptx",
-                  "result": "17 of 17 checks pass: one native bar chart, values and embedded workbook equal to the CSV, labels only on the extremes, no pictures, Arial only (theme fonts too), footer present, no dash characters or banned words, file properties that name PptxGenJS and Claude Code."
+                  "result": "17 of 17 checks pass: one native bar chart, values and embedded workbook equal to the CSV, labels only on the extremes, no pictures, Arial only (theme fonts too), footer present, no dash characters or banned words, file properties that name PptxGenJS."
                 },
                 {
                   "what": "Render review",
@@ -1719,10 +1719,10 @@
           "bytes": 25631
         },
         "slides/figure1/log-faithful.md": {
-          "bytes": 9047
+          "bytes": 8991
         },
         "slides/figure1/log-redesign.md": {
-          "bytes": 10007
+          "bytes": 9951
         },
         "slides/figure1/overlay.png": {
           "bytes": 205754,
@@ -1746,7 +1746,7 @@
           "height": 720
         }
       },
-      "commit": "00ff2a8a907b",
+      "commit": "0c7bcf49a908",
       "dirty": false
     }
   ]

@@ -117,7 +117,7 @@ git commit -m "Sync project content"
 Push the three project repos before the hub, so the repo links on the site resolve. Then the hub:
 
 ```sh
-gh repo create logan-ankenbrandt/portfolio --public --source=. --remote=origin \
+gh repo create logan-ankenbrandt/portfolio-site --public --source=. --remote=origin \
   --description "Slide reconstruction portfolio: static site for three case studies"
 git push -u origin main
 ```

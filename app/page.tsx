@@ -2,13 +2,14 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 import { BeforeAfter } from '@/components/before-after';
+import { CreditText } from '@/components/credit-text';
 import { LogExcerpt } from '@/components/log-view';
 import { ProjectCard } from '@/components/project-card';
 import { SkillsMatrix } from '@/components/skills-matrix';
 import { creditsByProject, getContent, getHero, image, itemUrl } from '@/lib/content';
 import { buildEvidence } from '@/lib/evidence';
 import { KIND_LABEL, afterAlt, overlayAlt, sourceAlt } from '@/lib/format';
-import { site } from '@/lib/site';
+import { notAffiliatedFor, site } from '@/lib/site';
 
 const COUNT_WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
 
@@ -32,6 +33,12 @@ export default function HomePage() {
   const hero = getHero(content);
   const rows = buildEvidence(content);
   const credits = creditsByProject(content);
+  // The faithful rebuild of the hero's source slide: the evidence for accurate reconstruction.
+  const faithful = hero
+    ? hero.project.portfolio.items.find(
+        (i) => i.id !== hero.item.id && i.group === hero.item.group && (i.kind === 'faithful' || i.kind === 'chart-faithful'),
+      )
+    : undefined;
 
   return (
     <main id="main" className="mx-auto max-w-6xl px-4 sm:px-8">
@@ -58,10 +65,9 @@ export default function HomePage() {
           <h2 id="featured" className="mt-3 max-w-4xl text-[26px] leading-tight font-semibold tracking-tight sm:text-[32px] lg:mt-1.5 lg:max-w-none lg:text-2xl">
             {hero.item.title}
           </h2>
-          {/* At 1280 x 800 the name, the positioning line, both images and the first log lines fit on the first screen,
-              so the summary follows the log there. */}
-          <p className="mt-3 max-w-3xl text-muted lg:hidden">{hero.item.summary}</p>
-          <div className="mt-7 lg:mt-4">
+          {/* The summary follows the log at every width, so the images reach the first screen on a phone and
+              at 1280 x 800 the name, the positioning line, both images and the log lines fit on the first screen. */}
+          <div className="mt-6 lg:mt-4">
             <BeforeAfter
               eager
               before={image(hero.project, hero.item.source!.image, sourceAlt(hero.item))}
@@ -71,11 +77,20 @@ export default function HomePage() {
               afterNote={hero.item.after.pptx ? 'editable PowerPoint' : KIND_LABEL[hero.item.kind].toLowerCase()}
             />
           </div>
+          {faithful ? (
+            <p className="mt-4 text-[15px] lg:mt-2">
+              <Link href={itemUrl(hero.project.portfolio.slug, faithful.id)} className="link font-medium">
+                {faithful.overlay
+                  ? 'Faithful rebuild of the same slide, with its overlay on the source'
+                  : 'Faithful rebuild of the same slide'}
+              </Link>
+            </p>
+          ) : null}
           <div className="mt-10 lg:mt-4">
             <h3 className="sr-only">From the log</h3>
             <LogExcerpt log={hero.item.log} />
           </div>
-          <p className="mt-8 hidden max-w-3xl text-muted lg:block">{hero.item.summary}</p>
+          <p className="mt-8 max-w-3xl text-muted">{hero.item.summary}</p>
           <p className="mt-8 text-[15px] lg:mt-4">
             <Link href={itemUrl(hero.project.portfolio.slug, hero.item.id)} className="link font-medium">
               {hero.item.after.pptx ? 'See the full log and download the PowerPoint' : 'See the full log'}
@@ -136,14 +151,14 @@ export default function HomePage() {
               <ul className="mt-3 space-y-3 text-[15px] leading-snug">
                 {group.credits.map((credit) => (
                   <li key={credit} className="border-l-2 border-rule pl-4">
-                    {credit}
+                    <CreditText text={credit} />
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <p className="mt-8 font-semibold">{site.notAffiliated}</p>
+        <p className="mt-8 font-semibold">{notAffiliatedFor(credits.flatMap((g) => g.credits))}</p>
       </section>
     </main>
   );

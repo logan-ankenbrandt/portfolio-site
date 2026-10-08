@@ -9,15 +9,12 @@ through the items below, then run the commands in the last section yourself.
 
 All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the page files.
 
-1. The positioning line is a **DRAFT**. Current text: "I rebuild technical slides as editable
+1. The positioning line is a **DRAFT**. Current text: "I direct and check slide rebuilds in editable
    PowerPoint: clear charts, architecture diagrams and a log for every change." It sits under your
-   name on the home page and on the one-pager. "I rebuild" can read as rebuilt by hand, while agents
-   did the rebuilds. The "How this was made" section on the same page says so plainly. If the first
-   line should not lean on that, two alternatives:
-   - "Technical slides rebuilt as editable PowerPoint: clear charts, architecture diagrams and a log
-     for every change."
-   - "I direct and check slide rebuilds in editable PowerPoint: clear charts, architecture diagrams
-     and a log for every change."
+   name on the home page and on the one-pager. The earlier draft, "I rebuild technical slides as
+   editable PowerPoint", implied you built the slides, which the honesty rule forbids, so the final
+   review replaced it. A passive alternative: "Technical slides rebuilt as editable PowerPoint: clear
+   charts, architecture diagrams and a log for every change."
 2. The how-made note (`howMade`) reads: "Claude Code agents rebuilt these slides from the source
    images as editable PowerPoint, drafted the logs and built this site. I chose the sources, set the
    rules each rebuild follows, and checked every slide, number and log before publishing." The last
@@ -32,10 +29,8 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
    with `node scripts/make-brand-assets.mjs` after any text change.
 5. The section headings in `app/page.tsx` are "Three case studies" (the number follows the project
    count), "Each skill, with a slide or log that shows it", "How this was made" and "Credits".
-6. The three project lines in `README.md` are now each project's `oneLiner`. The project titles
-   differ in style: "Chart Rebuilds: GAO's federal IT spending chart" uses title case and a straight
-   apostrophe, while the other two use sentence case and NASA’s with a curly apostrophe. The titles
-   live in each project's `portfolio.json`, so a change there needs a new sync.
+6. The three project lines in `README.md` are each project's `oneLiner`. All three project titles
+   now use sentence case and a curly apostrophe ("Chart rebuilds: GAO’s federal IT spending chart").
 7. The only contact on the site is github.com/logan-ankenbrandt. There is no email or resume link.
 
 ## 2. The real sync, and what to check in it
@@ -52,9 +47,9 @@ Read these on the built site:
 
 - The hero is the first item in slide-rebuild-log's `items` that has a source image: the revised
   "cFS has been used on 40+ NASA projects historically, about half of them at Goddard". The four log
-  lines under it are the first changed, kept, rejected and flagged entries. The kept line reads
-  '"40+", "historically", "likely" and "dominant" as the source words them.' Reword it in the
-  project log if "words" as a verb reads oddly.
+  lines under it are the first changed, kept, rejected and flagged entries. The kept line now reads
+  '"40+", "historically", "likely" and "dominant" exactly as the source phrases them.' A link under
+  the hero images opens the faithful rebuild of the same slide with its overlay.
 - The skills matrix picks one item per skill and project, by item kind and then keywords. The build
   printed no `matrix:` warning. Two cells read "Not in this project" because those projects do not list
   the skill: Data Visualization for architecture-three-ways and System Architecture for chart-rebuilds.
@@ -62,10 +57,12 @@ Read these on the built site:
   2015 layer diagram). Pin a different pick in `EVIDENCE_OVERRIDES` in `lib/site.ts` if you prefer.
 - Credits on the home page are now grouped under each project's title. The projects cite the same
   NASA decks in their own words, so merging lines would have shown near-duplicates side by side.
-- "Not affiliated with or endorsed by NASA, GAO or NIST." prints on every page. NIST appears only in
-  chart-rebuilds, so the line is broader than any single project page needs. It stays true as written.
-- Alt text comes from each item's kind, title, summary and source fields (`lib/format.ts`). Read it
-  once in the page source.
+- The not-affiliated line names only the agencies a page credits: "NASA or GAO" on the home page and
+  the one-pager, "NASA" on the two NASA project pages and "GAO" on chart-rebuilds
+  (`notAffiliatedFor` in `lib/site.ts`). No project uses a NIST source, so NIST is gone.
+- Alt text comes from each item's kind, title, summary and source fields (`lib/format.ts`). Source
+  images also get a one-sentence description of what they show, from `SOURCE_DESCRIPTIONS` in
+  `lib/site.ts`. Read both once in the page source.
 - Look at every source image on the project pages. In the screenshots no NASA insignia, GSFC banner,
   cFS logo or GAO logo is visible, and the published 2015 slide 8 copies are the masked ones.
 
@@ -157,14 +154,17 @@ slide-rebuild-log (ready with caveats):
   rounding, so they do not update after Edit Data. Logged.
 - Two revised slides use labels under 14 pt (11 pt and 12 pt), logged as exceptions. Nothing is under
   10 pt.
-- Confirm the center names in the 01 revised slide against NTRS 20230002444 slide 13.
+- The center names in the 01 revised slide match NTRS 20230002444 slide 13 word for word (checked in
+  the final review).
 - `src/lib.js` still exports an unused `chartLabelPatch`. It was left in place pending your call.
 
 architecture-three-ways (ready with caveats):
 
-- Git history in that repo still contains private names in commits 41c8367 through 32a6fe4. The
-  current files and the synced content are clean (the sync's private-term check passed). Rewrite or
-  squash that history before pushing. The project's report has the exact commands.
+- The private names in that repo's history were removed from `main` with `git filter-branch`: the
+  one regex line in `src/check_writing.py` became `NEVER = []` in every commit from 41c8367 on, and
+  the final tree is byte-identical (tree 9b91d27). The old commits are still reachable from the backup
+  ref `refs/original/refs/heads/main`. Delete that ref before any push (REVIEW-PACKET.md section 7
+  has the commands), and push `main` only, never `--mirror`.
 - Two sources come from outside the shared NTRS set: the nasa/cFS README and the cFE Application
   Developers Guide (Apache 2.0, committed unmodified with digests). Approve them, or every claim that
   cites them comes out of the brief and logs.

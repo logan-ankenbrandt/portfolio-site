@@ -30,6 +30,7 @@ export function ItemBlock({ project, item }: { project: SyncedProject; item: Ite
           overlay={overlay}
           beforeNote="source image"
           afterNote={KIND_LABEL[item.kind].toLowerCase()}
+          fullSizeProminent={item.kind === 'chart-faithful'}
         />
       </div>
 

@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { CreditText } from '@/components/credit-text';
 import { DownloadList } from '@/components/download-list';
 import { ItemBlock } from '@/components/item-block';
 import { SkillChips } from '@/components/skill-chips';
 import { fileUrl, getContent, getProject, groupItems, projectUrl, type Item } from '@/lib/content';
 import { KIND_LABEL } from '@/lib/format';
 import { pageMetadata } from '@/lib/metadata';
-import { site } from '@/lib/site';
+import { notAffiliatedFor } from '@/lib/site';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -149,11 +150,11 @@ export default async function ProjectPage({ params }: Params) {
         <ul className="mt-6 max-w-4xl space-y-3 text-[15px] leading-snug">
           {p.credits.map((credit) => (
             <li key={credit} className="border-l-2 border-rule pl-4">
-              {credit}
+              <CreditText text={credit} />
             </li>
           ))}
         </ul>
-        <p className="mt-6 font-semibold">{site.notAffiliated}</p>
+        <p className="mt-6 font-semibold">{notAffiliatedFor(p.credits)}</p>
         <p className="mt-2 text-[15px]">
           <a href={p.repo} className="link">
             Code, files and logs on GitHub

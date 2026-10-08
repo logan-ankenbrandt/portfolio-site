@@ -1,4 +1,5 @@
 import type { Item, Kind, Portfolio } from './content';
+import { SOURCE_DESCRIPTIONS } from './site';
 
 export const KIND_LABEL: Record<Kind, string> = {
   faithful: 'Faithful rebuild',
@@ -51,7 +52,11 @@ export function fileName(rel: string): string {
 export function sourceAlt(item: Item): string {
   const s = item.source;
   if (!s) return '';
-  return `Source, before the rebuild: "${s.title}" (${s.page}), ${s.credit}.`;
+  const credit = s.credit.replace(/\.$/, '');
+  const description = SOURCE_DESCRIPTIONS[s.image];
+  return description
+    ? `${description} Before the rebuild. From "${s.title}" (${s.page}), ${credit}.`
+    : `Source, before the rebuild: "${s.title}" (${s.page}), ${credit}.`;
 }
 
 export function afterAlt(item: Item): string {

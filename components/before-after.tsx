@@ -15,9 +15,25 @@ type Props = {
   afterNote?: string;
   /** Load eagerly (the home page hero is above the fold). */
   eager?: boolean;
+  /** Below md, show "Full size" as a button: for figures whose values cannot be read at phone width. */
+  fullSizeProminent?: boolean;
 };
 
-function Figure({ img, label, note, eager, children }: { img: Img; label: string; note?: string; eager?: boolean; children?: ReactNode }) {
+function Figure({
+  img,
+  label,
+  note,
+  eager,
+  prominent,
+  children,
+}: {
+  img: Img;
+  label: string;
+  note?: string;
+  eager?: boolean;
+  prominent?: boolean;
+  children?: ReactNode;
+}) {
   return (
     <figure className="m-0">
       {/* Plain img with width and height: the site is a static export with no image optimization. */}
@@ -38,9 +54,22 @@ function Figure({ img, label, note, eager, children }: { img: Img; label: string
         </span>
         <span className="flex flex-wrap items-center gap-x-4 gap-y-2 md:shrink-0">
           {children}
-          <a href={img.src} target="_blank" rel="noopener" className="link">
-            Full size<span className="sr-only"> image: {label}</span>
-          </a>
+          {prominent ? (
+            <a
+              href={img.src}
+              target="_blank"
+              rel="noopener"
+              className="link max-md:inline-flex max-md:rounded-full max-md:border max-md:border-accent max-md:px-3 max-md:py-1 max-md:font-medium max-md:no-underline"
+            >
+              <span className="md:hidden">Open full size to read the values</span>
+              <span className="hidden md:inline">Full size</span>
+              <span className="sr-only"> image: {label}</span>
+            </a>
+          ) : (
+            <a href={img.src} target="_blank" rel="noopener" className="link">
+              Full size<span className="sr-only"> image: {label}</span>
+            </a>
+          )}
         </span>
       </figcaption>
     </figure>
@@ -52,7 +81,7 @@ function Figure({ img, label, note, eager, children }: { img: Img; label: string
  * Columns are sized by each image's aspect ratio so both images render at the same height.
  * When an overlay exists, a toggle swaps the after image for the overlay.
  */
-export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNote, eager }: Props) {
+export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNote, eager, fullSizeProminent }: Props) {
   const id = useId();
   const [side, setSide] = useState<Side>('after');
   const [showOverlay, setShowOverlay] = useState(false);
@@ -81,7 +110,7 @@ export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNo
     // A lone image would fill the whole column, so it gets the width of one side of a pair at most.
     return (
       <div className="max-w-3xl">
-        <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager}>
+        <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager} prominent={fullSizeProminent}>
           {toggle}
         </Figure>
       </div>
@@ -110,7 +139,7 @@ export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNo
 
   return (
     <div>
-      <div role="tablist" aria-label="Compare before and after" className="mb-4 inline-flex rounded-full border border-rule-strong p-1 md:hidden">
+      <div role="tablist" aria-label="Compare before and after" className="mb-4 inline-flex rounded-full border border-muted p-1 md:hidden">
         {SIDES.map((s, i) => (
           <button
             key={s}
@@ -138,7 +167,7 @@ export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNo
           aria-labelledby={`${id}-tab-before`}
           className={side === 'before' ? 'block' : 'hidden md:block'}
         >
-          <Figure img={before} label="Before" note={beforeNote} eager={eager} />
+          <Figure img={before} label="Before" note={beforeNote} eager={eager} prominent={fullSizeProminent} />
         </div>
         <div
           role="tabpanel"
@@ -146,7 +175,7 @@ export function BeforeAfter({ before, after, overlay = null, beforeNote, afterNo
           aria-labelledby={`${id}-tab-after`}
           className={side === 'after' ? 'block' : 'hidden md:block'}
         >
-          <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager}>
+          <Figure img={shown} label={afterLabel} note={afterCaption} eager={eager} prominent={fullSizeProminent}>
             {toggle}
           </Figure>
         </div>

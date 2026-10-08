@@ -76,4 +76,4 @@ Code: MIT ([LICENSE](LICENSE)). Site text and brand images: CC BY 4.0
 ([LICENSE-content](LICENSE-content)). Synced project content keeps the license of its repo. The source
 slides and figures are US government works, credited on the site and in each project's CREDITS.md.
 
-Not affiliated with or endorsed by NASA, GAO or NIST.
+Not affiliated with or endorsed by NASA or GAO.

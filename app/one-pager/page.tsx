@@ -4,7 +4,26 @@ import { PrintButton } from '@/components/print-button';
 import { getContent, image, projectUrl } from '@/lib/content';
 import { coverAlt } from '@/lib/format';
 import { pageMetadata } from '@/lib/metadata';
-import { site } from '@/lib/site';
+import { notAffiliatedFor, site } from '@/lib/site';
+
+/** A URL as text that may break only after a slash, so it never splits a word on a phone. */
+function BreakableUrl({ text }: { text: string }) {
+  const parts = text.split('/');
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 ? (
+            <>
+              /<wbr />
+            </>
+          ) : null}
+        </span>
+      ))}
+    </>
+  );
+}
 
 export const metadata: Metadata = pageMetadata({
   title: 'One-page summary',
@@ -26,7 +45,7 @@ export default function OnePager() {
       <header className="border-b-2 border-ink pb-4">
         <h1 className="text-[32px] leading-tight font-semibold tracking-tight print:text-[24pt]">{site.name}</h1>
         <p className="mt-2 leading-snug print:text-[11pt]">{site.positioning}</p>
-        <p className="mt-2 font-mono text-[13px] break-all text-muted print:text-[9pt]">
+        <p className="mt-2 font-mono text-[13px] [overflow-wrap:anywhere] text-muted print:text-[9pt]">
           {host} &middot; github.com/logan-ankenbrandt
         </p>
       </header>
@@ -48,12 +67,11 @@ export default function OnePager() {
                 <h2 className="text-lg leading-snug font-semibold print:text-[13pt]">{p.title}</h2>
                 <p className="mt-1 text-[15px] leading-snug print:text-[10.5pt]">{p.oneLiner}</p>
                 <p className="mt-1 text-[15px] leading-snug text-muted print:text-[10pt]">Shows: {p.skills.join(', ')}</p>
-                <p className="mt-2 font-mono text-[13px] leading-snug break-all print:text-[9pt]">
-                  {host}
-                  {projectUrl(p.slug)}
+                <p className="mt-2 font-mono text-[13px] leading-snug [overflow-wrap:anywhere] print:text-[9pt]">
+                  <BreakableUrl text={`${host}${projectUrl(p.slug)}`} />
                 </p>
-                <p className="font-mono text-[13px] leading-snug break-all text-muted print:text-[9pt]">
-                  {p.repo.replace('https://', '')}
+                <p className="font-mono text-[13px] leading-snug [overflow-wrap:anywhere] text-muted print:text-[9pt]">
+                  <BreakableUrl text={p.repo.replace('https://', '')} />
                 </p>
               </div>
             </li>
@@ -63,7 +81,7 @@ export default function OnePager() {
 
       <footer className="mt-8 border-t border-rule pt-3 text-[13px] leading-snug text-muted print:text-[9pt]">
         <p>{site.howMade}</p>
-        <p className="mt-1">{site.notAffiliated}</p>
+        <p className="mt-1">{notAffiliatedFor(projects.flatMap((project) => project.portfolio.credits))}</p>
       </footer>
     </main>
   );

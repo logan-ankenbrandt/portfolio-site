@@ -5,9 +5,9 @@ export const site = {
   title: 'Logan Ankenbrandt | Slide reconstruction portfolio',
   description:
     'Public government slides and charts rebuilt as editable PowerPoint, each with a log of what changed, what was kept, what was rejected and what was flagged for the author.',
-  // DRAFT: Logan approves or rewrites this line (REVIEW.md, item 1).
+  // DRAFT: Logan approves or rewrites this line (REVIEW.md, item 1). Agents build the slides, so it must not say he does.
   positioning:
-    'I rebuild technical slides as editable PowerPoint: clear charts, architecture diagrams and a log for every change.',
+    'I direct and check slide rebuilds in editable PowerPoint: clear charts, architecture diagrams and a log for every change.',
   url: 'https://logan-ankenbrandt.vercel.app',
   github: 'https://github.com/logan-ankenbrandt',
   howMade:
@@ -18,10 +18,37 @@ export const site = {
     'Revised slides carry one message under a title that states the point, and keep the source\u2019s definitions, caveats and hedges, such as \u201chistorically\u201d and \u201cabout\u201d.',
     'Each log lists what changed, what was kept on purpose, what was considered and rejected, and what was flagged for the author instead of fixed.',
   ],
-  notAffiliated: 'Not affiliated with or endorsed by NASA, GAO or NIST.',
+  notAffiliated: 'Not affiliated with or endorsed by NASA or GAO.',
   licenses:
     'Code is MIT licensed. The rebuilt slides, logs and site text are CC BY 4.0. The source slides and figures are US government works.',
 } as const;
+
+/** The agencies whose work appears on the site, matched against credit lines. */
+const AGENCIES: [name: string, pattern: RegExp][] = [
+  ['NASA', /\bNASA\b/],
+  ['GAO', /\bGAO\b|Government Accountability Office/],
+];
+
+/** The not-affiliated line for a page, naming only the agencies its credits name. */
+export function notAffiliatedFor(credits: readonly string[]): string {
+  const names = AGENCIES.filter(([, re]) => credits.some((c) => re.test(c))).map(([name]) => name);
+  return names.length ? `Not affiliated with or endorsed by ${names.join(' or ')}.` : site.notAffiliated;
+}
+
+/**
+ * What each source image shows, for its alt text, keyed by the image path in the project's portfolio.json.
+ * A source without an entry gets a citation-only alt text.
+ */
+export const SOURCE_DESCRIPTIONS: Record<string, string> = {
+  'slides/01-cfs-usage/source.png':
+    'Source slide \u201ccFS Usage and Impact At NASA\u201d: three 3D pie charts of cFS applications by NASA center, by mission directorate and by segment, with a caption box under each.',
+  'slides/02-cfs-key-features/source.png':
+    'Source slide \u201ccFS Key Features\u201d: three bullets above a layered block diagram of cFS, from apps at the top to the real-time OS and boot software at the bottom, colored by a four-entry status legend, with red ellipses around the mission-built parts.',
+  'slides/01-layers/source.png':
+    'Source slide \u201ccFS Key Features\u201d: three bullets above a layered block diagram of cFS, from apps at the top to the real-time OS and boot software at the bottom, colored by a four-entry status legend, with red ellipses around the mission-built parts.',
+  'slides/figure1/source.png':
+    'Source figure: one horizontal bar per agency for 24 agencies\u2019 planned fiscal year 2025 IT spending, each bar split into the operations and maintenance share and the development, modernization and enhancement share, with the dollar total beside each agency name.',
+};
 
 /** The listing's skills that the home page matrix shows, and how a cell picks its evidence. */
 export type MatrixRule = {

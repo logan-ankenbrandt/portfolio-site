@@ -80,8 +80,7 @@ export default function OnePager() {
       </ol>
 
       <footer className="mt-8 border-t border-rule pt-3 text-[13px] leading-snug text-muted print:text-[9pt]">
-        <p>{site.howMade}</p>
-        <p className="mt-1">{notAffiliatedFor(projects.flatMap((project) => project.portfolio.credits))}</p>
+        <p>{notAffiliatedFor(projects.flatMap((project) => project.portfolio.credits))}</p>
       </footer>
     </main>
   );

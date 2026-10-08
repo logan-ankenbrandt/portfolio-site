@@ -74,13 +74,6 @@ export default async function ProjectPage({ params }: Params) {
         </dl>
       </header>
 
-      <section aria-labelledby="how-made" className="mt-10 max-w-4xl border-l-4 border-accent bg-panel px-5 py-4 sm:px-6">
-        <h2 id="how-made" className="eyebrow text-ink">
-          How this was made
-        </h2>
-        <p className="mt-2 leading-relaxed">{p.howMade}</p>
-      </section>
-
       <nav aria-labelledby="contents" className="mt-12">
         <h2 id="contents" className="eyebrow">
           On this page

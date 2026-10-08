@@ -16,11 +16,10 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
    editable PowerPoint", implied you built the slides, which the honesty rule forbids, so the final
    review replaced it. A passive alternative: "Technical slides rebuilt as editable PowerPoint: clear
    charts, architecture diagrams and a log for every change."
-2. The how-made note (`howMade`) reads: "Claude Code agents rebuilt these slides from the source
-   images as editable PowerPoint, drafted the logs and built this site. I approved the sources and the
-   rules each rebuild follows, and checked every slide, number and log before publishing." The last
-   clause is a claim about you. Do the checking first, or change the clause.
-3. The four rules (`rules`) under "How this was made" restate the rules the project agents were given:
+2. The how-made note (`howMade`) came off the site on 2026-10-08. The home page, the one-pager and
+   the project pages no longer say how the slides were made. The project READMEs and logs still carry
+   the note, and the sync still requires it in each project's `portfolio.json`.
+3. The four rules (`rules`) under "Method" on the home page restate the rules the project agents were given:
    numbers trace to the source, faithful rebuilds match the source, revised slides keep hedges and
    caveats, and logs list what changed, was kept, was rejected and was flagged. Confirm they match what
    the projects did.

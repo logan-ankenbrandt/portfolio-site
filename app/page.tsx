@@ -121,23 +121,17 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      <section id="how-made" aria-labelledby="how-made-title" className="mt-24 scroll-mt-6">
-        <SectionHeading id="how-made-title" eyebrow="Method">
-          How this was made
+      <section id="method" aria-labelledby="method-title" className="mt-24 scroll-mt-6">
+        <SectionHeading id="method-title" eyebrow="Method">
+          The rules each rebuild follows
         </SectionHeading>
-        <div className="mt-8 grid gap-x-12 gap-y-8 lg:grid-cols-2">
-          <p className="text-lg leading-relaxed">{site.howMade}</p>
-          <div>
-            <h3 className="font-semibold">The rules each rebuild follows</h3>
-            <ol className="mt-3 list-decimal space-y-2.5 pl-5 text-[15px] leading-snug marker:text-muted">
-              {site.rules.map((rule) => (
-                <li key={rule} className="pl-1">
-                  {rule}
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
+        <ol className="mt-8 max-w-3xl list-decimal space-y-2.5 pl-5 text-[15px] leading-snug marker:text-muted">
+          {site.rules.map((rule) => (
+            <li key={rule} className="pl-1">
+              {rule}
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section id="credits" aria-labelledby="credits-title" className="mt-24 scroll-mt-6">

@@ -1,0 +1,37 @@
+Number checks for slides/01-cfs-usage (source: NTRS 20240004389, page 5)
+Transcription: slides/01-cfs-usage/data.csv, read from page-05-200dpi.png
+
+[PASS] centers: counts total: 5 + 1 + 19 + 10 + 4 + 1 = 40
+[PASS] centers: printed percentages total: 12 + 2 + 48 + 25 + 10 + 3 = 100%
+    exact: ['NASA JSC 10/40 = 25% printed 25%', 'NASA LARC 4/40 = 10% printed 10%']
+    printed above the exact share: ['NASA GSFC 19/40 = 47.5% printed 48%', 'NASA MSFC 1/40 = 2.5% printed 3%']
+    printed below the exact share: ['NASA ARC 5/40 = 12.5% printed 12%', 'NASA GRC 1/40 = 2.5% printed 2%']
+    round half up would print a total of 102% (matches every label: False); round half to even would total 99% (matches every label: False)
+
+[PASS] directorates: counts total: 3 + 15 + 11 + 9 + 2 = 40
+[PASS] directorates: printed percentages total: 7 + 37 + 28 + 23 + 5 = 100%
+    exact: ['SOMD 2/40 = 5% printed 5%']
+    printed above the exact share: ['STMD 11/40 = 27.5% printed 28%', 'ESDMD 9/40 = 22.5% printed 23%']
+    printed below the exact share: ['ARMD 3/40 = 7.5% printed 7%', 'SMD 15/40 = 37.5% printed 37%']
+    round half up would print a total of 102% (matches every label: False); round half to even would total 101% (matches every label: False)
+
+[PASS] centers: one project shown as two different percentages: NASA GRC 1 project = 2%; NASA MSFC 1 project = 3% (1/40 = 2.5%)
+
+[PASS] segments: label count: 16 labels
+[PASS] segments: printed percentages total 103%: 4 + 5 + 4 + 7 + 28 + 2 + 2 + 28 + 2 + 2 + 4 + 2 + 7 + 2 + 2 + 2 = 103%
+    smallest total consistent with every printed segment label (round half up): 57 projects
+[PASS] segments: example counts for 57 projects reproduce every label: Aircraft 2 (3.51%), Architecture 3 (5.26%), Balloon 2 (3.51%), Instrument 4 (7.02%), Payload 16 (28.07%), Processor 1 (1.75%), Rover 1 (1.75%), Spacecraft 16 (28.07%), Robot 1 (1.75%), Telescope 1 (1.75%), Lander 2 (3.51%), Platform 1 (1.75%), Capsule 4 (7.02%), Launch Vehicle 1 (1.75%), Spacesuit 1 (1.75%), Unmanned Aircraft 1 (1.75%)
+    smallest total consistent with every printed segment label (either direction at exact halves): 57 projects
+[PASS] segments: example counts for 57 projects reproduce every label: Aircraft 2 (3.51%), Architecture 3 (5.26%), Balloon 2 (3.51%), Instrument 4 (7.02%), Payload 16 (28.07%), Processor 1 (1.75%), Rover 1 (1.75%), Spacecraft 16 (28.07%), Robot 1 (1.75%), Telescope 1 (1.75%), Lander 2 (3.51%), Platform 1 (1.75%), Capsule 4 (7.02%), Launch Vehicle 1 (1.75%), Spacesuit 1 (1.75%), Unmanned Aircraft 1 (1.75%)
+    note: the source prints no segment counts, so any base above is a lower bound, not a finding.
+
+[PASS] centers: categories in the 2024 pie: 6 (NASA ARC, NASA GRC, NASA GSFC, NASA JSC, NASA LARC, NASA MSFC); caption says 'cFS is used at 6 NASA Centers!'
+[PASS] 2023 deck slide 13 lists seven centers: 'In use at seven NASA centers:' then 7: ['Ames Research Center', 'Glenn Research Center', 'Goddard Space Flight Center', 'Johnson Space Center', 'Kennedy Space Center', 'Marshall Space Flight Center', 'Langley Research Center']
+    centers in the 2023 list but not in the 2024 pie: ['Kennedy Space Center']
+
+[PASS] faithful.pptx centers values match data.csv: 6 values
+[PASS] faithful.pptx directorates values match data.csv: 5 values
+[PASS] faithful.pptx segments values match data.csv: 16 values
+[PASS] revised.pptx centers values match data.csv: 6 values
+[PASS] revised.pptx directorates values match data.csv: 5 values
+[PASS] revised.pptx segments values match data.csv: 16 values

@@ -1,366 +1,804 @@
 {
-  "mode": "fixtures",
+  "mode": "repos",
   "projects": [
     {
       "portfolio": {
         "slug": "slide-rebuild-log",
-        "title": "PLACEHOLDER Slide rebuild log",
-        "oneLiner": "PLACEHOLDER one-liner. The real line says what the slide rebuild log project shows, in one sentence.",
+        "title": "Slide rebuild log",
+        "oneLiner": "Two public NASA slides rebuilt as editable PowerPoint, each once faithfully and once revised, with a log of every change, every rejected change and every number check.",
         "repo": "https://github.com/logan-ankenbrandt/slide-rebuild-log",
         "order": 1,
         "skills": [
+          "Microsoft PowerPoint",
           "Slide Reconstruction",
           "Presentation Design",
           "Data Visualization",
           "Visual Storytelling",
           "Content Editing",
+          "Critical Thinking",
+          "Attention to Detail",
+          "Written Communication",
           "Technical Documentation",
-          "Microsoft PowerPoint",
-          "Attention to Detail"
+          "System Architecture",
+          "Software Engineering"
         ],
         "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
-            "id": "01-usage-revised",
-            "group": "01-usage",
-            "title": "PLACEHOLDER revised slide whose title states the point in the source's own hedged terms",
+            "id": "01-cfs-usage-revised",
+            "group": "01-cfs-usage",
+            "title": "cFS has been used on 40+ NASA projects historically, about half of them at Goddard",
             "kind": "revised",
-            "summary": "PLACEHOLDER summary. The real summary says what this revised version changes and keeps, in one or two sentences.",
+            "summary": "Three 3D pies become three sorted bar charts under an action title in the source's own hedged terms, led by the centers chart that carries the title. Counts stay counts, the segment shares stay as printed, and a footnote says why those shares cannot be a split of the 40 projects.",
             "source": {
-              "image": "slides/01-usage/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "image": "slides/01-cfs-usage/source.png",
+              "title": "Evolution of Core Flight System (cFS)",
+              "credit": "Ashok Prajapati, NASA Goddard Space Flight Center, 2024. NASA Technical Reports Server 20240004389.",
+              "url": "https://ntrs.nasa.gov/citations/20240004389",
+              "license": "Work of the US Gov. Public Use Permitted.",
+              "page": "Slide 5 of 23, \"cFS Usage and Impact At NASA\""
             },
             "after": {
-              "image": "slides/01-usage/revised.png",
-              "pptx": "slides/01-usage/revised.pptx",
-              "pdf": "slides/01-usage/revised.pdf"
+              "image": "slides/01-cfs-usage/revised.png",
+              "pptx": "slides/01-cfs-usage/revised.pptx",
+              "pdf": "slides/01-cfs-usage/revised.pdf"
             },
             "overlay": null,
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "The topic title \"cFS Usage and Impact At NASA\" is now the action title \"cFS has been used on 40+ NASA projects historically, about half of them at Goddard\".",
+                  "why": "A reader gets the point from the title alone. \"40+\" and \"historically\" are the source's own hedges, and 19 of 40 projects at Goddard (47.5%) is about half."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "The three 3D pies are three sorted horizontal bar charts with direct value labels, no legend and no value axis.",
+                  "why": "Bars on a shared baseline compare more accurately than tilted pie slices, sorting puts the largest first, and labels on the bars remove the trip to a legend."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                  "what": "The centers chart takes the left column at 14 pt. The directorates and segments charts are smaller and stacked on the right, where they share one bar baseline.",
+                  "why": "The title is about the project count and Goddard, so its evidence gets the most room. The other two charts support it."
+                },
+                {
+                  "what": "The centers and directorates charts show project counts (n = 40). The segments chart shows the printed percentages.",
+                  "why": "The first two pies print counts that total 40. The segment pie prints only percentages, and no split of 40 projects gives them, so it keeps its own unit."
+                },
+                {
+                  "what": "The chart headings say \"Projects\" where the source's pie titles say \"CFS Applications\".",
+                  "why": "The center and directorate counts each total 40, and the source's caption says cFS is \"on 40+ projects historically\", so the slide reads the counted applications as projects. The segment chart keeps \"applications\" in its data name because its unit is unknown."
+                },
+                {
+                  "what": "Goddard's bar is orange and every other bar is blue.",
+                  "why": "One accent marks the bar the title is about."
+                },
+                {
+                  "what": "The segment bars are muted gray, under the heading \"Share by segment, as printed (labels total 103%)\".",
+                  "why": "Those shares cannot be read against the 40 projects (see the flags), so they are quieter than the counts, and the heading says so where the reader looks."
+                },
+                {
+                  "what": "Center abbreviations are spelled out with the abbreviation kept in parentheses, for example \"Goddard (GSFC)\". The directorates keep the abbreviations the source prints: SMD, STMD, ESDMD, ARMD and SOMD.",
+                  "why": "The center names match the list on NTRS 20230002444 slide 13. No source in this repo spells out the directorate names, so they stay as printed (see Rejected)."
+                },
+                {
+                  "what": "The yellow callout and the lilac footer banner are two gray notes in the left column, with their wording unchanged.",
+                  "why": "They are context, not data. Without the strong fills they no longer compete with the title."
+                },
+                {
+                  "what": "The captions are plain statements without the exclamation marks and the final period. The directorates caption, which holds the \"40+ projects\" claim, sits under the centers chart.",
+                  "why": "That caption is the source of the title's \"40+\" and \"historically\", so it sits with the title's evidence. The words are the source's."
+                },
+                {
+                  "what": "A footnote says the segment shares are as printed, total 103%, and could not come from 40 projects (the smallest total that fits is 57).",
+                  "why": "Without it a reader comparing the panels would assume the segment chart also counts the 40 projects."
+                },
+                {
+                  "what": "The two supporting charts use 11 pt labels, under the 14 pt body size.",
+                  "why": "That lets all 21 rows fit beside the main chart without dropping a segment. The main chart, captions and notes are 14 pt, and nothing on the slide is under 10 pt."
+                },
+                {
+                  "what": "The page is 13.333 x 7.5 in instead of 10 x 5.625 in, with a source line and the portfolio footer.",
+                  "why": "Same 16:9 shape at PowerPoint's default widescreen size, which leaves room for a 28 pt title and 14 pt body text inside 0.5 in margins."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "\"40+\", \"historically\", \"likely\" and \"dominant\" as the source words them.",
+                  "why": "They are the author's claims and hedges. The revision makes none of them stronger or weaker."
                 },
                 {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                  "what": "\"approved by HEO directorate\" in the ISwSIS note.",
+                  "why": "It is the author's wording. The mismatch with the ESDMD and SOMD names on the pie is flagged instead of edited."
+                },
+                {
+                  "what": "\"cFS is used at 6 NASA Centers\", although a 2023 NASA deck lists seven.",
+                  "why": "Changing it would mix two sources on one slide. The conflict is flagged for the author."
+                },
+                {
+                  "what": "All 16 segments, including the ten at 2%.",
+                  "why": "Grouping small segments into \"Other\" would change what the author chose to show."
+                },
+                {
+                  "what": "Every printed value.",
+                  "why": "Nothing on the slide is recomputed or rounded again."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                  "what": "Converting the segment percentages to project counts.",
+                  "why": "The source prints no counts for that pie and no split of 40 projects gives its labels, so any count would be invented."
                 },
                 {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "Scaling the segment percentages to total 100%.",
+                  "why": "That changes printed values without knowing the true counts."
+                },
+                {
+                  "what": "Flat 2D pies or one stacked bar per breakdown.",
+                  "why": "Six to sixteen slices with small differences are hard to compare by angle, and stacked segments share a baseline only at the ends."
+                },
+                {
+                  "what": "Adding Kennedy as a seventh center with zero projects.",
+                  "why": "The 2024 slide has no data for Kennedy. A zero bar would state a count no source gives."
+                },
+                {
+                  "what": "A title that says cFS is the most used flight software in the world.",
+                  "why": "The source hedges that claim with \"likely\" and gives no data for it on this slide. The title uses the claim the charts support."
+                },
+                {
+                  "what": "Spelling out the directorate names, for example \"Science\" for SMD.",
+                  "why": "No source in this repo prints them, so the names would be unsourced text on the slide. The 02 revised slide follows the same rule for PSP, TSP and RTOS."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The segment pie's labels total 103%.",
+                  "evidence": "4 + 5 + 4 + 7 + 28 + 2 + 2 + 28 + 2 + 2 + 4 + 2 + 7 + 2 + 2 + 2 = 103, from the 16 labels on page 5 read at 200 dpi. The other two pies total 100%."
+                },
+                {
+                  "what": "The segment pie cannot be a split of the 40 projects the other two pies count.",
+                  "evidence": "At 40 projects every share is a multiple of 2.5%, so no count prints as 4% (1/40 = 2.5%, 2/40 = 5%), and three segments print 4%. The smallest total that reproduces all 16 labels is 57, for example Payload and Spacecraft at 16 each (28.07%). The source prints no counts, so 57 is a lower bound and not the real base."
+                },
+                {
+                  "what": "Six centers on this slide, seven in a 2023 NASA deck.",
+                  "evidence": "Page 5 says \"cFS is used at 6 NASA Centers!\" and its pie has six centers. NTRS 20230002444, slide 13, says \"In use at seven NASA centers:\" and adds Kennedy Space Center. That deck's speaker notes describe Kennedy's use as \"Evaluation for use on UAVs and sounding rockets\", which may be why the 2024 count leaves it out."
+                },
+                {
+                  "what": "The callout names the HEO directorate while the directorates pie uses ESDMD and SOMD.",
+                  "evidence": "Callout on page 5: \"cFS named by ISwSIS (and approved by HEO directorate) as the standard FSW framework\". The pie labels read \"ESDMD, 9, 23%\" and \"SOMD, 2, 5%\" and it has no HEO slice. A reader who knows only one set of names may not connect them."
+                },
+                {
+                  "what": "One project prints as 2% for Glenn and as 3% for Marshall.",
+                  "evidence": "Both centers show 1 project of 40, which is 2.5%. The center labels follow no single rounding rule: round half up would total 102% and round half to even 99%, while the printed labels total 100%."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Pie totals, read from page 5 at 200 dpi.",
+                  "result": "Centers 5 + 1 + 19 + 10 + 4 + 1 = 40 projects and 12 + 2 + 48 + 25 + 10 + 3 = 100%. Directorates 3 + 15 + 11 + 9 + 2 = 40 projects and 7 + 37 + 28 + 23 + 5 = 100%."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "Sum of the segment labels.",
+                  "result": "16 labels, total 103%."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "Smallest number of projects consistent with every printed segment percentage (each segment at least 1).",
+                  "result": "57, under round half up and under either direction at exact halves (tools/checks.py, then a separate script written for this log, which agreed). 40 is impossible."
+                },
+                {
+                  "what": "Centers on the 2024 slide against NTRS 20230002444 slide 13.",
+                  "result": "6 in the 2024 pie and caption, 7 in the 2023 list. Kennedy Space Center is the difference."
+                },
+                {
+                  "what": "HEO wording against the pie's directorate names.",
+                  "result": "\"HEO\" appears only in the callout. The pie's five slices are ARMD, SMD, STMD, ESDMD and SOMD."
+                },
+                {
+                  "what": "Chart values read back from revised.pptx against data.csv.",
+                  "result": "Pass: 6 center counts, 5 directorate counts and 16 segment percentages match."
+                },
+                {
+                  "what": "Deck inspector (tools/inspect.py): native charts with workbooks, no picture over 15% of the slide, nothing off the slide, Arial only, nothing under 10 pt.",
+                  "result": "Pass."
+                },
+                {
+                  "what": "Type, color and contrast.",
+                  "result": "Title 28 pt bold, main heading 16 pt bold, side headings 14 pt bold, captions, notes and main chart labels 14 pt, side chart labels 11 pt, footnote and source line 10.5 pt, footer 10 pt. Dark text #1F2328 on white is 15.8:1 and on the note gray #F4F6F8 14.6:1, and the muted gray #5B6470 is 6.0:1. Accents: blue #2F5D8A and orange #D9822B. Segment bars #8C959F are 3.0:1 against white."
+                },
+                {
+                  "what": "Layout, checked by eye on the 96 dpi render.",
+                  "result": "Nothing overlaps, margins are at least 0.5 in, and the directorates and segments bars start at the same x (867 px at 1280 px wide)."
                 }
               ]
             },
-            "logMarkdown": "slides/01-usage/log-revised.md"
+            "logMarkdown": "slides/01-cfs-usage/log-revised.md"
           },
           {
-            "id": "01-usage-faithful",
-            "group": "01-usage",
-            "title": "PLACEHOLDER faithful rebuild of the usage slide",
+            "id": "01-cfs-usage-faithful",
+            "group": "01-cfs-usage",
+            "title": "cFS Usage and Impact At NASA (faithful rebuild)",
             "kind": "faithful",
-            "summary": "PLACEHOLDER summary. The real summary says what this faithful version changes and keeps, in one or two sentences.",
+            "summary": "The 2024 usage slide at its own size and positions, with the three pasted 3D pie pictures rebuilt as native 3D pie charts whose labels are chart data labels tied to the data. Every printed word and value is kept as printed, including the ones that do not add up.",
             "source": {
-              "image": "slides/01-usage/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "image": "slides/01-cfs-usage/source.png",
+              "title": "Evolution of Core Flight System (cFS)",
+              "credit": "Ashok Prajapati, NASA Goddard Space Flight Center, 2024. NASA Technical Reports Server 20240004389.",
+              "url": "https://ntrs.nasa.gov/citations/20240004389",
+              "license": "Work of the US Gov. Public Use Permitted.",
+              "page": "Slide 5 of 23, \"cFS Usage and Impact At NASA\""
             },
             "after": {
-              "image": "slides/01-usage/faithful.png",
-              "pptx": "slides/01-usage/faithful.pptx",
-              "pdf": "slides/01-usage/faithful.pdf"
+              "image": "slides/01-cfs-usage/faithful.png",
+              "pptx": "slides/01-cfs-usage/faithful.pptx",
+              "pdf": "slides/01-cfs-usage/faithful.pdf"
             },
-            "overlay": "slides/01-usage/overlay-faithful.png",
+            "overlay": "slides/01-cfs-usage/overlay.png",
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "The three pasted 3D pie pictures are native 3D pie charts with their data in an embedded workbook.",
+                  "why": "In the source the pies are raster images, so no value on them can be edited or checked. Each chart keeps the source's slice order and is sized and tilted to its source pie: the chart frames are centered on the source pies, and tilts of 52, 60 and 63 degrees give the source's height to width ratios of 0.83, 0.87 and 0.89."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "The 27 pie labels are chart data labels. In each label the category name and the value are fields tied to the chart data, and the label is moved to the center of its source label box.",
+                  "why": "Edit Data then changes the names and counts on the labels too. Each move runs from where LibreOffice first places the label to the source position, measured with tools/pielabels.py."
+                },
+                {
+                  "what": "On the center and directorate pies, the printed percentage in each label is typed text, not a computed field.",
+                  "why": "The printed percentages follow no single rounding rule (one project prints as 2% for Glenn and as 3% for Marshall), so a computed percentage would print different numbers. The cost is that these percentages do not update after an edit in Edit Data. The segment labels show the value itself, so they do update."
+                },
+                {
+                  "what": "Labels are Arial Bold, 7 pt on the centers and segments pies and 8 pt on the directorates pie.",
+                  "why": "The source labels use a narrower typeface. At these sizes each box is as wide as the source's within about 6 pt. The boxes are 2 to 6 pt shorter (12 pt for the source's taller NASA LARC box), because LibreOffice draws a label box tight around its text."
+                },
+                {
+                  "what": "The sides of the pies are thinner than in the source.",
+                  "why": "LibreOffice draws a 3D pie's side at a fixed thickness and ignores the depth setting, so the source's deeper sides cannot be matched in the render."
+                },
+                {
+                  "what": "The title's shadow and the two gold rules are native: a text shadow, and gradient-filled rectangles with stops sampled from the 200 dpi render.",
+                  "why": "In the source they are pictures. Native versions keep the look with no image on the slide."
+                },
+                {
+                  "what": "The portfolio footer sits in the bottom left, where the source has no text.",
+                  "why": "Every rebuilt slide says it is a portfolio reconstruction and not a NASA document."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "Every word of the title, callout, captions and footer banner, including the exclamation marks, \"HEO directorate\" and the period after \"ecosystem\".",
+                  "why": "A faithful rebuild reproduces the text as printed. Questions about the wording go to the flags."
+                },
+                {
+                  "what": "\"CFS\" with a capital C in the first two panel titles and \"cFS\" in the third.",
+                  "why": "The source spells them that way. Correcting it here would hide a detail the author may want to fix."
+                },
+                {
+                  "what": "Every printed count and percentage, including the labels that do not add up.",
+                  "why": "The faithful rebuild records what the slide says. The arithmetic is flagged, not corrected."
+                },
+                {
+                  "what": "Text at the source's sizes, including the 8 pt page number and the 7 pt and 8 pt pie labels.",
+                  "why": "A faithful rebuild matches the source. The 10 pt floor in this repo applies to the revised slides."
+                },
+                {
+                  "what": "The 16:9 page at 10 x 5.625 in, with positions, sizes and fonts from the PDF objects.",
+                  "why": "That is what lets the rebuild sit exactly on top of the source in the overlay."
+                },
+                {
+                  "what": "Leader lines on the segment pie's labels, switched on as in the source, which draws them for Platform and Spacesuit.",
+                  "why": "PowerPoint draws a leader line when a label sits away from its slice. LibreOffice does not draw them, so they are missing from faithful.png."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
-                }
-              ],
-              "flagged": [],
-              "checks": [
-                {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Placing the source pie pictures on the slide and typing labels over them.",
+                  "why": "It would pass a visual check and leave the numbers locked in pictures, which is the problem a rebuild exists to solve."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
-                }
-              ]
-            },
-            "logMarkdown": "slides/01-usage/log-faithful.md"
-          },
-          {
-            "id": "02-key-features-faithful",
-            "group": "02-key-features",
-            "title": "PLACEHOLDER faithful rebuild of a 4:3 architecture slide",
-            "kind": "faithful",
-            "summary": "PLACEHOLDER summary. The real summary says what this faithful version changes and keeps, in one or two sentences.",
-            "source": {
-              "image": "slides/02-key-features/source.png",
-              "title": "PLACEHOLDER source title 2",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 2",
-              "url": "https://example.com/placeholder-source-2",
-              "license": "PLACEHOLDER license line for source 2",
-              "page": "PLACEHOLDER page 2"
-            },
-            "after": {
-              "image": "slides/02-key-features/faithful.png",
-              "pptx": "slides/02-key-features/faithful.pptx",
-              "pdf": "slides/02-key-features/faithful.pdf"
-            },
-            "overlay": "slides/02-key-features/overlay-faithful.png",
-            "log": {
-              "changed": [
-                {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "Flat 2D pies.",
+                  "why": "A faithful rebuild keeps the source's form. Flat pies are round and smaller than the source's wide tilted pies, and would leave most labels off their slices."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "Pie labels as text boxes on the slide.",
+                  "why": "They would look the same but would not change with Edit Data, so a changed value would sit under a stale label."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
-                }
-              ],
-              "kept": [
-                {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
-                },
-                {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
-                }
-              ],
-              "rejected": [
-                {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
-                },
-                {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "Correcting the segment percentages so they total 100%.",
+                  "why": "The source prints no counts for that pie, so there is no way to know the right values. Any fix would invent data."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The segment pie's labels total 103%.",
+                  "evidence": "4 + 5 + 4 + 7 + 28 + 2 + 2 + 28 + 2 + 2 + 4 + 2 + 7 + 2 + 2 + 2 = 103, from the 16 labels on page 5 read at 200 dpi. Details are in the revised slide's log."
+                },
+                {
+                  "what": "Six centers on this slide, seven in a 2023 NASA deck.",
+                  "evidence": "\"cFS is used at 6 NASA Centers!\" here. NTRS 20230002444, slide 13: \"In use at seven NASA centers:\", adding Kennedy Space Center."
+                },
+                {
+                  "what": "The callout names the HEO directorate while the directorates pie uses ESDMD and SOMD.",
+                  "evidence": "Callout: \"approved by HEO directorate\". Pie labels: \"ESDMD, 9, 23%\" and \"SOMD, 2, 5%\". No HEO slice."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Overlay of the rebuild render on the source at 96 dpi (tools/overlay.sh).",
+                  "result": "RMSE 0.1848 (ImageMagick, 0 to 1, lower is closer), down from 0.2452 with flat 2D pies and 10 pt labels. Most of the remaining difference is the source pies' deeper sides and shading, the label typeface, and the Liberation Sans glyphs LibreOffice draws for Arial."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "Label boxes against the source at 200 dpi (tools/darkboxes.py).",
+                  "result": "The detector finds 25 of the source's 27 label boxes (Telescope and Robot sit on a dark slice and merge with it). 21 pair with a rebuild box whose center is within 0.4 pt. The other four (Platform, Launch Vehicle, Lander and Capsule) touch a neighbor in the render and are paired wrongly, and a 200 dpi crop shows them at their source positions."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "Label text centers read back from faithful.pdf (tools/pielabels.py --compare).",
+                  "result": "All 27 found, each 0.0 pt from its target. This confirms the moves were applied. The targets themselves come from the box measurement above."
+                },
+                {
+                  "what": "Word positions against the source PDF's text layer (tools/textpos.py).",
+                  "result": "78 words matched. Median offset -0.13 pt across and 0.00 pt down. Largest offsets 1.87 pt across and 1.02 pt down."
+                },
+                {
+                  "what": "Slice colors against the source at 200 dpi.",
+                  "result": "The flat top faces of 11 source slices are within 6 levels per channel of the Office theme colors used. The source's shaded sides and rims are darker."
+                },
+                {
+                  "what": "Chart values read back from faithful.pptx against data.csv (tools/checks.py).",
+                  "result": "Pass: 6 center counts, 5 directorate counts and 16 segment percentages match the transcription."
+                },
+                {
+                  "what": "Deck inspector (tools/inspect.py).",
+                  "result": "Pass: native charts with workbooks, no pictures, nothing off the slide, Arial only, nothing under the 7 pt floor for faithful decks."
+                },
+                {
+                  "what": "Render font.",
+                  "result": "LibreOffice draws Arial with the metric-compatible Liberation Sans, so line breaks hold and glyph shapes differ slightly. That adds a little to the RMSE."
+                },
+                {
+                  "what": "Not checked: the deck in PowerPoint.",
+                  "result": "The renders come from LibreOffice. PowerPoint draws 3D pies with its own projection, so there a label can land a few points from its LibreOffice position."
                 }
               ]
             },
-            "logMarkdown": "slides/02-key-features/log-faithful.md"
+            "logMarkdown": "slides/01-cfs-usage/log-faithful.md"
+          },
+          {
+            "id": "02-cfs-key-features-faithful",
+            "group": "02-cfs-key-features",
+            "title": "cFS Key Features (faithful rebuild)",
+            "kind": "faithful",
+            "summary": "The 2015 layered architecture slide at 4:3, with its pasted diagram picture rebuilt as native shapes, dashed layer rules, legend and labels, and the two red highlight ellipses left where the author put them, over the text.",
+            "source": {
+              "image": "slides/02-cfs-key-features/source.png",
+              "title": "Core Flight System (cFS) a Low Cost Solution for SmallSats",
+              "credit": "David McComas, Susanne Strege and Jonathan Wilmot, NASA Goddard Space Flight Center, August 2015. NASA Technical Reports Server 20150018075.",
+              "url": "https://ntrs.nasa.gov/citations/20150018075",
+              "license": "Work of the US Gov. Public Use Permitted.",
+              "page": "Slide 8 of 24, \"cFS Key Features\" (NASA insignia, GSFC banner and cFS logo masked in this copy)"
+            },
+            "after": {
+              "image": "slides/02-cfs-key-features/faithful.png",
+              "pptx": "slides/02-cfs-key-features/faithful.pptx",
+              "pdf": "slides/02-cfs-key-features/faithful.pdf"
+            },
+            "overlay": "slides/02-cfs-key-features/overlay.png",
+            "log": {
+              "changed": [
+                {
+                  "what": "The pasted diagram picture is native shapes: 23 parts, the four dashed layer rules, the legend, five layer labels and the two red ellipses.",
+                  "why": "In the source the whole diagram is one picture, so none of its text can be edited or searched. Each shape was measured from the 200 dpi render."
+                },
+                {
+                  "what": "The level 1 bullet is an Arial bullet in the source's color #6FB7D7, where the source uses a Wingdings 2 glyph.",
+                  "why": "The decks use Arial only, so the slide looks the same on a machine without Wingdings 2."
+                },
+                {
+                  "what": "The template's background picture is a native gradient sampled down the slide's edge, five nested translucent white ellipses with soft edges for the lighter middle of the teal band, and two soft translucent swooshes.",
+                  "why": "The deck carries no pictures. A radial gradient would be simpler, but LibreOffice draws it as a circle, and the band's light area is a wide ellipse. The swooshes are filled bands with soft edges, so they read as light and not as drawn lines."
+                },
+                {
+                  "what": "The NASA insignia, the GSFC banner and the cFS logo are left out, and the portfolio footer sits in the strip where the banner was.",
+                  "why": "The NTRS public use line does not cover the agency's marks, and every rebuilt slide says it is a reconstruction."
+                },
+                {
+                  "what": "The source's shadows and the stacked look of the cFE Apps circles and the PSP box are native shadows and offset copies. The marble texture of the VxWorks and TSP boxes is a near-flat light gradient with no texture.",
+                  "why": "They are drawn into the source picture. Native versions keep the look without an image. The marble is a picture texture, and a native pattern fill did not look like it (see Rejected)."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "The two red ellipses where the source puts them, crossing the last bullet and two dashed rules.",
+                  "why": "They are part of the slide as presented. The faithful rebuild keeps the overlap and the revised slide fixes it."
+                },
+                {
+                  "what": "\"Layered  architecture\" with two spaces, \"Mission and CFS\" with a capital C, \"n(13)\", \"(x5)\", \"µcFE\" and \"3rd Party\" with a superscript.",
+                  "why": "Text is reproduced as printed."
+                },
+                {
+                  "what": "The 4:3 page at 10 x 7.5 in, the title in Arial 28 pt #2C7C9F, the bullets in 18 and 16 pt #595959, and \"August 2015\" and the page number in white.",
+                  "why": "These values come from the PDF text objects."
+                },
+                {
+                  "what": "Diagram outlines at 0.81 pt and the diagram's 14 pt labels at 11.4 pt.",
+                  "why": "The diagram was pasted at about 0.81 scale, so its native shapes use the scaled sizes the render shows."
+                },
+                {
+                  "what": "The legend's four status colors, #BFBFBF, #92D050, #00B0F0 and #FF4040.",
+                  "why": "They match the sampled source swatches."
+                },
+                {
+                  "what": "Text at the source's sizes: circle labels at 8.5 pt (9 pt for the Mission apps) on the source's line pitch, and legend labels at 8 pt in the source's legend box.",
+                  "why": "A faithful rebuild matches the source. The 10 pt floor in this repo applies to the revised slides."
+                },
+                {
+                  "what": "The legend swatches where the source puts them, a little above the middle of their labels.",
+                  "why": "Measured from the 200 dpi render. The offset is in the source."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "Placing the source diagram picture behind native text.",
+                  "why": "It would score better on the overlay and leave every part and label uneditable."
+                },
+                {
+                  "what": "Moving the ellipses off the text.",
+                  "why": "That is a design change, so it belongs in the revised slide."
+                },
+                {
+                  "what": "Reusing the template's background image.",
+                  "why": "It is a NASA template picture. The native background keeps the deck free of images."
+                },
+                {
+                  "what": "A preset dot pattern fill for the marble boxes.",
+                  "why": "LibreOffice draws the 10 percent dot pattern as diagonal hatching, which looks less like the source's speckled texture than a plain light fill."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "Three parts have a color that is not in the legend.",
+                  "evidence": "The cFE Apps (x5) circles are pale blue (about #AFDBEA), and the OS Abstraction VxWorks and OS Abstraction TSP boxes are near white (about #E5E6E1 to #F9F9F7). The legend lists only gray, green, bright blue (#00B0F0) and red, so the slide does not say what their status is."
+                },
+                {
+                  "what": "The highlight ellipses cross text.",
+                  "evidence": "The apps ellipse, (456,228) to (720,336) px at 96 dpi, crosses the end of \"Supports advances in technology without changes to the framework\" and the first dashed rule. The library ellipse, (216,320) to (344,420) px, crosses the second dashed rule."
+                },
+                {
+                  "what": "\"Mission and CFS\" in two layer labels, \"cFS\" everywhere else.",
+                  "evidence": "The two top layer labels print \"Mission and CFS\". The title, the bullets and the parts use \"cFS\"."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "Overlay of the rebuild render on the masked source at 96 dpi (tools/overlay.sh).",
+                  "result": "RMSE 0.1328 (ImageMagick, 0 to 1, lower is closer), down from 0.1412 with the circle and legend labels at 10 pt. Edges of boxes, circles, rules and the ellipses line up in the overlay image. The remaining difference is mostly the raster blur of the source diagram, the marble texture and the Liberation Sans glyphs LibreOffice draws for Arial."
+                },
+                {
+                  "what": "Title, bullet and footer positions against the source PDF's text layer (tools/textpos.py).",
+                  "result": "24 words matched. Median offset -0.04 pt across and 0.03 pt down. Largest offsets 1.08 pt across and 0.36 pt down."
+                },
+                {
+                  "what": "Diagram text against the source picture, by ink line in 32 windows: every part, API bar, circle, layer label and legend label (tools/inklines.py with ink-windows.json, where a circle window reads only inside the circle's outline).",
+                  "result": "Every line is within 1.5 pt of the source in position. Widths differ by at most 3.0 pt (the legend's \"Open source/NASA Maintained\" is narrower in the rebuild). Checked by eye at 200 dpi: every circle label sits inside its circle."
+                },
+                {
+                  "what": "Deck inspector (tools/inspect.py).",
+                  "result": "Pass: no pictures, nothing off the slide, Arial only, nothing under the 7 pt floor for faithful decks."
+                },
+                {
+                  "what": "Published source image.",
+                  "result": "source.png is the masked copy, with the insignia, banner and logo removed and every other pixel identical to the plain render (per the source folder's difference check)."
+                }
+              ]
+            },
+            "logMarkdown": "slides/02-cfs-key-features/log-faithful.md"
+          },
+          {
+            "id": "02-cfs-key-features-revised",
+            "group": "02-cfs-key-features",
+            "title": "In the 2015 cFS design, a mission builds its own apps, libraries and platform support and reuses the NASA-maintained framework",
+            "kind": "revised",
+            "summary": "The 2015 layer diagram redrawn at 16:9 under an action title dated to 2015, with the layer names first, the API bars labeled, and one orange highlight on every mission developed part in place of the two red ellipses. Every status is dated as of August 2015.",
+            "source": {
+              "image": "slides/02-cfs-key-features/source.png",
+              "title": "Core Flight System (cFS) a Low Cost Solution for SmallSats",
+              "credit": "David McComas, Susanne Strege and Jonathan Wilmot, NASA Goddard Space Flight Center, August 2015. NASA Technical Reports Server 20150018075.",
+              "url": "https://ntrs.nasa.gov/citations/20150018075",
+              "license": "Work of the US Gov. Public Use Permitted.",
+              "page": "Slide 8 of 24, \"cFS Key Features\" (NASA insignia, GSFC banner and cFS logo masked in this copy)"
+            },
+            "after": {
+              "image": "slides/02-cfs-key-features/revised.png",
+              "pptx": "slides/02-cfs-key-features/revised.pptx",
+              "pdf": "slides/02-cfs-key-features/revised.pdf"
+            },
+            "overlay": null,
+            "log": {
+              "changed": [
+                {
+                  "what": "The topic title \"cFS Key Features\" is now \"In the 2015 cFS design, a mission builds its own apps, libraries and platform support and reuses the NASA-maintained framework\".",
+                  "why": "The legend is the evidence. The parts it marks Mission Developed are the apps, the library, the platform support packages, the board support package and the boot software, and the parts it marks Open source/NASA Maintained are the framework. The title says that in the legend's terms. \"In the 2015 cFS design\" keeps the date in the claim, because the statuses are a 2015 snapshot."
+                },
+                {
+                  "what": "The two red ellipses are gone. Every part the legend marks Mission Developed is orange instead.",
+                  "why": "The ellipses crossed the last bullet and two layer rules, and they circled only two of the five kinds of mission developed parts. One fill marks all of them and covers no text."
+                },
+                {
+                  "what": "Status colors are recoded: open source and NASA maintained in blue #2F5D8A, in development in light blue #A9BED3, mission developed in orange #D9822B, third party in white with a solid dark gray outline.",
+                  "why": "The source's red and green are the pair readers with the most common color vision deficiency confuse. Blue and orange stay distinct for them. Third party is an outline so it cannot be mistaken for the pale blue of in development."
+                },
+                {
+                  "what": "The legend heading reads \"Status as of August 2015\".",
+                  "why": "The statuses are a 2015 snapshot. Parts shown as in development may have changed since, and the slide should not read as current."
+                },
+                {
+                  "what": "The cFE API, OS Abstraction API and cFE PSP API are drawn as thin bars with bold labels, and the legend has a row for them: \"Thin bar: an API between layers\".",
+                  "why": "In the source they look like any other box. Naming the shape tells the reader these are the interfaces between layers, which their names already say."
+                },
+                {
+                  "what": "The layer names move from the right edge to a left column, and thin solid rules replace the dashed ones.",
+                  "why": "Reading left to right, the reader meets each layer before its parts."
+                },
+                {
+                  "what": "Circles become rectangles, the stacked cFE Apps circles become one box labeled \"(x5)\", and the shadows, marble fills and background art are gone.",
+                  "why": "Shape carries no meaning in the legend, and the effects add ink without information."
+                },
+                {
+                  "what": "The two cFS app boxes share one width, and so do the three mission app boxes.",
+                  "why": "Parts of the same kind look the same size. Other widths follow their label text."
+                },
+                {
+                  "what": "Part labels are 12 pt, under the 14 pt body size.",
+                  "why": "All 23 parts must fit the diagram grid with every label on one or two lines. Nothing on the slide is under 10 pt."
+                },
+                {
+                  "what": "The three parts whose source color is in no legend entry (cFE apps, OS Abstraction VxWorks and OS Abstraction TSP) are white with a dashed outline, and the legend says \"Color not in the source legend\".",
+                  "why": "Giving them a status would put a claim on the slide that the source does not make."
+                },
+                {
+                  "what": "Small wording edits: \"Mission and CFS\" to \"Mission and cFS\", \"Time & Space Partitioning\" to \"Time and Space Partitioning\", \"3rd Party\" to \"Third party\", \"Open source/NASA Maintained\" to \"Open source, NASA maintained\", \"RTOS / BOOT Layer\" to \"RTOS and boot layer\", \"cFE Apps\" to \"cFE apps\".",
+                  "why": "One spelling of cFS and plain words in labels. The meanings are unchanged."
+                },
+                {
+                  "what": "The source's bullets move to the right column under \"Key features (source wording)\".",
+                  "why": "The title now carries the message, and the bullets stay as the author's list."
+                },
+                {
+                  "what": "The page is 16:9 at 13.333 x 7.5 in, with a subtitle, a source line and the portfolio footer.",
+                  "why": "Same size as the other revised slide, with room for the legend and the bullets beside the diagram."
+                }
+              ],
+              "kept": [
+                {
+                  "what": "All 23 diagram parts in their layers and left to right order, with their printed names, including \"n(13)\", \"(x5)\" and \"µcFE\".",
+                  "why": "The parts and their places are the architecture the slide shows."
+                },
+                {
+                  "what": "Which part has which status.",
+                  "why": "The status of each part is the slide's data. Only the colors changed."
+                },
+                {
+                  "what": "The bullets word for word, including \"Platform Independent\".",
+                  "why": "They are the author's claims, quoted."
+                },
+                {
+                  "what": "PSP, TSP, RTOS, PROM and FSW as printed, without expansions.",
+                  "why": "The slide defines none of them, and definitions added from memory would be unsourced text on the slide."
+                }
+              ],
+              "rejected": [
+                {
+                  "what": "Moving the ellipses so they cross no text.",
+                  "why": "They would still mark only two of the five kinds of mission developed parts, and an ellipse around a row of parts crowds its neighbors."
+                },
+                {
+                  "what": "Updating the statuses to today.",
+                  "why": "No source in this repo says what changed after August 2015, so new statuses would be invented. The date makes the age plain instead."
+                },
+                {
+                  "what": "Giving cFE apps, VxWorks and TSP the nearest legend status.",
+                  "why": "It would be a guess presented as data."
+                },
+                {
+                  "what": "Adding the line that each layer and service has a standard API.",
+                  "why": "It comes from a different deck (NTRS 20230002444, slide 8). On this slide it would credit the 2015 authors with a claim they did not make here."
+                },
+                {
+                  "what": "Keeping the source's red and green status colors.",
+                  "why": "Red and green are the pair that readers with the most common color vision deficiency confuse, and the legend depends on telling them apart."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "Three parts have a color that is not in the legend.",
+                  "evidence": "cFE Apps (x5) is pale blue (about #AFDBEA), OS Abstraction VxWorks and OS Abstraction TSP are near white. The legend has only gray, green, bright blue and red."
+                },
+                {
+                  "what": "The ellipses mark only two of the five kinds of mission developed parts.",
+                  "evidence": "The legend's gray covers the Mission App circles, Mission Library, cFE Platform Support Packages, Board Support Package and PROM Boot FSW. The ellipses circle only the first two. The revised title reads the author's point as all five."
+                },
+                {
+                  "what": "\"cFS App n(13)\" does not say what 13 counts.",
+                  "evidence": "The label suggests n = 13 cFS apps, but the slide does not say so. It is kept as printed."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "Every source part present.",
+                  "result": "23 of 23, same names and layers, read from the shape list of revised.pptx."
+                },
+                {
+                  "what": "Every status kept, counted by fill and outline style in revised.pptx (tools/partstyles.py).",
+                  "result": "9 open source and NASA maintained, 3 in development, 7 mission developed, 1 third party, 3 with no legend color. Same split as the source's colors."
+                },
+                {
+                  "what": "Bullets against the page 8 text layer.",
+                  "result": "Same words, same order."
+                },
+                {
+                  "what": "Deck inspector (tools/inspect.py).",
+                  "result": "Pass: no pictures, nothing off the slide, Arial only, nothing under 10 pt."
+                },
+                {
+                  "what": "Type sizes.",
+                  "result": "Title 28 pt bold, subtitle, layer names, legend and bullets 14 pt, part labels 12 pt, source line 10.5 pt, footer 10 pt."
+                },
+                {
+                  "what": "Contrast (WCAG ratio).",
+                  "result": "White on blue #2F5D8A 6.9:1. Dark #1F2328 on orange #D9822B 5.4:1, on light blue #A9BED3 8.3:1, on white 15.8:1. The third party outline #4A525C is 7.9:1 against white."
+                },
+                {
+                  "what": "Nothing covers text and no label overflows its box.",
+                  "result": "Checked by eye on the 96 dpi render: no shape overlaps another shape's text, and every part label fits inside its box."
+                }
+              ]
+            },
+            "logMarkdown": "slides/02-cfs-key-features/log-revised.md"
           }
         ],
         "downloads": [
           {
-            "label": "PLACEHOLDER Deck with every slide (.pptx)",
-            "path": "dist/deck.pptx",
-            "bytes": 45849
+            "label": "Group 01: transcription of every printed pie label (CSV)",
+            "path": "slides/01-cfs-usage/data.csv",
+            "bytes": 1336
           },
           {
-            "label": "PLACEHOLDER Deck with every slide (PDF)",
-            "path": "dist/deck.pdf",
-            "bytes": 28479
+            "label": "Group 01: number checks output (text)",
+            "path": "slides/01-cfs-usage/checks.txt",
+            "bytes": 3548
           }
         ],
         "credits": [
-          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
-          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+          "Ashok Prajapati, \"Evolution of Core Flight System (cFS),\" NASA Goddard Space Flight Center, 2024. NASA Technical Reports Server 20240004389, https://ntrs.nasa.gov/citations/20240004389. Work of the US Gov. Public Use Permitted.",
+          "David McComas, Susanne Strege and Jonathan Wilmot, \"Core Flight System (cFS) a Low Cost Solution for SmallSats,\" NASA Goddard Space Flight Center, August 2015. NASA Technical Reports Server 20150018075, https://ntrs.nasa.gov/citations/20150018075. Work of the US Gov. Public Use Permitted. The NASA insignia, GSFC banner and cFS logo are masked in the published copy of slide 8.",
+          "Dylan Baker, \"core Flight System (cFS) Overview,\" NASA Goddard Space Flight Center, 2023. NASA Technical Reports Server 20230002444, https://ntrs.nasa.gov/citations/20230002444. Work of the US Gov. Public Use Permitted. Cited for slide 13 only."
         ]
       },
       "files": {
-        "dist/deck.pdf": {
-          "bytes": 28479
-        },
-        "dist/deck.pptx": {
-          "bytes": 45849
-        },
         "renders/cover.png": {
-          "bytes": 32689,
+          "bytes": 183157,
           "width": 1280,
           "height": 720
         },
-        "slides/01-usage/faithful.pdf": {
-          "bytes": 30351
+        "slides/01-cfs-usage/checks.txt": {
+          "bytes": 3548
         },
-        "slides/01-usage/faithful.png": {
-          "bytes": 34673,
+        "slides/01-cfs-usage/data.csv": {
+          "bytes": 1336
+        },
+        "slides/01-cfs-usage/faithful.pdf": {
+          "bytes": 324975
+        },
+        "slides/01-cfs-usage/faithful.png": {
+          "bytes": 196801,
+          "width": 960,
+          "height": 540
+        },
+        "slides/01-cfs-usage/faithful.pptx": {
+          "bytes": 36502
+        },
+        "slides/01-cfs-usage/log-faithful.md": {
+          "bytes": 8228
+        },
+        "slides/01-cfs-usage/log-revised.md": {
+          "bytes": 10159
+        },
+        "slides/01-cfs-usage/overlay.png": {
+          "bytes": 303544,
+          "width": 960,
+          "height": 540
+        },
+        "slides/01-cfs-usage/revised.pdf": {
+          "bytes": 90118
+        },
+        "slides/01-cfs-usage/revised.png": {
+          "bytes": 183157,
           "width": 1280,
           "height": 720
         },
-        "slides/01-usage/faithful.pptx": {
-          "bytes": 45864
+        "slides/01-cfs-usage/revised.pptx": {
+          "bytes": 34811
         },
-        "slides/01-usage/log-faithful.md": {
-          "bytes": 1139
+        "slides/01-cfs-usage/source.png": {
+          "bytes": 260579,
+          "width": 960,
+          "height": 540
         },
-        "slides/01-usage/log-revised.md": {
-          "bytes": 1794
+        "slides/02-cfs-key-features/faithful.pdf": {
+          "bytes": 429263
         },
-        "slides/01-usage/overlay-faithful.png": {
-          "bytes": 34839,
-          "width": 1280,
-          "height": 720
-        },
-        "slides/01-usage/revised.pdf": {
-          "bytes": 30306
-        },
-        "slides/01-usage/revised.png": {
-          "bytes": 34609,
-          "width": 1280,
-          "height": 720
-        },
-        "slides/01-usage/revised.pptx": {
-          "bytes": 45863
-        },
-        "slides/01-usage/source.png": {
-          "bytes": 38217,
-          "width": 1280,
-          "height": 720
-        },
-        "slides/02-key-features/faithful.pdf": {
-          "bytes": 14658
-        },
-        "slides/02-key-features/faithful.png": {
-          "bytes": 13064,
+        "slides/02-cfs-key-features/faithful.png": {
+          "bytes": 180715,
           "width": 960,
           "height": 720
         },
-        "slides/02-key-features/faithful.pptx": {
-          "bytes": 45871
+        "slides/02-cfs-key-features/faithful.pptx": {
+          "bytes": 24251
         },
-        "slides/02-key-features/log-faithful.md": {
-          "bytes": 1802
+        "slides/02-cfs-key-features/log-faithful.md": {
+          "bytes": 7112
         },
-        "slides/02-key-features/overlay-faithful.png": {
-          "bytes": 12936,
+        "slides/02-cfs-key-features/log-revised.md": {
+          "bytes": 8327
+        },
+        "slides/02-cfs-key-features/overlay.png": {
+          "bytes": 253379,
           "width": 960,
           "height": 720
         },
-        "slides/02-key-features/source.png": {
-          "bytes": 13988,
+        "slides/02-cfs-key-features/revised.pdf": {
+          "bytes": 89697
+        },
+        "slides/02-cfs-key-features/revised.png": {
+          "bytes": 185984,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/02-cfs-key-features/revised.pptx": {
+          "bytes": 17566
+        },
+        "slides/02-cfs-key-features/source.png": {
+          "bytes": 161162,
           "width": 960,
           "height": 720
         }
       },
-      "commit": null,
+      "commit": "e6c02dece0c4",
       "dirty": false
     },
     {
       "portfolio": {
         "slug": "architecture-three-ways",
-        "title": "PLACEHOLDER One architecture, three ways",
-        "oneLiner": "PLACEHOLDER one-liner. The real line says what the one architecture, three ways project shows, in one sentence.",
+        "title": "One architecture, three ways: NASA’s core Flight System",
+        "oneLiner": "NASA’s layered flight software framework, documented from NASA’s public slides and training memo as an executive slide, an engineer slide and a one-page brief, with every quote cited to its page.",
         "repo": "https://github.com/logan-ankenbrandt/architecture-three-ways",
         "order": 2,
         "skills": [
           "System Architecture",
           "Technical Documentation",
-          "Visual Storytelling",
+          "Software Engineering",
           "Presentation Design",
+          "Slide Reconstruction",
+          "Visual Storytelling",
           "Content Editing",
-          "Written Communication"
+          "Written Communication",
+          "Critical Thinking",
+          "Microsoft PowerPoint"
         ],
-        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "howMade": "Claude Code agents rebuilt NASA’s layer diagram and drew the other views as editable PowerPoint from NASA’s public documents, and drafted the logs, the brief and the glossary. I chose the sources, set the rules each view follows, and checked every slide, quote and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
             "id": "01-layers-exec",
             "group": "01-layers",
-            "title": "PLACEHOLDER executive slide that makes one point about the layers",
+            "title": "Each layer hides its implementation behind a standard API, so a mission reuses the framework and focuses on custom parts",
             "kind": "exec",
-            "summary": "PLACEHOLDER summary. The real summary says what this exec version changes and keeps, in one or two sentences.",
+            "summary": "NASA’s 2015 layer diagram, reduced to one point for an executive: the layer stack with a standard API between layers, colored by which parts a mission reuses and which it builds, and three benefits NASA states, each cited. The title follows NASA’s 2023 overview and 2021 training memo.",
             "source": {
               "image": "slides/01-layers/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "title": "Core Flight System (cFS) a Low Cost Solution for SmallSats",
+              "credit": "David McComas, Susanne Strege and Jonathan Wilmot, NASA Goddard Space Flight Center, August 2015. NTRS 20150018075 (GSFC-E-DAA-TN25822).",
+              "url": "https://ntrs.nasa.gov/citations/20150018075",
+              "license": "NTRS: Work of the US Gov. Public Use Permitted. The NASA insignia, the Goddard banner and the cFS logo are masked in this copy.",
+              "page": "Page 8, cFS Key Features"
             },
             "after": {
               "image": "slides/01-layers/exec.png",
@@ -371,56 +809,100 @@
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "The topic title “cFS Key Features” became the action title “Each layer hides its implementation behind a standard API, so a mission reuses the framework and focuses on custom parts”.",
+                  "why": "An executive should get the point from the title alone. The first half restates two of NASA’s own bullets, “Each layer and service has a standard API” and “Each layer ‘hides’ its implementation and technology details.” (2023 overview, slide 8, repeated in the 2021 training memo, printed p39). The second half follows the memo’s “Teams focus on the custom aspects of their project” (printed p41)."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "The 23 boxes and bars of the 2015 diagram became three layers and a base strip: community apps beside mission apps, framework services (cFE), OS abstraction (OSAL) beside platform support (PSP), and a strip that splits the third-party real-time OS from the board support and boot code.",
+                  "why": "Three layers carry the structure an executive needs, and the same 2015 deck draws three on its page 2: “Application Layer”, “FSW Service Layer” and “Platform Abstraction Layer”. Splitting the top layer, the abstraction layer and the strip keeps visible which parts a mission reuses and which it builds."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                  "what": "The two boundaries between layers are drawn as dark bars labeled “standard API”.",
+                  "why": "The bars are the mechanism the title names: “Each layer and service has a standard API” (2023 overview, slide 8)."
+                },
+                {
+                  "what": "The three key features on the 2015 slide became three benefit cards, each pairing NASA’s feature with one NASA sentence that explains it, with both cited.",
+                  "why": "A feature name such as “Reusable components” tells an executive little on its own. The paired sentence says what the mission gains, for example “Reuse of tested, certified components supplies savings in each phase of the software development cycle.” (2021 memo, printed p41)."
+                },
+                {
+                  "what": "Four status colors became two plus a neutral gray, with a three-entry legend: blue for reused, NASA-maintained parts, orange for parts the mission builds, gray for the third-party real-time OS.",
+                  "why": "The executive point is the split between what a mission reuses and what it builds. The colors follow the 2015 legend (p8), which marks the platform support packages, the board support package and the PROM boot software as mission developed, and the deck notes “There are many other PSPs at each center that are not open source” (p23). The in-development status describes single components as of August 2015 and stays on the engineer slide, dated."
+                },
+                {
+                  "what": "The third key feature, “Supports advances in technology without changes to the framework”, became the card label “New technology without framework changes”.",
+                  "why": "A card label has to fit one line at 16 pt. The card pairs it with the 2023 overview’s sentence on changing a layer, and its cite points to the feature on p8."
+                },
+                {
+                  "what": "The 4:3 page with NASA’s template became a 16:9 white slide in Arial: 30 pt title, 14 to 16 pt layer and card text, 12 to 13 pt kicker, legend and bar labels, 10 pt sources, 0.5 in margins.",
+                  "why": "That is the design standard for revised slides in this portfolio. The NASA insignia, the Goddard banner and the cFS logo stay out of every output."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "NASA’s terms: framework, cFE, OSAL, PSP, standard API and “hides”.",
+                  "why": "Domain terms stay as NASA defines them, so every word on the slide can be checked against glossary.md. Only the cell captions are plain English."
                 },
                 {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                  "what": "Two of the three key features of the 2015 slide, word for word, as card labels: “Reusable components” and “Platform independent”.",
+                  "why": "They are the benefits NASA chose to state on the slide being reworked (2015 deck, p8). The third is shortened, as recorded above."
+                },
+                {
+                  "what": "The double hyphen inside the quote “Internals of a layer can be changed -- without affecting other layers’ internals and components.”",
+                  "why": "Quotes stay word for word, punctuation included (2023 overview, slide 8)."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                  "what": "Saying in the title that a mission writes only its own apps.",
+                  "why": "NASA’s own 2015 legend marks the board support package, the boot code and the platform support packages as mission developed (p8), and GPM’s code was 38.9 percent heritage clone and own (p14). The title says a mission “focuses on custom parts”, after NASA’s “Teams focus on the custom aspects of their project” (2021 memo, printed p41), and the slide colors those parts orange."
                 },
                 {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "Coloring the whole abstraction layer and the base strip as reused framework.",
+                  "why": "An earlier draft did this, and it understated the porting work a mission does. The PSP cell and the board support and boot strip are orange, as in the 2015 legend."
+                },
+                {
+                  "what": "Adding the 2015 claim that the architecture “reduces Non-Recurring Engineering (NRE) up to 90%” (p11).",
+                  "why": "The deck gives no baseline or method for the figure, and on an executive slide it would become the headline. It stays in citations.csv and off the slide."
+                },
+                {
+                  "what": "Listing the five cFE services by acronym (ES, SB, EVS, TIME, TBL) in the framework layer.",
+                  "why": "Acronyms cost an executive time. The layer names the services in words, and the engineer slide carries the acronyms."
+                },
+                {
+                  "what": "Showing each component’s 2015 status, including in development, on this slide.",
+                  "why": "They are dated component facts from August 2015. This slide keeps only the legend’s split between reused, mission-built and third-party parts at the layer level, and the engineer slide keeps every status under “Status as of August 2015”."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The middle layer has three names across NASA’s documents.",
+                  "evidence": "The 2015 deck calls it “FSW Service Layer” on p2 and “cFE Core Layer” in the p8 diagram, and the 2021 memo’s layer diagram labels it Core Flight Executive (printed p8). The slide uses “Framework services (cFE)” and cites the memo’s definition."
+                },
+                {
+                  "what": "The 2015 deck writes the system name two ways.",
+                  "evidence": "The p8 diagram labels read “Mission and CFS Application Layer” and p11 says “The CFS architecture”, while the rest of the deck writes cFS. The 2021 memo also expands cFS as “Core Flight Software System” in its acronym list (printed p209) against “Core Flight System” in its title."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Quotes on the slide against their cited pages (src/check_quotes.py).",
+                  "result": "All 105 quotes in the ledger match their cited pages word for word. All 181 quoted fragments in the published slides and Markdown trace to the ledger, a transcribed diagram label, a source title or the slides’ own text."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "Deck inspector (src/inspect_pptx.py) on exec.pptx and its LibreOffice PDF.",
+                  "result": "Passed. Arial only, smallest text 10 pt, title 30 pt. Every shape sits inside the 0.5 in margins, no two text boxes overlap, and all 265 words in the LibreOffice render sit inside their own text boxes."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "Render looked at by eye at 96 dpi (exec.png, 1280 x 720 px).",
+                  "result": "Title on two lines, the layer stack and the cards end level at the bottom, the legend sits above the stack, no clipped or colliding text. The renderer substitutes Liberation Sans for Arial. It has Arial’s metrics, so line breaks match a PowerPoint render."
+                },
+                {
+                  "what": "Single-slide file against the combined deck.",
+                  "result": "exec.pdf rendered on its own and its page in the combined deck differ by RMSE 0.0000 (0 means identical)."
+                },
+                {
+                  "what": "Marks and footer.",
+                  "result": "No NASA insignia, logotype, Goddard banner or cFS logo on the slide. The footer “Portfolio reconstruction of a public NASA slide. Not a NASA document.” is present. The published source image is the masked copy from the sources folder."
                 }
               ]
             },
@@ -429,16 +911,16 @@
           {
             "id": "01-layers-engineer",
             "group": "01-layers",
-            "title": "PLACEHOLDER engineer slide with each layer API labeled",
+            "title": "The OSAL and PSP hide the real-time OS and the board, so the cFE and the apps above it stay platform independent",
             "kind": "engineer",
-            "summary": "PLACEHOLDER summary. The real summary says what this engineer version changes and keeps, in one or two sentences.",
+            "summary": "The same 2015 diagram rebuilt as native shapes and cleaned up: no ellipses over text, labeled API bars and statuses dated August 2015. Four component roles are quoted or closely paraphrased from NASA’s 2021 training memo, with pages.",
             "source": {
               "image": "slides/01-layers/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "title": "Core Flight System (cFS) a Low Cost Solution for SmallSats",
+              "credit": "David McComas, Susanne Strege and Jonathan Wilmot, NASA Goddard Space Flight Center, August 2015. NTRS 20150018075 (GSFC-E-DAA-TN25822).",
+              "url": "https://ntrs.nasa.gov/citations/20150018075",
+              "license": "NTRS: Work of the US Gov. Public Use Permitted. The NASA insignia, the Goddard banner and the cFS logo are masked in this copy.",
+              "page": "Page 8, cFS Key Features"
             },
             "after": {
               "image": "slides/01-layers/engineer.png",
@@ -449,443 +931,822 @@
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "The topic title “cFS Key Features” became the action title “The OSAL and PSP hide the real-time OS and the board, so the cFE and the apps above it stay platform independent”.",
+                  "why": "It states what the diagram shows an engineer. The OSAL gives one API “regardless of the underlying real-time operating system” (2021 memo, printed p23), the PSP gives one API “to underlying avionics hardware and board support package” (printed p24), and the 2015 slide’s own bullet is “Platform Independent” (p8)."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "The pasted raster diagram became native, named PowerPoint shapes, one per box and bar.",
+                  "why": "The source diagram is one image with no text layer. As shapes, every box can be edited, recolored, searched and read by a screen reader."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                  "what": "The two red ellipses that covered “Mission App 1”, “Mission App 2”, “Mission App N” and “Mission Library” are gone. Every mission-developed part now has an orange fill and outline.",
+                  "why": "The ellipses ran over text and marked only four of the seven parts the legend calls mission developed. The fill marks all seven alike: three mission apps, the mission library, the platform support packages, the board support package and the PROM boot software."
+                },
+                {
+                  "what": "The status colors were recoded: blue tint for open source and NASA maintained, orange for mission developed, a dashed outline for in development, gray for third party. The legend is titled “Status as of August 2015”.",
+                  "why": "The source’s green and red are hard to tell apart for readers with red-green color blindness, and red reads as an error. The title dates the statuses to the 2015 deck."
+                },
+                {
+                  "what": "The three API bars (“cFE API”, “OS Abstraction API”, “cFE PSP API”) are dark bars with white labels, numbered to the role list, and the legend names them “Layer API”.",
+                  "why": "In the source they look like any other box. NASA’s rule “Each layer and service has a standard API” (2023 overview, slide 8) is what makes them the point of the diagram."
+                },
+                {
+                  "what": "The cFE Core box now shows its five services, ES, SB, EVS, TIME and TBL, as small chips.",
+                  "why": "An engineer needs to see where the software bus lives. The acronyms and their order come from the 2021 memo (printed p45). The 2015 deck lists the same five services, spelled out and in another order, on p9."
+                },
+                {
+                  "what": "Four numbered component roles were added beside the diagram: cFE Core services, software bus, OSAL and PSP, each quoted or closely paraphrased from the 2021 memo, with its printed page and “paraphrase” where it applies on the heading line.",
+                  "why": "The diagram names components but never says what they do. Putting the cite on the heading line leaves clear space between the four blocks."
+                },
+                {
+                  "what": "All seven numbered badges, on the diagram and in the role column, are near-black.",
+                  "why": "One kind of mark gets one color, and a dark badge stays visible on the blue API bars."
+                },
+                {
+                  "what": "Layer names moved from the right edge to a left column and were shortened, for example “Mission and CFS Application Layer” to “Application layer”.",
+                  "why": "Read left to right, each layer’s name now comes before its contents. The colors already say which parts are mission developed, so “Mission and CFS” was dropped."
+                },
+                {
+                  "what": "App circles became rounded rectangles, PROM Boot FSW moved beside the real-time OS and board support package inside the same layer, and the three bullets above the diagram were removed.",
+                  "why": "Rounded rectangles hold 11 pt labels without breaking words, and one row keeps the boot layer short. The bullets moved to the executive slide, where each one is cited."
+                },
+                {
+                  "what": "The 4:3 page with NASA’s template became a 16:9 white slide in Arial: 28 pt title, 14 pt role text, 10 to 12 pt diagram and legend labels, 10 pt sources.",
+                  "why": "That is the design standard for revised slides in this portfolio, and it leaves room for the role column. No NASA marks appear."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "Every box and bar of the 2015 diagram, layer by layer, with its label word for word, including “cFS App n(13)”, “µcFE Core” and “Time & Space Partitioning (TSP) cFE Core”.",
+                  "why": "The engineer slide cleans up NASA’s diagram and adds no new components. The labels were transcribed from the 200 dpi render because the diagram has no text layer."
                 },
                 {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                  "what": "The 2015 statuses, including in development for Software Bus Network, µcFE Core and the TSP cFE Core.",
+                  "why": "They are the source’s facts. They are dated, not updated, because no source here gives a newer status for each part."
+                },
+                {
+                  "what": "The stacks behind “cFE Apps (x5)” and “cFE Platform Support Packages”.",
+                  "why": "In the source both stand for many instances, and the stack keeps that meaning."
+                },
+                {
+                  "what": "The order of the five services: ES, SB, EVS, TIME, TBL.",
+                  "why": "That is the order of the 2021 memo’s list on printed p45."
+                },
+                {
+                  "what": "Diagram labels at 11 pt, under the 14 pt body size.",
+                  "why": "They are labels, not body text. At 11 pt all 23 source boxes fit in their source positions with their full NASA wording. Only the role column is body text, at 14 pt."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                  "what": "Updating statuses to today, for example marking the TSP or µcFE cores as released.",
+                  "why": "None of this project’s sources gives a current status for those parts, so the slide dates the 2015 statuses instead of guessing."
                 },
                 {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "Coloring OS Abstraction VxWorks and OS Abstraction TSP blue like Linux and RTEMS.",
+                  "why": "The source fills them near-white, which matches no legend entry. The slide shows them as “No status color in source” and does not assign a status."
+                },
+                {
+                  "what": "Changing “cFS App n(13)” to 12, the count in the 2021 memo’s “GSFC has released 12 applications” (printed p28).",
+                  "why": "The 13 is the 2015 deck’s own count. It is kept and flagged."
+                },
+                {
+                  "what": "Keeping the red ellipses and moving them off the text.",
+                  "why": "Moved ellipses would still mark only four of the seven mission-developed parts. A fill marks all of them without covering anything."
+                },
+                {
+                  "what": "Folding in the 2023 overview’s isometric layer drawing, with its messaging middleware, device abstraction and device driver layers (slide 8).",
+                  "why": "It slices the stack differently from the 2015 diagram. Mixing the two would create layers that neither source draws."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The 2015 deck’s count of cFS apps does not match its own app table.",
+                  "evidence": "The diagram says “cFS App n(13)” (p8) and the facts slide says “Components available 13” (p22), but the apps table on p10 lists 15 apps, or 12 without its three Lab apps (Command Ingest Lab, Scheduler Lab, Telemetry Output Lab). The 2021 memo says “GSFC has released 12 applications” (printed p28)."
+                },
+                {
+                  "what": "Two OS abstraction boxes have no status.",
+                  "evidence": "OS Abstraction VxWorks and OS Abstraction TSP have a textured near-white fill that averages #EBEBE9 (sampled with ImageMagick from text-free strips of the 96 dpi render), which matches none of the four legend swatches on p8: gray #BFBFBF, green #92D050, blue #00B0F0 and red #FF4040."
+                },
+                {
+                  "what": "Software Bus Network’s transport changed between the sources.",
+                  "evidence": "2015: “Passes Software Bus messages over Ethernet” (p10). 2021: “Passes Software Bus messages over various ‘plug-in’ network protocols” (printed p34). The slide keeps the 2015 status, dated."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Diagram labels and status styles against the 2015 source (src/check_labels.py).",
+                  "result": "23 of 23 source boxes and bars are on the slide with their labels word for word and the right status style. All 32 labels (23 boxes and bars, 4 legend entries, 5 layer names) were read at 200 dpi from the masked render."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "Role texts against their cited pages (src/check_quotes.py).",
+                  "result": "The software bus role is the memo’s words, “Provides an application publish/subscribe messaging service” (printed p45). The OSAL and PSP roles are close paraphrases of printed p23 and p24, and the cFE role combines printed p25 and p45. All 105 quotes in the ledger match their cited pages word for word."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "Deck inspector (src/inspect_pptx.py) on engineer.pptx and its LibreOffice PDF.",
+                  "result": "Passed. Arial only, smallest text 10 pt, title 28 pt. Every shape sits inside the 0.5 in margins, no two text boxes overlap, and all 271 words in the LibreOffice render sit inside their own text boxes."
+                },
+                {
+                  "what": "Render looked at by eye at 96 dpi (engineer.png, 1280 x 720 px).",
+                  "result": "No ellipse or badge covers a label. The numbered badges sit on the cFE Core box, above the SB chip and at the left end of the two abstraction API bars. The renderer substitutes Liberation Sans for Arial. It has Arial’s metrics, so line breaks match a PowerPoint render."
+                },
+                {
+                  "what": "Single-slide file against the combined deck.",
+                  "result": "engineer.pdf rendered on its own and its page in the combined deck differ by RMSE 0.0000 (0 means identical)."
+                },
+                {
+                  "what": "Overlay against the source.",
+                  "result": "Not published for this item. The slide changes layout on purpose (left layer names, a role column, a 16:9 page), so a 50 percent overlay would show the edits, not the fit. The faithful rebuild of the same page, with its overlay, is in the slide-rebuild-log project."
                 }
               ]
             },
             "logMarkdown": "slides/01-layers/log-engineer.md"
           },
           {
-            "id": "02-brief-page",
+            "id": "02-brief",
             "group": "02-brief",
-            "title": "PLACEHOLDER one-page architecture brief",
+            "title": "cFS hides the OS and the hardware behind layered APIs, and its apps talk over a software bus",
             "kind": "brief",
-            "summary": "PLACEHOLDER summary. The real summary says what this brief version changes and keeps, in one or two sentences.",
+            "summary": "A one-page brief: what each layer hides, one housekeeping packet’s path across the software bus in six steps, and the tradeoffs NASA states, every quote cited to its page.",
             "source": null,
             "after": {
-              "image": "slides/02-brief/page.png",
-              "pptx": "slides/02-brief/page.pptx",
-              "pdf": "slides/02-brief/page.pdf"
+              "image": "brief/brief.png",
+              "pptx": "brief/brief.pptx",
+              "pdf": "brief/brief.pdf"
             },
             "overlay": null,
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "About 15 slides of NASA’s software bus training (2021 memo, printed pp. 85 to 99) were condensed into one six-step path for one housekeeping packet.",
+                  "why": "One worked path shows publish/subscribe, pipes and routing in the order they happen, and each step cites the slide it comes from."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "The path is drawn as a bus diagram (msgpath.pptx) with the apps above a single bus bar.",
+                  "why": "It matches how NASA draws the bus, as an “Inter-app Message Router (Software Bus)” with apps around it (2021 memo, printed p29), and it shows one packet reaching every subscriber at a glance. The slide adds a dashed box for other subscribers, such as Data Storage. The brief’s smaller copy leaves that box out to stay on one page, and its step 5 names only the subscribed pipes."
+                },
+                {
+                  "what": "Step 1’s gray badge became blue like the other five, and badge 3 moved onto the sending app’s top-right corner.",
+                  "why": "Nothing on the page explained the gray, and the dashed arrow already marks subscribing as a startup step. In the gap between two apps, badge 3 could be read as belonging to Telemetry Output."
+                },
+                {
+                  "what": "Layer definitions are quoted, not paraphrased.",
+                  "why": "cFS and cFE are easy to mix up, so NASA’s own words carry each definition (2021 memo, printed pp. 7, 10 and 22 to 25)."
+                },
+                {
+                  "what": "The function names carry a dated note: the memo’s CFE_SB_SendMsg and CFE_SB_RcvMsg (printed p97) next to the current guide’s CFE_SB_TransmitMsg and CFE_SB_ReceiveBuffer (sections 6.6 and 6.7). On the slide the note is part of the source line, and in the brief it is a line under the steps.",
+                  "why": "The memo is from January 2021, and the current cFE guide no longer uses the old names. A separate note box on the slide made a second message between the diagram and the steps, so it moved into the source line and the diagram took the space."
+                },
+                {
+                  "what": "The message-path slide’s footer reads “Portfolio diagram drawn from public NASA documents. Not a NASA document.”",
+                  "why": "The slide is a new diagram drawn from the memo’s text, not a rebuilt NASA slide, so the footer the two layer slides carry would misstate where it came from."
+                },
+                {
+                  "what": "The page is 10 x 12.94 in, letter proportions.",
+                  "why": "Its 96 dpi render is then 960 px wide like the other images on the portfolio site, and the PDF prints on letter paper at 85 percent."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "The README’s caveat that the open bundle “has not been fully verified as an operational system”.",
+                  "why": "It limits what the six steps show: a lab setup, not a flight configuration."
+                },
+                {
+                  "what": "NASA’s own word “drawback” for the copy each send makes, and the guide’s condition on it (cFE guide, section 6.8).",
+                  "why": "The tradeoff is stated in NASA’s terms. Section 6.8 is about large messages and offers zero copy for when the copy takes too long, so the line reads “Copies slow large messages.” and does not present the copy as a cost on every send."
+                },
+                {
+                  "what": "The GPM lesson from 2015, “Addition of PSP changed build infrastructure midstream” (p14).",
+                  "why": "It is the one cost of the abstraction layers that NASA reports from a flight project in these sources."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
-                }
-              ],
-              "flagged": [],
-              "checks": [
-                {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "A comparison with general-purpose message brokers.",
+                  "why": "None of the sources makes one, so it would be the brief’s claim, not NASA’s."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "The command path, tables and events as further walk-throughs.",
+                  "why": "One path keeps the brief to one page. glossary.md defines EVS and TBL, and the altitude log records what was left out."
+                },
+                {
+                  "what": "A step for runtime rerouting, from the memo’s “Message routing can be added/removed at runtime” (printed p85).",
+                  "why": "Rerouting is not part of a housekeeping packet’s normal path. The quote stays in citations.csv."
+                },
+                {
+                  "what": "A Mermaid sequence diagram.",
+                  "why": "A native PowerPoint diagram can be edited and reused in a deck. The numbered steps in brief.md serve as its text version."
+                },
+                {
+                  "what": "Raising the brief’s 10 pt reference list to 11 pt.",
+                  "why": "The page has 0.05 in to spare below the footer, and 10 pt meets the floor at the page’s own size. Printed on letter paper at 85 percent it reads at about 8.5 pt, so the PDF and PNG on screen are the reading copies."
+                }
+              ],
+              "flagged": [
+                {
+                  "what": "API is expanded two ways in the same memo.",
+                  "evidence": "“Application Program Interface” in the OSAL and PSP definitions (printed p23 and p24) and “API Application Programmer Interface” in the acronym list (printed p209). The 2015 deck also says “API Application Programmer Interface” (p19)."
+                },
+                {
+                  "what": "Telemetry Output in the open bundle is a lab app.",
+                  "evidence": "The 2021 memo lists “Telemetry Output Lab” (printed p34), and the nasa/cFS README says “the \"lab\" apps are intended as examples only”. The current cFE guide says the ingest and telemetry apps are “adapted as needed to fit the mission” (section 6)."
+                }
+              ],
+              "checks": [
+                {
+                  "what": "Quotes in the brief, msgpath.pptx and brief.md against their cited pages (src/check_quotes.py --outputs).",
+                  "result": "All 105 quotes in the ledger match their cited pages word for word. All 181 quoted fragments in the published slides and Markdown trace to the ledger, a transcribed diagram label, a source title or the slides’ own text."
+                },
+                {
+                  "what": "Deck inspector on brief.pptx and its LibreOffice PDF.",
+                  "result": "Passed. Arial only, smallest text 10 pt, title 22 pt. Every shape sits inside the 0.5 in margins, no two text boxes overlap, and all 565 words in the LibreOffice render sit inside their own text boxes."
+                },
+                {
+                  "what": "Deck inspector on msgpath.pptx and its LibreOffice PDF.",
+                  "result": "Passed. Arial only, smallest text 10 pt, title 28 pt. Every shape sits inside the 0.5 in margins, no two text boxes overlap, and all 230 words in the LibreOffice render sit inside their own text boxes."
+                },
+                {
+                  "what": "One page.",
+                  "result": "brief.pdf has 1 page, 720 x 931.748 pt (10 x 12.94 in)."
+                },
+                {
+                  "what": "Length.",
+                  "result": "360 words of body text, plus 70 words in the source list. The diagram labels are not counted."
+                },
+                {
+                  "what": "Render looked at by eye at 96 dpi (brief.png, 960 px wide).",
+                  "result": "Every block fits its box, the table rows hold their text, and the diagram badges sit beside their arrows without covering labels. The renderer substitutes Liberation Sans for Arial. It has Arial’s metrics, so line breaks match a PowerPoint render."
                 }
               ]
             },
-            "logMarkdown": "slides/02-brief/log-page.md"
+            "logMarkdown": "brief/log-brief.md"
           }
         ],
         "downloads": [
           {
-            "label": "PLACEHOLDER Executive and engineer slides (.pptx)",
-            "path": "dist/deck.pptx",
-            "bytes": 45855
+            "label": "All three slides: executive, engineer, message path (.pptx)",
+            "path": "dist/architecture-three-ways.pptx",
+            "bytes": 27482
           },
           {
-            "label": "PLACEHOLDER Architecture brief (PDF)",
-            "path": "dist/brief.pdf",
-            "bytes": 29465
+            "label": "All three slides (PDF)",
+            "path": "dist/architecture-three-ways.pdf",
+            "bytes": 187916
+          },
+          {
+            "label": "Architecture brief, one page (PDF)",
+            "path": "brief/brief.pdf",
+            "bytes": 131033
+          },
+          {
+            "label": "Architecture brief (Markdown)",
+            "path": "brief/brief.md",
+            "bytes": 3570
+          },
+          {
+            "label": "Message path diagram (.pptx)",
+            "path": "brief/msgpath.pptx",
+            "bytes": 17029
+          },
+          {
+            "label": "Glossary of NASA definitions (Markdown)",
+            "path": "glossary.md",
+            "bytes": 6095
+          },
+          {
+            "label": "Citations, one row per quote (CSV)",
+            "path": "citations.csv",
+            "bytes": 26273
+          },
+          {
+            "label": "Altitude log: what each view leaves out (Markdown)",
+            "path": "altitude-log.md",
+            "bytes": 5286
           }
         ],
         "credits": [
-          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
-          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+          "D. McComas, S. Strege and J. Wilmot, “Core Flight System (cFS) a Low Cost Solution for SmallSats,” NASA Goddard Space Flight Center, August 2015. NTRS 20150018075 (GSFC-E-DAA-TN25822), https://ntrs.nasa.gov/citations/20150018075. NTRS: Work of the US Gov. Public Use Permitted. Page 8 is the source image (insignia, Goddard banner and cFS logo masked), and pages 2, 3, 8 to 11, 14, 19, 22 and 23 are quoted.",
+          "D. Baker, “core Flight System (cFS) Overview,” NASA Goddard Space Flight Center, 2023. NTRS 20230002444, https://ntrs.nasa.gov/citations/20230002444. NTRS: Work of the US Gov. Public Use Permitted. Slide 8 is quoted, and its image is published with the insignia and cFS logo masked.",
+          "“Core Flight System (cFS) Training,” NASA/TM-20205000691/REV 1, Flight Software Systems Branch (Code 582), NASA Goddard Space Flight Center, January 2021. NTRS 20205011588, https://ntrs.nasa.gov/citations/20205011588. NTRS: Work of the US Gov. Public Use Permitted. Text only, quoted with page cites. No page images, since every slide page carries the NASA insignia and the cFS logo.",
+          "NASA, nasa/cFS repository README (main branch), https://github.com/nasa/cFS, read October 6, 2026. Apache License 2.0. Quoted only.",
+          "NASA, “cFE Application Developers Guide,” nasa/cFE repository docs (main branch), https://github.com/nasa/cFE, read October 6, 2026. Apache License 2.0. Quoted only.",
+          "No NASA insignia, logotype, center banner or cFS logo appears in any slide, image or page in this repo. This is a portfolio project, not a NASA document, and it is not affiliated with or endorsed by NASA."
         ]
       },
       "files": {
-        "dist/brief.pdf": {
-          "bytes": 29465
+        "altitude-log.md": {
+          "bytes": 5286
         },
-        "dist/deck.pptx": {
-          "bytes": 45855
+        "brief/brief.md": {
+          "bytes": 3570
+        },
+        "brief/brief.pdf": {
+          "bytes": 131033
+        },
+        "brief/brief.png": {
+          "bytes": 338272,
+          "width": 960,
+          "height": 1243
+        },
+        "brief/brief.pptx": {
+          "bytes": 19616
+        },
+        "brief/log-brief.md": {
+          "bytes": 6749
+        },
+        "brief/msgpath.pptx": {
+          "bytes": 17029
+        },
+        "citations.csv": {
+          "bytes": 26273
+        },
+        "dist/architecture-three-ways.pdf": {
+          "bytes": 187916
+        },
+        "dist/architecture-three-ways.pptx": {
+          "bytes": 27482
+        },
+        "glossary.md": {
+          "bytes": 6095
         },
         "renders/cover.png": {
-          "bytes": 34138,
+          "bytes": 230692,
           "width": 1280,
           "height": 720
         },
         "slides/01-layers/engineer.pdf": {
-          "bytes": 30848
+          "bytes": 103967
         },
         "slides/01-layers/engineer.png": {
-          "bytes": 35436,
+          "bytes": 205810,
           "width": 1280,
           "height": 720
         },
         "slides/01-layers/engineer.pptx": {
-          "bytes": 45871
+          "bytes": 18043
         },
         "slides/01-layers/exec.pdf": {
-          "bytes": 30918
+          "bytes": 86806
         },
         "slides/01-layers/exec.png": {
-          "bytes": 35824,
+          "bytes": 230692,
           "width": 1280,
           "height": 720
         },
         "slides/01-layers/exec.pptx": {
-          "bytes": 45867
+          "bytes": 16956
         },
         "slides/01-layers/log-engineer.md": {
-          "bytes": 1796
+          "bytes": 9824
         },
         "slides/01-layers/log-exec.md": {
-          "bytes": 1792
+          "bytes": 8407
         },
         "slides/01-layers/source.png": {
-          "bytes": 13942,
+          "bytes": 161162,
           "width": 960,
           "height": 720
-        },
-        "slides/02-brief/log-page.md": {
-          "bytes": 1135
-        },
-        "slides/02-brief/page.pdf": {
-          "bytes": 31239
-        },
-        "slides/02-brief/page.png": {
-          "bytes": 36304,
-          "width": 1280,
-          "height": 720
-        },
-        "slides/02-brief/page.pptx": {
-          "bytes": 45866
         }
       },
-      "commit": null,
+      "commit": "32643a2ad249",
       "dirty": false
     },
     {
       "portfolio": {
         "slug": "chart-rebuilds",
-        "title": "PLACEHOLDER Chart rebuilds",
-        "oneLiner": "PLACEHOLDER one-liner. The real line says what the chart rebuilds project shows, in one sentence.",
+        "title": "Chart Rebuilds: GAO's federal IT spending chart",
+        "oneLiner": "A dense GAO chart, 24 agencies with every value printed, rebuilt as a native PowerPoint chart, checked against its own printed totals, then redesigned around its one finding.",
         "repo": "https://github.com/logan-ankenbrandt/chart-rebuilds",
         "order": 3,
         "skills": [
-          "Data Visualization",
+          "Microsoft PowerPoint",
           "Slide Reconstruction",
+          "Data Visualization",
           "Presentation Design",
           "Visual Storytelling",
-          "Attention to Detail"
+          "Attention to Detail",
+          "Critical Thinking",
+          "Content Editing",
+          "Technical Documentation",
+          "Software Engineering"
         ],
-        "howMade": "Claude Code agents rebuilt these slides from the source images as editable PowerPoint and drafted the logs. I chose the sources, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
+        "howMade": "Claude Code agents rebuilt this GAO figure from the source image as editable PowerPoint and drafted the logs. I chose the source, set the rules each rebuild follows, and checked every slide, number and log before publishing.",
         "cover": "renders/cover.png",
         "items": [
           {
-            "id": "01-spending-faithful",
-            "group": "01-spending",
-            "title": "PLACEHOLDER native chart rebuilt to match the report figure",
+            "id": "figure1-faithful",
+            "group": "figure1",
+            "title": "Faithful rebuild: GAO Figure 1 as a native PowerPoint chart",
             "kind": "chart-faithful",
-            "summary": "PLACEHOLDER summary. The real summary says what this chart-faithful version changes and keeps, in one or two sentences.",
+            "summary": "GAO's figure of planned FY2025 IT spending for 24 agencies, rebuilt on a 16:9 slide as one native 100% stacked bar chart with the 48 printed percents embedded and a table for names and totals. Laid over the published figure, its bar outlines land within 1 px at 300 ppi.",
             "source": {
-              "image": "slides/01-spending/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "image": "slides/figure1/source.png",
+              "title": "Figure 1: Planned IT Spending, as Reported on the IT Dashboard for Fiscal Year 2025, in millions of dollars",
+              "credit": "U.S. Government Accountability Office, GAO-25-107795 (July 17, 2025), Figure 1",
+              "url": "https://www.gao.gov/products/gao-25-107795",
+              "license": "Work of the U.S. government, not subject to copyright protection in the United States (report page iii).",
+              "page": "PDF page 11 (printed page 5)"
             },
             "after": {
-              "image": "slides/01-spending/faithful.png",
-              "pptx": "slides/01-spending/faithful.pptx",
-              "pdf": "slides/01-spending/faithful.pdf"
+              "image": "slides/figure1/faithful.png",
+              "pptx": "slides/figure1/faithful.pptx",
+              "pdf": "slides/figure1/faithful.pdf"
             },
-            "overlay": "slides/01-spending/overlay-faithful.png",
+            "overlay": "slides/figure1/overlay.png",
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "Moved GAO's report figure onto a 16:9 slide at its printed size, 5.0 by 6.32 in, centered, with the report's caption and rule above it.",
+                  "why": "The source is a portrait figure on a report page. At its printed size the rebuild keeps GAO's point sizes and fits the 7.5 in slide height, so nothing is rescaled."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "Rebuilt the 24 bars as one native 100% stacked bar chart whose embedded data are the 48 printed percents.",
+                  "why": "A native chart opens in Edit Data, so every value can be checked in PowerPoint. GAO drew each bar from its rounded percent (all 24 bars measure within 0.07 points of their labels), so charting the printed percents reproduces the drawing."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                  "what": "Set the agency names and dollar totals in a native two-column table whose 24 rows share the chart's row pitch of 0.202 in.",
+                  "why": "A table keeps all 48 cells in one editable object and lines each row up with its bar by construction. A text column would have meant 24 or 48 loose text boxes to keep in line."
+                },
+                {
+                  "what": "Drew the top band (the gray label area, the overall O&M and DME bar and its five values) with shapes and text boxes.",
+                  "why": "The band is about twice as tall as an agency bar and sits apart from the rows, so it cannot be a 25th category of the same chart. Its divider sits at the printed 79%, where GAO drew it: the band's bar measures 79.00%."
+                },
+                {
+                  "what": "Set the two DME labels that sit outside their bars (Housing and Urban Development 3%, Small Business Administration 5%) as text boxes, and switched off the chart's own labels for those two points.",
+                  "why": "PowerPoint stores a moved data label as an offset from its default spot, and LibreOffice computes that spot differently, so a moved label would land in different places in the two programs. The inspector checks both text boxes against the CSV."
+                },
+                {
+                  "what": "Drew the axis rule, the numbers 0 to 100 and the axis title as a shape and text boxes in place of the chart's own axis.",
+                  "why": "A 100% stacked chart's axis prints 0% to 100%, and GAO prints the numbers without percent signs. GAO's rule also starts 18 px (300 ppi) below the last bar's fill, lower than a chart axis line sits."
+                },
+                {
+                  "what": "Placed each text element on its measured baseline, then moved it by the offset that best matched its ink to the source in a 300 dpi render, 1 to 5 px (under 1.2 pt).",
+                  "why": "LibreOffice sets baselines a little lower than the font-metric model used to place them. The offsets are the NUDGE table in src/build-faithful.js, and the result is in data/fit-offsets.json."
+                },
+                {
+                  "what": "Added a slide footer: the source line and 'Portfolio reconstruction of a public GAO figure. Not a GAO product.'",
+                  "why": "Every rebuilt slide carries it, so the slide cannot pass for a GAO product. It sits 0.28 in from the bottom edge, inside the redesign's 0.5 in margin, because the figure fills the slide height at its printed size and its source line ends at about 6.92 in."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "GAO's order (largest planned total first), all 24 names as printed, every dollar total and every percent label.",
+                  "why": "These are the figure's content. Each value was read in four passes and matches data/figure1.csv, and the inspector compares the chart, its embedded workbook and the table with that file."
                 },
                 {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                  "what": "Colors from the figure's pixels: O&M #409993, DME #99CCFF, band gray #D7D7D7, black text and outlines.",
+                  "why": "The PDF holds the figure as an indexed-color image, so these are its exact palette values."
+                },
+                {
+                  "what": "GAO's type and lines: caption Arial Bold 9 pt, band heading 9 pt bold, $105,136 at 10 pt bold, totals 8 pt bold, names 7 pt bold, percent labels 7 pt, source line 6 pt, 0.5 pt outlines and a 1.9 pt axis rule.",
+                  "why": "Measured on the 300 ppi figure from cap heights and word widths, and from the PDF's text layer for the caption, where the word 'Figure' is 27.56 pt wide, the width of 9 pt Arial Bold."
+                },
+                {
+                  "what": "The caption, the legend's two definitions (with GAO's bold '=' signs) and the source line, word for word.",
+                  "why": "They carry the figure's title and its definitions of DME and O&M."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                  "what": "Putting the totals into the chart's category labels.",
+                  "why": "PowerPoint sets category labels in one style, right-aligned against the axis, so names could not sit left-aligned at the figure's edge with bold totals in their own right-aligned column."
                 },
                 {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "A 25th chart category for the top band.",
+                  "why": "It would force the band to the agency bars' height and spacing."
+                },
+                {
+                  "what": "Tracing over a pasted copy of the source image, or keeping any picture on the slide.",
+                  "why": "Everything on the slide is a native, editable object. The inspector fails any slide that holds a picture, and its test proves that it does."
+                },
+                {
+                  "what": "Two tables with different row pitches, to follow GAO's dollar column exactly.",
+                  "why": "GAO's totals run on a slightly longer pitch than its bars. With one table on the bars' pitch, the row 1 total sits 3 px low and the row 24 total 4 px high at 300 ppi (about 1 pt), while names stay within 1 px. One table keeps the slide simple."
+                },
+                {
+                  "what": "Giving the chart's inside labels fixed offsets to match GAO's padding.",
+                  "why": "LibreOffice places inside-end labels 3 to 5 px (300 ppi) closer to the segment end than GAO did. Fixed-offset labels would stop following the data."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The figure prints 79% for O&M, and the exact share is 78.78%.",
+                  "evidence": "$82,828M / $105,136M = 78.78% (checks.md). GAO's text rounds it the same way: 'about $83 billion (79 percent)' (PDF p. 10, printed p. 4)."
+                },
+                {
+                  "what": "Ties in the printed shares cannot be ordered from the figure.",
+                  "evidence": "GAO drew every bar from its rounded percent (all 24 within 0.07 points, checks.md), so Defense, Interior and the Nuclear Regulatory Commission at 83%, for example, carry no finer detail."
+                },
+                {
+                  "what": "The published PDF and PNG use Liberation Sans where the .pptx names Arial.",
+                  "evidence": "pdffonts lists only LiberationSans and LiberationSans-Bold in both PDFs. LibreOffice substitutes this metric-compatible font, so widths and line breaks hold and glyph shapes differ slightly."
+                },
+                {
+                  "what": "No step in this build opened the file in Microsoft PowerPoint.",
+                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application and say Claude Code agents generated it (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Transcription in four passes: the PDF image by eye (A), GAO's web JPEG by eye in reverse order (B), tesseract OCR (C) and the sources agent's sheet, opened last (D)",
+                  "result": "75 values compared, 1 disagreement: OCR read row 2's O&M label as 21%. A 6x zoom shows 91%, and the DME label beside it is 9% (data/transcription/compare.md). Passes A and B were read by the same agent, so C and D are the independent ones."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "24 agency totals against the printed total",
+                  "result": "Sum $105,136M equals the printed $105,136M."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "O&M and DME shares",
+                  "result": "$82,828M / $105,136M = 78.78%, printed 79%. $22,308M = 21.22%, printed 21%. The two add to $105,136M."
+                },
+                {
+                  "what": "Rounding of each agency's shares",
+                  "result": "All 24 rows add to 100. The rounded shares imply $82,847.15M of O&M against the printed $82,828M, inside the +/-$525.68M that whole-percent rounding allows."
+                },
+                {
+                  "what": "Bar lengths against their labels",
+                  "result": "All 24 bars measure within 0.07 points of their printed percents at 300 ppi (checks.md)."
+                },
+                {
+                  "what": "Order",
+                  "result": "Totals strictly decrease down the figure. The closest pairs, Energy with Agriculture and USAID with EPA, are each $1M apart."
+                },
+                {
+                  "what": "Inspector (python-pptx) on faithful.pptx",
+                  "result": "22 of 22 checks pass: one native 100% stacked bar chart, chart values and embedded workbook equal to the CSV, table equal to the CSV with a frame as tall as its 24 rows, outside labels, no pictures, Arial only (theme fonts too), footer present, file properties that name PptxGenJS and Claude Code. A test builds broken decks and each one fails."
+                },
+                {
+                  "what": "Overlay on the published figure",
+                  "result": "RMSE 0.1427 on the figure at 300 dpi (the source image at its native resolution), 0.1388 at 96 dpi and 0.0908 for the whole slide, where 0 means identical. Bar outlines and dividers land within 1 px at 300 ppi."
                 }
               ]
             },
-            "logMarkdown": "slides/01-spending/log-faithful.md"
+            "logMarkdown": "slides/figure1/log-faithful.md"
           },
           {
-            "id": "01-spending-redesign",
-            "group": "01-spending",
-            "title": "PLACEHOLDER redesigned chart whose title states the finding",
+            "id": "figure1-redesign",
+            "group": "figure1",
+            "title": "Redesign: the same data as an executive slide",
             "kind": "chart-redesign",
-            "summary": "PLACEHOLDER summary. The real summary says what this chart-redesign version changes and keeps, in one or two sentences.",
+            "summary": "Sorted by operations and maintenance share, with a line at the all-agency 79%, labels on the five extremes, and an action title in GAO's own numbers. Notes keep the report's general 'about 80 percent' and its legacy caveat apart from the FY2025 figure.",
             "source": {
-              "image": "slides/01-spending/source.png",
-              "title": "PLACEHOLDER source title 1",
-              "credit": "PLACEHOLDER credit: author, agency and date of source 1",
-              "url": "https://example.com/placeholder-source-1",
-              "license": "PLACEHOLDER license line for source 1",
-              "page": "PLACEHOLDER page 1"
+              "image": "slides/figure1/source.png",
+              "title": "Figure 1: Planned IT Spending, as Reported on the IT Dashboard for Fiscal Year 2025, in millions of dollars",
+              "credit": "U.S. Government Accountability Office, GAO-25-107795 (July 17, 2025), Figure 1",
+              "url": "https://www.gao.gov/products/gao-25-107795",
+              "license": "Work of the U.S. government, not subject to copyright protection in the United States (report page iii).",
+              "page": "PDF page 11 (printed page 5)"
             },
             "after": {
-              "image": "slides/01-spending/redesign.png",
-              "pptx": "slides/01-spending/redesign.pptx",
-              "pdf": "slides/01-spending/redesign.pdf"
+              "image": "slides/figure1/redesign.png",
+              "pptx": "slides/figure1/redesign.pptx",
+              "pdf": "slides/figure1/redesign.pdf"
             },
             "overlay": null,
             "log": {
               "changed": [
                 {
-                  "what": "PLACEHOLDER change. The real entry names one change made to the slide.",
-                  "why": "PLACEHOLDER reason. The real entry gives the design rule or the source evidence behind the change, in a sentence or two."
+                  "what": "Replaced GAO's figure title with an action title: 'Agencies planned 79% of FY2025 IT spending, about $83 billion, for operations and maintenance (O&M)'.",
+                  "why": "A slide read at a distance needs its finding in the title. The numbers and hedges are GAO's: 'about $83 billion (79 percent) in planned total IT spending for fiscal year 2025 was intended for operations and maintenance' (PDF p. 10, printed p. 4)."
                 },
                 {
-                  "what": "PLACEHOLDER change to the title, which states the point instead of the topic.",
-                  "why": "PLACEHOLDER reason. A reader should get the message from the title alone."
+                  "what": "Set the subtitle to the spread: 'Planned O&M share by agency ranged from 60% (Transportation) to 97% (Housing and Urban Development)'.",
+                  "why": "The title gives the all-agency 79%, and the 24 bars show how far agencies sit from it, which GAO also points out: the figure 'shows how agencies can vary in their percentage of operations and maintenance spending' (PDF p. 10). The subtitle states that spread from the lowest and highest rows of data/figure1.csv, and says 'planned' as GAO does."
                 },
                 {
-                  "what": "PLACEHOLDER change to labels, which move from a legend onto the marks.",
-                  "why": "PLACEHOLDER reason. Direct labels remove the back and forth between legend and chart."
+                  "what": "Sorted the 24 agencies by O&M share, highest first, in place of GAO's order by total spending.",
+                  "why": "The slide compares each agency with the overall share, and a sorted bar chart shows the spread and the extremes at a glance. Agencies with equal shares keep GAO's order, largest total first."
+                },
+                {
+                  "what": "Plotted one series, the O&M share, on a 0 to 100% axis that starts at zero.",
+                  "why": "Each agency's two shares add to 100, so the DME bar repeats the same information. One series drops half the ink and the legend, and the zero baseline keeps bar lengths true to the shares."
+                },
+                {
+                  "what": "Added a reference line at the all-agency share, labeled 'All 24 agencies: 79%'.",
+                  "why": "It turns each bar into a comparison with the total. The line sits at the exact share from the printed dollars, 82,828 / 105,136 = 78.78%, and carries GAO's rounded label."
+                },
+                {
+                  "what": "Labeled values only on the five extremes: Housing and Urban Development 97%, Small Business Administration 95%, Homeland Security 91%, Treasury 61% and Transportation 60%.",
+                  "why": "These five stand apart from the rest: the next share below 91% is 87%, and the next above 61% is 69%. The gridlines carry the other values, and every value stays in the faithful slide and data/figure1.csv."
+                },
+                {
+                  "what": "Shortened agency names, for example 'Defense' for 'Department of Defense', 'NASA' and 'USAID'.",
+                  "why": "Short names fit 24 rows beside the bars. The mapping is the redesign_label column of data/figure1.csv."
+                },
+                {
+                  "what": "Left out the dollar totals.",
+                  "why": "The slide carries one message, the share. The totals stay in the faithful slide and the CSV, and the notes column gives the overall $82,828 million of $105,136 million."
+                },
+                {
+                  "what": "Added a notes column: what the line is, the report's separate 'about 80 percent' statement, and GAO's legacy caveat.",
+                  "why": "These are the qualifiers a reader needs before repeating the number. Each one cites the report page it comes from. The three notes are paragraphs of one text box at one fixed gap, starting level with the top of the plot."
+                },
+                {
+                  "what": "Colored the bars #2B5D96 and the line #D55E00 (vermilion).",
+                  "why": "The dataviz palette validator rated #2F5D8A below its chroma floor (OKLCH chroma 0.089, so it reads gray). #2B5D96, a slightly more saturated blue of about the same lightness, passes every check with #D55E00 (data/palette-check.txt)."
                 }
               ],
               "kept": [
                 {
-                  "what": "PLACEHOLDER kept. The real entry names something deliberately left as the source had it.",
-                  "why": "PLACEHOLDER reason. Keeping it preserves a definition, a caveat or the source's own hedge."
+                  "what": "GAO's numbers and hedges: 'planned', 'about $83 billion', 79%.",
+                  "why": "The title claims no more precision or certainty than the report."
                 },
                 {
-                  "what": "PLACEHOLDER kept wording from the source.",
-                  "why": "PLACEHOLDER reason. The source's hedge is part of the claim."
+                  "what": "The definitions: operations and maintenance (O&M) spelled out in the title, and the other 21% named as development, modernization and enhancement.",
+                  "why": "They come from the figure's legend and the report's footnote 11 (PDF p. 10)."
+                },
+                {
+                  "what": "The scope and source: the 24 CFO Act agencies, GAO-25-107795 Figure 1, GAO analysis of IT Dashboard data.",
+                  "why": "The scope is from PDF p. 10 and the source line from the figure."
+                },
+                {
+                  "what": "Arial throughout, theme fonts included: title 28 pt, subtitle 16 pt, notes 14 pt, chart text 11 to 12 pt, source and footer 10 pt.",
+                  "why": "The deck's type standard. Chart text sits below the 14 pt body size because of the 24 rows (see Rejected), and nothing is under 10 pt."
                 }
               ],
               "rejected": [
                 {
-                  "what": "PLACEHOLDER rejected. A change that was considered and not made.",
-                  "why": "PLACEHOLDER reason. What the change would have cost, such as accuracy, a caveat or traceability to the source."
+                  "what": "A dot plot.",
+                  "why": "Dots would show the same 24 shares, but bars on a 0 to 100% axis read as a share of the whole, which is what the data are, and they keep the zero baseline in view."
                 },
                 {
-                  "what": "PLACEHOLDER rejected a second change.",
-                  "why": "PLACEHOLDER reason, one short sentence."
+                  "what": "Small multiples.",
+                  "why": "There is one measure and one comparison. Panels would split the agencies across several plots and repeat the reference line."
+                },
+                {
+                  "what": "Keeping the 100% stacked bars with DME.",
+                  "why": "DME is 100 minus O&M on every row, so the second color adds a legend and no information."
+                },
+                {
+                  "what": "Coloring the five extremes and graying the rest.",
+                  "why": "It would pull the eye to the extremes and away from the reference line, which carries the title's number. In a sorted chart, position and labels already mark the extremes."
+                },
+                {
+                  "what": "Value labels on all 24 bars.",
+                  "why": "A column of 24 numbers competes with the reference line. The faithful slide keeps every value."
+                },
+                {
+                  "what": "Agency names at 14 pt, the deck's body minimum.",
+                  "why": "Under a two-line title the 24 rows get 0.179 in each, and 14 pt names would overlap. They are 12 pt, the largest size that keeps them apart. One render at a slightly tighter pitch made LibreOffice drop every other name, so the label interval is now fixed at 1."
+                },
+                {
+                  "what": "Putting the report's 'about 80 percent' in the title.",
+                  "why": "That is GAO's general statement about what agencies have typically reported, not the FY2025 plan, and the slide keeps the two numbers apart."
                 }
               ],
               "flagged": [
                 {
-                  "what": "PLACEHOLDER flag. Something in the source looks wrong and was left for the author instead of fixed.",
-                  "evidence": "PLACEHOLDER evidence. The arithmetic or the page reference behind the flag."
+                  "what": "The report gives two figures for O&M spending: 'about 80 percent' in general and 79% for FY2025 plans.",
+                  "evidence": "PDF p. 2 and p. 7 (printed p. 1): agencies 'have typically reported spending about 80 percent on operations and maintenance of existing IT'. PDF p. 10 (printed p. 4): 'about $83 billion (79 percent) in planned total IT spending for fiscal year 2025'. The slide uses 79%, and its notes keep the general statement separate."
+                },
+                {
+                  "what": "O&M spending is not the same as legacy spending.",
+                  "evidence": "PDF p. 10: 'it is uncertain how much of the operations and maintenance is spent on legacy technology because the Office of Management and Budget (OMB) does not require agencies to include information on whether their investments are considered legacy IT.' The slide's third note keeps this caveat."
+                },
+                {
+                  "what": "The reference line is a drawn shape, not part of the chart data.",
+                  "evidence": "It sits at 78.78% of the plot width and measured 78.81% in a 300 dpi render (data/reference-line.json). It does not move if the chart data change, and the speaker notes say so."
+                },
+                {
+                  "what": "Ties are ordered by total spending because the source cannot rank them.",
+                  "evidence": "Four groups share a printed share: 87% (Veterans Affairs, NASA), 83% (Defense, Interior, Nuclear Regulatory Commission), 79% (Justice, Education) and 72% (General Services Administration, USAID). GAO drew the bars from rounded percents (checks.md)."
+                },
+                {
+                  "what": "The published PDF and PNG use Liberation Sans where the .pptx names Arial.",
+                  "evidence": "pdffonts lists only LiberationSans and LiberationSans-Bold in both PDFs. LibreOffice substitutes this metric-compatible font, so widths and line breaks hold and glyph shapes differ slightly."
+                },
+                {
+                  "what": "No step in this build opened the file in Microsoft PowerPoint.",
+                  "evidence": "The .pptx comes from PptxGenJS 4.0.1 and is checked with python-pptx 1.0.2. Its file properties name PptxGenJS 4.0.1 as the application and say Claude Code agents generated it (the inspector checks this). Renders, the overlay and every position calibration come from LibreOffice, so text positions in PowerPoint are unchecked."
                 }
               ],
               "checks": [
                 {
-                  "what": "PLACEHOLDER check. A verification step, for example an overlay or a value read back from the file.",
-                  "result": "PLACEHOLDER result. What the check found."
+                  "what": "Chart values",
+                  "result": "The chart cache and the embedded workbook equal the printed O&M shares in data/figure1.csv, in the sorted order (inspector)."
                 },
                 {
-                  "what": "PLACEHOLDER check of fonts and sizes.",
-                  "result": "PLACEHOLDER result. Pass."
+                  "what": "Sort and tie order",
+                  "result": "4 tie groups, each in GAO's order (checks.md)."
                 },
                 {
-                  "what": "PLACEHOLDER check that every number traces to the source.",
-                  "result": "PLACEHOLDER result. Pass, with the page cited in the log."
+                  "what": "Extremes",
+                  "result": "Highest: Housing and Urban Development 97%, Small Business Administration 95%, Homeland Security 91%. Lowest: Treasury 61%, Transportation 60%. Value labels appear on exactly those five (inspector)."
+                },
+                {
+                  "what": "Reference line position",
+                  "result": "78.81% of the axis in a 300 dpi render, against a target of 78.78% (data/reference-line.json)."
+                },
+                {
+                  "what": "Numbers in the title, subtitle and notes",
+                  "result": "'about $83 billion' is $82,828M rounded, 79% is 78.78% rounded and 21% is 21.22% rounded, as GAO prints them (checks.md). The subtitle's 60% and 97% are the printed shares of Transportation and Housing and Urban Development (data/figure1.csv rows 6 and 18), the lowest and highest of the 24."
+                },
+                {
+                  "what": "Palette",
+                  "result": "The dataviz validator passes #2B5D96 with #D55E00 on the lightness band, chroma floor, colorblind separation (delta E 21.3), normal-vision floor and contrast (data/palette-check.txt)."
+                },
+                {
+                  "what": "Inspector (python-pptx) on redesign.pptx",
+                  "result": "17 of 17 checks pass: one native bar chart, values and embedded workbook equal to the CSV, labels only on the extremes, no pictures, Arial only (theme fonts too), footer present, no dash characters or banned words, file properties that name PptxGenJS and Claude Code."
+                },
+                {
+                  "what": "Render review",
+                  "result": "All 24 names visible with no overlaps at 96 and 200 dpi. An earlier render that dropped every other name was fixed by setting the label interval to 1."
                 }
               ]
             },
-            "logMarkdown": "slides/01-spending/log-redesign.md"
+            "logMarkdown": "slides/figure1/log-redesign.md"
           }
         ],
         "downloads": [
           {
-            "label": "PLACEHOLDER Both charts (.pptx)",
-            "path": "dist/charts.pptx",
-            "bytes": 45848
+            "label": "Faithful rebuild (PowerPoint)",
+            "path": "slides/figure1/faithful.pptx",
+            "bytes": 25631
           },
           {
-            "label": "PLACEHOLDER Both charts (PDF)",
-            "path": "dist/charts.pdf",
-            "bytes": 28805
+            "label": "Faithful rebuild (PDF)",
+            "path": "slides/figure1/faithful.pdf",
+            "bytes": 103388
           },
           {
-            "label": "PLACEHOLDER Chart data (CSV)",
-            "path": "data/spending.csv",
-            "bytes": 56
+            "label": "Redesign (PowerPoint)",
+            "path": "slides/figure1/redesign.pptx",
+            "bytes": 23146
+          },
+          {
+            "label": "Redesign (PDF)",
+            "path": "slides/figure1/redesign.pdf",
+            "bytes": 78958
+          },
+          {
+            "label": "Figure 1 values with where each was printed (CSV)",
+            "path": "data/figure1.csv",
+            "bytes": 8778
+          },
+          {
+            "label": "Arithmetic, rounding and pixel checks",
+            "path": "checks.md",
+            "bytes": 5992
           }
         ],
         "credits": [
-          "PLACEHOLDER credit line for source 1: title, author, agency, date, ID, URL and license.",
-          "PLACEHOLDER credit line for source 2, with what was left out of the published copy."
+          "GAO, Information Technology: Agencies Need to Plan for Modernizing Critical Decades-Old Legacy Systems, GAO-25-107795 (Washington, D.C.: July 17, 2025), Figure 1, https://www.gao.gov/products/gao-25-107795. \"This is a work of the U.S. government and is not subject to copyright protection in the United States.\"",
+          "Not affiliated with or endorsed by GAO. The report's cover, the GAO logo and the Figure 2 photograph are not used."
         ]
       },
       "files": {
-        "data/spending.csv": {
-          "bytes": 56
+        "checks.md": {
+          "bytes": 5992
         },
-        "dist/charts.pdf": {
-          "bytes": 28805
-        },
-        "dist/charts.pptx": {
-          "bytes": 45848
+        "data/figure1.csv": {
+          "bytes": 8778
         },
         "renders/cover.png": {
-          "bytes": 33302,
+          "bytes": 188676,
           "width": 1280,
           "height": 720
         },
-        "slides/01-spending/faithful.pdf": {
-          "bytes": 30507
+        "slides/figure1/faithful.pdf": {
+          "bytes": 103388
         },
-        "slides/01-spending/faithful.png": {
-          "bytes": 34781,
+        "slides/figure1/faithful.png": {
+          "bytes": 128202,
           "width": 1280,
           "height": 720
         },
-        "slides/01-spending/faithful.pptx": {
-          "bytes": 45864
+        "slides/figure1/faithful.pptx": {
+          "bytes": 25631
         },
-        "slides/01-spending/log-faithful.md": {
-          "bytes": 1798
+        "slides/figure1/log-faithful.md": {
+          "bytes": 9045
         },
-        "slides/01-spending/log-redesign.md": {
-          "bytes": 1798
+        "slides/figure1/log-redesign.md": {
+          "bytes": 10005
         },
-        "slides/01-spending/overlay-faithful.png": {
-          "bytes": 8663,
-          "width": 600,
-          "height": 759
-        },
-        "slides/01-spending/redesign.pdf": {
-          "bytes": 30360
-        },
-        "slides/01-spending/redesign.png": {
-          "bytes": 34624,
+        "slides/figure1/overlay.png": {
+          "bytes": 205754,
           "width": 1280,
           "height": 720
         },
-        "slides/01-spending/redesign.pptx": {
-          "bytes": 45864
+        "slides/figure1/redesign.pdf": {
+          "bytes": 78958
         },
-        "slides/01-spending/source.png": {
-          "bytes": 9267,
-          "width": 600,
-          "height": 759
+        "slides/figure1/redesign.png": {
+          "bytes": 188676,
+          "width": 1280,
+          "height": 720
+        },
+        "slides/figure1/redesign.pptx": {
+          "bytes": 23146
+        },
+        "slides/figure1/source.png": {
+          "bytes": 208224,
+          "width": 1280,
+          "height": 720
         }
       },
-      "commit": null,
+      "commit": "414868998ce0",
       "dirty": false
     }
   ]

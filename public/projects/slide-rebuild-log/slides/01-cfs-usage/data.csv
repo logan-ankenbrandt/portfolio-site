@@ -1,0 +1,28 @@
+chart,clockwise_order,category,count,printed_percent,label_as_printed,slice_color
+centers,1,NASA ARC,5,12,"NASA ARC, 5, 12%",4472C4
+centers,2,NASA GRC,1,2,"NASA GRC, 1, 2%",ED7D31
+centers,3,NASA GSFC,19,48,"NASA GSFC, 19, 48%",A5A5A5
+centers,4,NASA JSC,10,25,"NASA JSC, 10, 25%",FFC000
+centers,5,NASA LARC,4,10,"NASA LARC, 4, 10%",5B9BD5
+centers,6,NASA MSFC,1,3,"NASA MSFC, 1, 3%",70AD47
+directorates,1,ARMD,3,7,"ARMD, 3, 7%",4472C4
+directorates,2,SMD,15,37,"SMD, 15, 37%",ED7D31
+directorates,3,STMD,11,28,"STMD, 11, 28%",A5A5A5
+directorates,4,ESDMD,9,23,"ESDMD, 9, 23%",FFC000
+directorates,5,SOMD,2,5,"SOMD, 2, 5%",5B9BD5
+segments,1,Aircraft,,4,Aircraft 4%,4472C4
+segments,2,Architecture,,5,Architecture 5%,ED7D31
+segments,3,Balloon,,4,Balloon 4%,A5A5A5
+segments,4,Instrument,,7,Instrument 7%,FFC000
+segments,5,Payload,,28,Payload 28%,5B9BD5
+segments,6,Processor,,2,Processor 2%,70AD47
+segments,7,Rover,,2,Rover 2%,264478
+segments,8,Spacecraft,,28,Spacecraft 28%,9E480E
+segments,9,Robot,,2,Robot 2%,636363
+segments,10,Telescope,,2,Telescope 2%,255E91
+segments,11,Lander,,4,Lander 4%,43682B
+segments,12,Platform,,2,Platform 2%,698ED0
+segments,13,Capsule,,7,Capsule 7%,F1975A
+segments,14,Launch Vehicle,,2,Launch Vehicle 2%,B7B7B7
+segments,15,Spacesuit,,2,Spacesuit 2%,FFCD33
+segments,16,Unmanned Aircraft,,2,Unmanned Aircraft 2%,7CAFDD

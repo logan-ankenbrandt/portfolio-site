@@ -35,8 +35,8 @@ All site copy lives in [`lib/site.ts`](lib/site.ts), except the headings in the 
 
 ## 2. The real sync, and what to check in it
 
-`npm run sync` read `../slide-rebuild-log` (commit e6c02de), `../architecture-three-ways` (commit
-32643a2) and `../chart-rebuilds` (commit 4148689), all clean. All three passed the contract, the file
+`npm run sync` read `../slide-rebuild-log` (commit a25ad20), `../architecture-three-ways` (commit
+de93d76) and `../chart-rebuilds` (commit ba1daa7), all clean. All three passed the contract, the file
 checks and the private-term check with no warnings: 4, 3 and 2 items, 57 files in all. The project
 agents reported slide-rebuild-log and architecture-three-ways as ready with caveats and chart-rebuilds
 as ready (their caveats are in section 5). The sync still fails with a full list if any

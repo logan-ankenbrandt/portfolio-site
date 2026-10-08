@@ -31,7 +31,7 @@ Page cites: the 2015 deck by slide page, the 2023 overview by slide number, the 
 ## Considered and rejected
 
 - Rejected: Updating statuses to today, for example marking the TSP or µcFE cores as released. Why: None of this project’s sources gives a current status for those parts, so the slide dates the 2015 statuses instead of guessing.
-- Rejected: Coloring OS Abstraction VxWorks and OS Abstraction TSP blue like Linux and RTEMS. Why: The source fills them near-white, which matches no legend entry. The slide shows them as “No status color in source” and does not assign a status.
+- Rejected: Coloring cFE Apps (x5) blue like cFS App 1, and OS Abstraction VxWorks and OS Abstraction TSP blue like Linux and RTEMS. Why: The source fills cFE Apps a pale blue and the two OS boxes near-white, and neither matches a legend entry. The slide shows them as “No status color in source” and does not assign a status.
 - Rejected: Changing “cFS App n(13)” to 12, the count in the 2021 memo’s “GSFC has released 12 applications” (printed p28). Why: The 13 is the 2015 deck’s own count. It is kept and flagged.
 - Rejected: Keeping the red ellipses and moving them off the text. Why: Moved ellipses would still mark only four of the seven mission-developed parts. A fill marks all of them without covering anything.
 - Rejected: Folding in the 2023 overview’s isometric layer drawing, with its messaging middleware, device abstraction and device driver layers (slide 8). Why: It slices the stack differently from the 2015 diagram. Mixing the two would create layers that neither source draws.
@@ -39,7 +39,7 @@ Page cites: the 2015 deck by slide page, the 2023 overview by slide number, the 
 ## Flagged for the source’s authors
 
 - Flagged: The 2015 deck’s count of cFS apps does not match its own app table. Evidence: The diagram says “cFS App n(13)” (p8) and the facts slide says “Components available 13” (p22), but the apps table on p10 lists 15 apps, or 12 without its three Lab apps (Command Ingest Lab, Scheduler Lab, Telemetry Output Lab). The 2021 memo says “GSFC has released 12 applications” (printed p28).
-- Flagged: Two OS abstraction boxes have no status. Evidence: OS Abstraction VxWorks and OS Abstraction TSP have a textured near-white fill that averages #EBEBE9 (sampled with ImageMagick from text-free strips of the 96 dpi render), which matches none of the four legend swatches on p8: gray #BFBFBF, green #92D050, blue #00B0F0 and red #FF4040.
+- Flagged: Three parts have no status: cFE Apps (x5) and two OS abstraction boxes. Evidence: The cFE Apps (x5) circles are a pale, textured blue that samples #A4D0DE to #AAD6E4 in text-free patches of the 200 dpi masked render, well off the legend blue #00B0F0 that cFS App 1 uses. OS Abstraction VxWorks and OS Abstraction TSP have a textured near-white fill that averages #EBEBE9 (sampled with ImageMagick from text-free strips of the 96 dpi render), which matches none of the four legend swatches on p8: gray #BFBFBF, green #92D050, blue #00B0F0 and red #FF4040.
 - Flagged: Software Bus Network’s transport changed between the sources. Evidence: 2015: “Passes Software Bus messages over Ethernet” (p10). 2021: “Passes Software Bus messages over various ‘plug-in’ network protocols” (printed p34). The slide keeps the 2015 status, dated.
 
 ## Checks

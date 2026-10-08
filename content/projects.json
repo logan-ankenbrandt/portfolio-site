@@ -102,7 +102,7 @@
               ],
               "kept": [
                 {
-                  "what": "\"40+\", \"historically\", \"likely\" and \"dominant\" as the source words them.",
+                  "what": "\"40+\", \"historically\", \"likely\" and \"dominant\" exactly as the source phrases them.",
                   "why": "They are the author's claims and hedges. The revision makes none of them stronger or weaker."
                 },
                 {
@@ -699,7 +699,7 @@
           "bytes": 8228
         },
         "slides/01-cfs-usage/log-revised.md": {
-          "bytes": 10159
+          "bytes": 10169
         },
         "slides/01-cfs-usage/overlay.png": {
           "bytes": 303544,
@@ -761,7 +761,7 @@
           "height": 720
         }
       },
-      "commit": "e6c02dece0c4",
+      "commit": "a25ad20a0aa8",
       "dirty": false
     },
     {
@@ -1003,8 +1003,8 @@
                   "why": "None of this project’s sources gives a current status for those parts, so the slide dates the 2015 statuses instead of guessing."
                 },
                 {
-                  "what": "Coloring OS Abstraction VxWorks and OS Abstraction TSP blue like Linux and RTEMS.",
-                  "why": "The source fills them near-white, which matches no legend entry. The slide shows them as “No status color in source” and does not assign a status."
+                  "what": "Coloring cFE Apps (x5) blue like cFS App 1, and OS Abstraction VxWorks and OS Abstraction TSP blue like Linux and RTEMS.",
+                  "why": "The source fills cFE Apps a pale blue and the two OS boxes near-white, and neither matches a legend entry. The slide shows them as “No status color in source” and does not assign a status."
                 },
                 {
                   "what": "Changing “cFS App n(13)” to 12, the count in the 2021 memo’s “GSFC has released 12 applications” (printed p28).",
@@ -1025,8 +1025,8 @@
                   "evidence": "The diagram says “cFS App n(13)” (p8) and the facts slide says “Components available 13” (p22), but the apps table on p10 lists 15 apps, or 12 without its three Lab apps (Command Ingest Lab, Scheduler Lab, Telemetry Output Lab). The 2021 memo says “GSFC has released 12 applications” (printed p28)."
                 },
                 {
-                  "what": "Two OS abstraction boxes have no status.",
-                  "evidence": "OS Abstraction VxWorks and OS Abstraction TSP have a textured near-white fill that averages #EBEBE9 (sampled with ImageMagick from text-free strips of the 96 dpi render), which matches none of the four legend swatches on p8: gray #BFBFBF, green #92D050, blue #00B0F0 and red #FF4040."
+                  "what": "Three parts have no status: cFE Apps (x5) and two OS abstraction boxes.",
+                  "evidence": "The cFE Apps (x5) circles are a pale, textured blue that samples #A4D0DE to #AAD6E4 in text-free patches of the 200 dpi masked render, well off the legend blue #00B0F0 that cFS App 1 uses. OS Abstraction VxWorks and OS Abstraction TSP have a textured near-white fill that averages #EBEBE9 (sampled with ImageMagick from text-free strips of the 96 dpi render), which matches none of the four legend swatches on p8: gray #BFBFBF, green #92D050, blue #00B0F0 and red #FF4040."
                 },
                 {
                   "what": "Software Bus Network’s transport changed between the sources.",
@@ -1186,12 +1186,12 @@
           {
             "label": "All three slides: executive, engineer, message path (.pptx)",
             "path": "dist/architecture-three-ways.pptx",
-            "bytes": 27482
+            "bytes": 27480
           },
           {
             "label": "All three slides (PDF)",
             "path": "dist/architecture-three-ways.pdf",
-            "bytes": 187916
+            "bytes": 187926
           },
           {
             "label": "Architecture brief, one page (PDF)",
@@ -1249,7 +1249,7 @@
           "height": 1243
         },
         "brief/brief.pptx": {
-          "bytes": 19616
+          "bytes": 19617
         },
         "brief/log-brief.md": {
           "bytes": 6749
@@ -1261,10 +1261,10 @@
           "bytes": 26273
         },
         "dist/architecture-three-ways.pdf": {
-          "bytes": 187916
+          "bytes": 187926
         },
         "dist/architecture-three-ways.pptx": {
-          "bytes": 27482
+          "bytes": 27480
         },
         "glossary.md": {
           "bytes": 6095
@@ -1275,15 +1275,15 @@
           "height": 720
         },
         "slides/01-layers/engineer.pdf": {
-          "bytes": 103967
+          "bytes": 103977
         },
         "slides/01-layers/engineer.png": {
-          "bytes": 205810,
+          "bytes": 205939,
           "width": 1280,
           "height": 720
         },
         "slides/01-layers/engineer.pptx": {
-          "bytes": 18043
+          "bytes": 18042
         },
         "slides/01-layers/exec.pdf": {
           "bytes": 86806
@@ -1297,7 +1297,7 @@
           "bytes": 16956
         },
         "slides/01-layers/log-engineer.md": {
-          "bytes": 9824
+          "bytes": 10125
         },
         "slides/01-layers/log-exec.md": {
           "bytes": 8407
@@ -1308,13 +1308,13 @@
           "height": 720
         }
       },
-      "commit": "32643a2ad249",
+      "commit": "de93d76417c9",
       "dirty": false
     },
     {
       "portfolio": {
         "slug": "chart-rebuilds",
-        "title": "Chart Rebuilds: GAO's federal IT spending chart",
+        "title": "Chart rebuilds: GAO’s federal IT spending chart",
         "oneLiner": "A dense GAO chart, 24 agencies with every value printed, rebuilt as a native PowerPoint chart, checked against its own printed totals, then redesigned around its one finding.",
         "repo": "https://github.com/logan-ankenbrandt/chart-rebuilds",
         "order": 3,
@@ -1746,7 +1746,7 @@
           "height": 720
         }
       },
-      "commit": "414868998ce0",
+      "commit": "ba1daa769dc2",
       "dirty": false
     }
   ]

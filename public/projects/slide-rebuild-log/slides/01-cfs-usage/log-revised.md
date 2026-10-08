@@ -41,7 +41,7 @@ How this was made: Claude Code agents rebuilt these slides from the source image
 
 ## Kept
 
-- Kept: "40+", "historically", "likely" and "dominant" as the source words them.
+- Kept: "40+", "historically", "likely" and "dominant" exactly as the source phrases them.
   Why: They are the author's claims and hedges. The revision makes none of them stronger or weaker.
 - Kept: "approved by HEO directorate" in the ISwSIS note.
   Why: It is the author's wording. The mismatch with the ESDMD and SOMD names on the pie is flagged instead of edited.
